@@ -1,0 +1,8 @@
+.sconnectpre{
+    background: #71cedf;
+    border: 2px dashed #000;
+    display: flex;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,15 @@
+{
+    "name": "quyle910/myproject",
+    "autoload": {
+        "psr-4": {
+            "Sconnect\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "le van quy",
+            "email": "quylv.dsth@gmail.com"
+        }
+    ],
+    "require": {}
+}

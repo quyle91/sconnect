@@ -1,0 +1,68 @@
+<?php 
+/**
+Sprint 1: 
+    làm Frontend nhưng ko có Css, 
+    Dùng ảnh placeholder, 
+    làm white frame, 
+    Build ACF, custom post type để làm frontend
+
+Sprint 2: 
+    "Code backend cho các chức năng như form
+    tạo logic"
+
+Sprint 3:
+    "Css
+    Tối ưu lại acf, Site option
+    Bổ sung các element còn thiếu"
+
+Sprint 4:
+    Xem feedback và fix lỗi
+
+*/
+
+
+
+defined( 'ABSPATH' ) || exit;
+
+if(!function_exists('WC')){
+    return;
+}
+
+if(!defined( 'ADMINZ' )){
+    return;
+}
+
+
+add_action( 'after_setup_theme', function () {
+    load_child_theme_textdomain( 'sconnect', get_stylesheet_directory() . '/languages' );
+} );
+
+
+
+
+
+
+define('Sconnect_Url', get_stylesheet_directory_uri());
+define('Sconnect_Dir', get_stylesheet_directory());
+
+require __DIR__ ."/vendor/autoload.php";
+
+
+// Functions
+new \Sconnect\Functions\Enqueue;
+new \Sconnect\Functions\AutoViewMore;
+
+// Shortcodes
+new \Sconnect\Shortcodes\TrendingTopic;
+
+// Integration
+new \Sconnect\Integration\Flatsome;
+new \Sconnect\Integration\FlatsomeCustomBlog;
+new \Sconnect\Integration\AdministratorZ;
+
+// Woocommerce
+new \Sconnect\Woocommerce\AccountPage;
+
+// Post type
+new  \Sconnect\DoAn\Controller\Init;
+new  \Sconnect\BoMon\Controller\Init;

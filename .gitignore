@@ -1,0 +1,9 @@
+/wp-admin/
+/wp-content/uploads/
+/wp-content/languages/
+/wp-includes/
+
+
+wp-config.php
+*.log
+/.htaccess
