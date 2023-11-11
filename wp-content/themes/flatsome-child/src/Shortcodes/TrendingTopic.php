@@ -9,10 +9,21 @@ class TrendingTopic {
         $a->shortcode_title = 'Sconnect Trending Topic';
         $a->shortcode_callback = function() use($a){
             ob_start();
-            echo "<pre class=sconnectpre>"; 
-            echo '<h4>Element name: '.$a->shortcode_name ."</h4>"; 
-            print_r("<span>".__FILE__."</span>"); 
-            echo "</pre>";
+            ?>
+            <div class="trendingtopic">
+                <?php
+                    echo "<pre class=sconnectpre>"; 
+                    echo '<h4>Element name: '.$a->shortcode_name ."</h4>"; 
+                    print_r("<span>".__FILE__."</span>"); 
+                    echo "</pre>";
+                ?>
+            </div>
+            <style type="text/css">
+                .trendingtopic{
+                    
+                }
+            </style>
+            <?php
             return ob_get_clean();
         };
         $a->options = [

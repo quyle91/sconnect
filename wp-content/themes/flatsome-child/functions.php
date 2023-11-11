@@ -54,6 +54,8 @@ new \Sconnect\Functions\AutoViewMore;
 
 // Shortcodes
 new \Sconnect\Shortcodes\TrendingTopic;
+new \Sconnect\Shortcodes\HoiDongHocThuat;
+new \Sconnect\Shortcodes\GiaiDapThacMac;
 
 // Integration
 new \Sconnect\Integration\Flatsome;
