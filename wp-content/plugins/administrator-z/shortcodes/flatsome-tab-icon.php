@@ -45,8 +45,9 @@ $flatsome_tab_icon->shortcode_callback = function($atts){
 		}
 		.<?php echo esc_attr($tab_class); ?> .nav .tab>a>span:before{
 		    content: "";
-		    width: 1em;
-		    height: 1em;
+		    width: 2em;
+		    height: 2em;
+			border: 2px solid lightgray;
 		    background-size: contain;
 		    background-repeat: no-repeat;
 		    background-position: center center;

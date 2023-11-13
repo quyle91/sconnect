@@ -13,3 +13,11 @@
 .chuongtrinhdaotao_class .post-item:hover .custom_element_chuongtrinhdaotao{
     opacity: 1;
 }
+
+/*Dự án nổi bật*/
+@media (max-width: 849px){
+    .doan{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

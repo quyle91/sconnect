@@ -13,21 +13,53 @@ class GiaiDapThacMac {
             ob_start();
             ?>
             <div class="giaidapthacmac">
+                <div class="row">
                 <?php
-                    $data = get_field('giai_dap_thac_mac_pho_bien','option'); // Sử dụng data ở đây
-                    echo "<pre class=sconnectpre>"; 
-                    echo '<h4>Element name: '.$a->shortcode_name ."</h4>"; 
-                    print_r(__FILE__); 
-                    echo "</pre>";
-                ?>
-            </div>
-            <style type="text/css">
-                .giaidapthacmac{
+                    $option = get_field('giai_dap_thac_mac_pho_bien','option');
+                    $data = $option['data'];
+                    $form = $option['form'];
 
-                }
-            </style>
+                    if(!empty($data) and is_array($data)){
+                        ?>
+                        <div class="data col">
+                            <?php
+                                echo '[tabgroup style="simple" type="vertical" class="giaidapthacmacphobien"]';
+                                $icon_array = [];
+                                foreach ($data as $key => $item) {
+                                    $icon_array[] = $item['icon'];
+                                    ?>
+                                    [tab title="<?php echo esc_attr($item['title']) ?>"]
+                                        <?php echo '[block id="'.$item['content'].'"]' ?>
+                                    [/tab]
+                                    <?php
+                                }
+                                echo '[/tabgroup]';
+                                echo '[adminz_tab_icons tab_class="giaidapthacmacphobien" ids="'.implode(",",$icon_array).'"]';
+                            ?>
+                        </div>
+                        <?php
+                    }
+
+
+                    if($form){
+                        ?>
+                        <div class="form col">
+                            [row class="row-nopaddingbottom"]
+                                [col span__sm="12" padding="15px 15px 15px 15px" bg_color="var(--xanh-nhat)"]
+                                    [title icon="icon-angle-right" text="<?php echo esc_attr($option['form_title']) ?>"]
+                                    [contact-form-7 id="<?php echo esc_attr($form) ?>"]
+                                [/col]
+                            [/row]
+                        </div>
+                        <?php
+                    }
+
+                ?>
+                </div>
+            </div>
+            
             <?php
-            return ob_get_clean();
+            return do_shortcode(ob_get_clean());
         };
         $a->options = [
             'text' => array(
@@ -37,6 +69,16 @@ class GiaiDapThacMac {
             ),
         ];
         $a->general_element();
+
+        add_action('wp_footer', function(){
+            ?>
+            <style type="text/css">
+                .giaidapthacmac{
+
+                }
+            </style>
+            <?php
+        });
 
     }
 }

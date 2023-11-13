@@ -443,30 +443,65 @@ function shortcode_ux_slider_custom($atts, $content=null) {
 	);	
 ?>
 <?php 
-// custom width and padding
- 	$args_respondsive_item = array(
-		'slide_width' => array(
-			'selector' => '',
-			'property' => 'max-width',
-			'unit'     => '%',
-		),
-	);
- 	echo ux_builder_element_style_tag( $_id ." .flickity-slider > *", $args_respondsive_item, $atts ); 	
+	if(isset($atts['slide_width']) and $atts['slide_width']){
+		// custom width and padding
+		$args_respondsive_item = array(
+			'slide_width' => array(
+				'selector' => '',
+				'property' => 'max-width',
+				'unit'     => '%',
+			),
+		);
+		echo ux_builder_element_style_tag( $_id ." .flickity-slider > *", $args_respondsive_item, $atts ); 	
+	}else{
+		?>
+		<style type="text/css">
+			#<?php echo esc_attr($_id);?> .flickity-slider>a, 
+			#<?php echo esc_attr($_id);?> .flickity-slider>a>img, 
+			#<?php echo esc_attr($_id);?> .flickity-slider>div:not(.col), 
+			#<?php echo esc_attr($_id);?> .flickity-slider>figure, 
+			#<?php echo esc_attr($_id);?> .flickity-slider>img, 
+			#<?php echo esc_attr($_id);?> .flickity-slider>p{
+				width: unset !important;
+			}
+		</style>
+		<?php
+	}
+
  	?>
  	<style type="text/css">
- 		<?php if($slide_item_padding){ ?>
- 		#<?php echo esc_attr($_id);?> .slider{margin-left:  -<?php echo esc_attr($slide_item_padding);?>; margin-right:  -<?php echo esc_attr($slide_item_padding);?>;}
-		#<?php echo esc_attr($_id);?> .flickity-slider >*{padding-left:  <?php echo esc_attr($slide_item_padding);?>; padding-right:  <?php echo esc_attr($slide_item_padding);?>;}
-		<?php } ?>
+
+ 		<?php 
+		if($slide_item_padding){ 
+			?>
+			#<?php echo esc_attr($_id);?> .slider{
+				margin-left:  -<?php echo esc_attr($slide_item_padding);?>; 
+				margin-right:  -<?php echo esc_attr($slide_item_padding);?>;
+			}
+			#<?php echo esc_attr($_id);?> .flickity-slider >*{
+				padding-left:  <?php echo esc_attr($slide_item_padding);?>; 
+				padding-right:  <?php echo esc_attr($slide_item_padding);?>;
+			}
+			<?php 
+		} 
+		?>
+
  		#<?php echo esc_attr($_id); ?> .slider:not(.flickity-enabled){
  			visibility: hidden;
  		}
+
  		<?php if($as_nav_for): ?>
- 		#<?php echo esc_attr($_id); ?> .is-selected >* {
- 			border:  1px solid var(--secondary-color);
- 			margin:  1px;
- 		}
+			#<?php echo esc_attr($_id); ?> .is-selected >* {
+				border:  1px solid var(--secondary-color);
+				margin:  1px;
+			}
  		<?php endif; ?>
+		
+		*{
+			
+		}
+
+
  	</style>
 <div class="<?php echo esc_attr($wrapper_classes); ?>" id="<?php echo esc_attr($_id); ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
     <div class="<?php echo esc_attr($classes); ?>"

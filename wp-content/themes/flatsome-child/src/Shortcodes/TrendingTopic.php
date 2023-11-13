@@ -10,21 +10,40 @@ class TrendingTopic {
         $a->shortcode_callback = function() use($a){
             ob_start();
             ?>
-            <div class="trendingtopic">
-                <?php
-                    echo "<pre class=sconnectpre>"; 
-                    echo '<h4>Element name: '.$a->shortcode_name ."</h4>"; 
-                    print_r("<span>".__FILE__."</span>"); 
-                    echo "</pre>";
-                ?>
-            </div>
-            <style type="text/css">
-                .trendingtopic{
-                    
-                }
-            </style>
+            <div class="trendingtopic tagcloud">
+                <div class="row">
+                    <div class="col small-12 large-3">
+                        <?php echo __("TRENDING TOPICS",'sconnect') ?>
+                    </div>
+                    <div class="col small-12 large-9">
+                        <?php
+                            $terms = get_terms( 
+                                [
+                                    'taxonomy' => 'post_tag',
+                                    'hide_empty' => 'true',
+                                    'orderby' => 'count',
+                                    'hide_empty' =>true,
+                                ]
+                            );
+                            if(!empty($terms) and is_array($terms)){
+                                echo '[adminz_slider_custom freescroll="true" nav_pos="outside"]';
+                                foreach ($terms as $key => $term) {
+                                    ?>
+                                        [adminz_slider_custom_item_wrap]
+                                            <a class="tag" href="<?php echo get_term_link( $term );?>">
+                                                <?php echo esc_attr($term->name); ?>
+                                            </a>
+                                        [/adminz_slider_custom_item_wrap]
+                                    <?php
+                                }
+                                echo '[/adminz_slider_custom]';
+                            }
+                        ?>
+                    </div>
+                </div>               
+            </div>            
             <?php
-            return ob_get_clean();
+            return do_shortcode(ob_get_clean());
         };
         $a->options = [
             'text' => array(
@@ -34,6 +53,16 @@ class TrendingTopic {
             ),
         ];
         $a->general_element();
+
+        add_action('wp_footer', function(){
+            ?>
+            <style type="text/css">
+                .trendingtopic{
+                    
+                }
+            </style>
+            <?php
+        });
 
     }
 }
