@@ -6,6 +6,8 @@ class FlatsomeCustomBlog {
         $this->change_grid_layout();
     }
 
+    
+
     function change_grid_layout(){
         /**
          * 1

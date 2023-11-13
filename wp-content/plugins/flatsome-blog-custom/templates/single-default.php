@@ -27,7 +27,7 @@ $col_class = apply_filters('fbc_flatsome_custom_blog_item_class', $col_class, $t
 ?>
 <div class="<?php echo implode(' ', $col_class); ?>" <?php echo $animate;?>>
     <div class="col-inner">
-        <?php do_action('fbc_flatsome_custom_blog_col_inner_before') ?>
+        <?php do_action('fbc_flatsome_custom_blog_col_inner_before',$repeater) ?>
         <a href="<?php echo apply_filters('flatsome_custom_blog_link',get_permalink(),$post) ?>" class="plain">
             <div class="box <?php echo implode(' ', $classes_box); ?> box-blog-post has-hover">
                 <?php if(has_post_thumbnail()) { ?>
@@ -74,7 +74,7 @@ $col_class = apply_filters('fbc_flatsome_custom_blog_item_class', $col_class, $t
                         <?php if($show_title =='true'): ?>
                             <?php do_action('flatsome_custom_blog_title_before',$args); ?>
                             <h5 class="post-title is-<?php echo $title_size; ?> <?php echo $title_style;?>">
-                                <?php do_action('flatsome_custom_blog_before_title',get_the_ID()) ?>
+                                <?php do_action('flatsome_custom_blog_before_title',$repeater) ?>
                                 <span><?php the_title(); ?></span>
                             </h5>
                             <?php do_action('flatsome_custom_blog_title_after',$args); ?>
@@ -130,6 +130,6 @@ $col_class = apply_filters('fbc_flatsome_custom_blog_item_class', $col_class, $t
                 <?php } ?>
             </div>
         </a>
-        <?php do_action('fbc_flatsome_custom_blog_col_inner_after') ?>
+        <?php do_action('fbc_flatsome_custom_blog_col_inner_after',$repeater) ?>
     </div>
 </div>
