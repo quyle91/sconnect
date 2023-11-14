@@ -10,35 +10,40 @@ class TrendingTopic {
         $a->shortcode_callback = function() use($a){
             ob_start();
             ?>
-            <div class="trendingtopic tagcloud">
+            <div class="trendingtopic">
                 <div class="row">
                     <div class="col small-12 large-3">
-                        <?php echo __("TRENDING TOPICS",'sconnect') ?>
+                        [title text="<?php echo __("TRENDING TOPICS",'sconnect') ?>"]
+                        
                     </div>
                     <div class="col small-12 large-9">
-                        <?php
-                            $terms = get_terms( 
-                                [
-                                    'taxonomy' => 'post_tag',
-                                    'hide_empty' => 'true',
-                                    'orderby' => 'count',
-                                    'hide_empty' =>true,
-                                ]
-                            );
-                            if(!empty($terms) and is_array($terms)){
-                                echo '[adminz_slider_custom freescroll="true" nav_pos="outside"]';
-                                foreach ($terms as $key => $term) {
-                                    ?>
-                                        [adminz_slider_custom_item_wrap]
-                                            <a class="tag" href="<?php echo get_term_link( $term );?>">
-                                                <?php echo esc_attr($term->name); ?>
-                                            </a>
-                                        [/adminz_slider_custom_item_wrap]
-                                    <?php
+                        <div class="tagcloud">
+                            <?php
+                                $terms = get_terms( 
+                                    [
+                                        'taxonomy' => 'post_tag',
+                                        'hide_empty' => 'true',
+                                        'orderby' => 'count',
+                                        'hide_empty' =>true,
+                                    ]
+                                );
+                                if(!empty($terms) and is_array($terms)){
+                                    echo '[adminz_slider_custom slide_item_padding="5px"  bullets="false" freescroll="true" nav_pos="outside" hide_nav="true"  nav_color="dark" nav_style="simple"]';
+                                    foreach ($terms as $key => $term) {
+                                        ?>
+                                            [adminz_slider_custom_item_wrap]
+                                                <a 
+                                                    style="white-space: nowrap;"
+                                                    class="tag" href="<?php echo get_term_link( $term );?>">
+                                                    <?php echo esc_attr($term->name); ?>
+                                                </a>
+                                            [/adminz_slider_custom_item_wrap]
+                                        <?php
+                                    }
+                                    echo '[/adminz_slider_custom]';
                                 }
-                                echo '[/adminz_slider_custom]';
-                            }
-                        ?>
+                            ?>
+                        </div>
                     </div>
                 </div>               
             </div>            
@@ -59,6 +64,14 @@ class TrendingTopic {
             <style type="text/css">
                 .trendingtopic{
                     
+                }
+                .trendingtopic .tagcloud{
+                    padding: 0 5px;
+                }
+                @media (min-width: 850px){
+                    .trendingtopic .tagcloud{
+                        padding: 0 40px;
+                    }
                 }
             </style>
             <?php
