@@ -56,11 +56,13 @@ new \Sconnect\Functions\AutoViewMore;
 new \Sconnect\Shortcodes\TrendingTopic;
 new \Sconnect\Shortcodes\HoiDongHocThuat;
 new \Sconnect\Shortcodes\GiaiDapThacMac;
+new \Sconnect\Shortcodes\MapView;
 
 // Integration
 new \Sconnect\Integration\Flatsome;
 new \Sconnect\Integration\FlatsomeCustomBlog;
 new \Sconnect\Integration\AdministratorZ;
+new \Sconnect\Integration\ImageMapPro;
 
 // Woocommerce
 new \Sconnect\Woocommerce\AccountPage;

@@ -1,0 +1,78 @@
+#wcp-form-form-control-connected_to {
+	display: none !important;
+}
+#wcp-form-form-control-static {
+	display: none !important;
+}
+/*#wcp-form-form-control-open_link_in_new_window {
+	display: none !important;
+}*/
+#wcp-form-form-control-click {
+	display: none !important;
+}
+#wcp-form-form-control-link {
+	display: block !important;
+}
+.wcp-form-tab[data-wcp-form-group="default_style"] {
+	display: none !important;
+}
+.wcp-form-tab[data-wcp-form-group="mouseover_style"] {
+	display: none !important;
+}
+.wcp-form-tab[data-wcp-form-group="tooltip"] {
+	display: none !important;
+}
+.wcp-editor-object-list-button[data-wcp-editor-object-list-button-name="copy"] {
+	display: none !important;
+}
+.wcp-editor-object-list-button[data-wcp-editor-object-list-button-name="paste"] {
+	display: none !important;
+}
+.wcp-editor-toolbar-button[data-wcp-tooltip="Text"] {
+	display: none !important;
+}
+.wcp-editor-toolbar-button[data-wcp-tooltip="Ellipse"] {
+	display: none !important;
+}
+.wcp-editor-toolbar-button[data-wcp-tooltip="Rectangle"] {
+	display: none !important;
+}
+.wcp-editor-toolbar-button[data-wcp-tooltip="Polygon"] {
+	display: none !important;
+}
+.wcp-form-tab[data-wcp-form-group="actions"] {
+	display: none !important;
+}
+.wcp-form-tab[data-wcp-form-group="layers"] {
+	display: none !important;
+}
+.wcp-form-tab[data-wcp-form-group="shapes"] {
+	display: none !important;
+}
+.wcp-form-tab[data-wcp-form-group="tooltips"] {
+	display: none !important;
+}
+.wcp-form-tab[data-wcp-form-group="shapes_menu"] {
+	display: none !important;
+}
+.wcp-form-tab[data-wcp-form-group="custom_code"] {
+	display: none !important;
+}
+#wcp-editor-button-new {
+	display: none !important;
+}
+#wcp-editor-button-load {
+	display: none !important;
+}
+.wcp-editor-main-button[data-wcp-editor-main-button-name="import"] {
+	display:  none !important;
+}
+.wcp-editor-main-button[data-wcp-editor-main-button-name="export"] {
+	display: none !important;
+}
+.wcp-editor-main-button[data-wcp-editor-main-button-name="help"] {
+	display: none !important;
+}
+#imp-editor-shape-tooltip {
+	display: none !important;
+}
