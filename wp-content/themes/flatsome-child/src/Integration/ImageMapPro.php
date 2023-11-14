@@ -4,7 +4,7 @@ class ImageMapPro {
     
     public function __construct() {
         add_action( 'admin_menu', [$this, 'kh_add_menu_page'] );
-        add_action( 'admin_enqueue_scripts', [$this, 'add_stype_image_map'] );
+        add_action( 'admin_enqueue_scripts', [$this, 'add_stype_image_map_admin'] );
         
 
         if( function_exists('acf_add_options_page') ) {
