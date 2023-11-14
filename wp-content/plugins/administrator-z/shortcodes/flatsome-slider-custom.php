@@ -496,11 +496,6 @@ function shortcode_ux_slider_custom($atts, $content=null) {
 				margin:  1px;
 			}
  		<?php endif; ?>
-		
-		*{
-			
-		}
-
 
  	</style>
 <div class="<?php echo esc_attr($wrapper_classes); ?>" id="<?php echo esc_attr($_id); ?>" <?php echo get_shortcode_inline_css($css_args); ?>>
