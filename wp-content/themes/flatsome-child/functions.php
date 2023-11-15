@@ -57,6 +57,7 @@ new \Sconnect\Shortcodes\TrendingTopic;
 new \Sconnect\Shortcodes\HoiDongHocThuat;
 new \Sconnect\Shortcodes\GiaiDapThacMac;
 new \Sconnect\Shortcodes\MapView;
+new \Sconnect\Shortcodes\BlogSmall;
 
 // Integration
 new \Sconnect\Integration\Flatsome;
