@@ -75,7 +75,7 @@ add_shortcode('adminz_breadcrumb',function ($atts) {
         '_id'=>"admz_".rand(),
         'seperator'     =>'/',
         'hide_current_item' => '',
-        'style'=> 'uppercase',
+        'style'=> 'normal',
         'size'=> '',
         'class'=> 'vietnamtutor-breadcrumb',
         'visibility'=> '',
