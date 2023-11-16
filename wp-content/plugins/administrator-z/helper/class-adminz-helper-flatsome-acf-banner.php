@@ -136,7 +136,7 @@ class ADMINZ_Helper_Flatsome_Acf_Banner{
 				'name' => 'breadcrumb_shortcode',
 				'aria-label' => '',
 				'type' => 'text',
-				'instructions' => '',
+				'instructions' => '[adminz_breadcrumb]',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -145,7 +145,7 @@ class ADMINZ_Helper_Flatsome_Acf_Banner{
 					'id' => '',
 				),
 				'message' => '',
-				'default_value' => '[adminz_breadcrumb]',
+				'default_value' => '',
 				'ui' => 0,
 				'ui_on_text' => '',
 				'ui_off_text' => '',
