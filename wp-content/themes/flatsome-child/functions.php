@@ -51,6 +51,7 @@ require __DIR__ ."/vendor/autoload.php";
 // Functions
 new \Sconnect\Functions\Enqueue;
 new \Sconnect\Functions\AutoViewMore;
+new \Sconnect\Functions\BannerFlyout;
 
 // Shortcodes
 new \Sconnect\Shortcodes\TrendingTopic;
