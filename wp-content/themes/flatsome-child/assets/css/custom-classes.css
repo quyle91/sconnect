@@ -6,3 +6,25 @@
     justify-content: center;
     flex-direction: column;
 }
+
+
+.section-BGR-BOTTOM-RIGHT-Z{ position: relative; }
+.section-BGR-BOTTOM-RIGHT-Z:after{
+    content: "";
+    background-image: url("../images/day_la_section_co_image_bottom_left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    content: "";    
+    width: 230px;
+    height: 71px;
+}
+@media (min-width: 768px){
+    .section-BGR-BOTTOM-RIGHT-Z:after{
+        width: 528px;
+        height: 160px;
+    }
+}

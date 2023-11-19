@@ -1,7 +1,12 @@
 <div class="single-bomon-item term_id_<?php echo esc_attr($args['term_id']); ?>">
     <a href="<?php the_permalink(); ?>">
         <?php
-            if($avatar = get_field('avatar')):
+            // Ngoại lệ cho 17?
+            if($args['term_id'] == 17){
+                $avatar = get_field('avatar');
+                if(!$avatar){
+                    $avatar = 305;
+                }
                 ?>
                 <span class=avatar>
                     <?php
@@ -16,27 +21,26 @@
                     ?>
                 </span>
                 <?php
-            endif;
+            }
         ?>
 
         <?php
             $icon = get_field('icon');
-            if(1==1):
-                ?>
-                <span class="icon" style="min-width: 40px; display: inline-block;">
-                    <?php
-                        echo wp_get_attachment_image( 
-                            $icon, 
-                            'full', 
-                            false, 
-                            [
-                                'style'=> 'height: 26px; width: auto;'
-                            ] 
-                        );
-                    ?>
-                </span>
+            if(!$icon){ $icon = 7;}
+            ?>
+            <span class="icon" style="min-width: 40px; display: inline-block;">
                 <?php
-            endif;
+                    echo wp_get_attachment_image( 
+                        $icon, 
+                        'full', 
+                        false, 
+                        [
+                            'style'=> 'height: 26px; width: auto;'
+                        ] 
+                    );
+                ?>
+            </span>
+            <?php
         ?>
         <span>
             <?php the_title() ?>

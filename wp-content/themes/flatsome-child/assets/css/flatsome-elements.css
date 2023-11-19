@@ -6,13 +6,6 @@
 .single-bomon-item a .icon-angle-right{
     margin-left: auto;
 }
-/*custom_element_chuongtrinhdaotao --------------------------------------------------*/
-.custom_element_chuongtrinhdaotao{
-    opacity: 0;
-}
-.chuongtrinhdaotao_class .post-item:hover .custom_element_chuongtrinhdaotao{
-    opacity: 1;
-}
 
 /*Dự án nổi bật*/
 @media (max-width: 849px){

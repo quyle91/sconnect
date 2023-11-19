@@ -10,21 +10,26 @@ class Init {
     }
 
     function custom_element_chuongtrinhdaotao(){
-        add_action('fbc_flatsome_custom_blog_col_inner_after', function($repeater){
+        add_action('fbc_flatsome_custom_blog_col_inner_after', function($repeater,$the_query){
             if(!isset($repeater['class']) or $repeater['class'] !== 'chuongtrinhdaotao_class') return;
             $term_id = get_field('sync_chuongtrinh');
             $color = get_field('color','term_'.$term_id);
+            if(!$color){
+                $color = 'var(--primary-color)';
+            }
             ?>
             <div 
                 class=custom_element_chuongtrinhdaotao
                 style="background-color: <?php echo esc_attr($color); ?>"
                 >
                 <div class="inner col text-center">
-                    <?php 
-                        the_title();
-                        $main_id = get_the_ID(); // Khắc phục lỗi ko gọi được get_the_ID()
-                    ?>
-                    <div class="items">
+                    <div class="h3 uppercase mb heading">
+                        <?php 
+                            the_title();
+                            $main_id = get_the_ID(); // Khắc phục lỗi ko gọi được get_the_ID()
+                        ?>
+                    </div>
+                    <div class="items mb">
                         <?php
                             $args = [
                                 'post_type' => 'bo_mon',
@@ -57,7 +62,7 @@ class Init {
                 </div>
             </div>
             <?php
-        },10,1);
+        },10,2);
 
         add_action( 'flatsome_custom_blog_before_title', function($repeater){
             if(!isset($repeater['class']) or $repeater['class'] !== 'chuongtrinhdaotao_class') return;
@@ -81,6 +86,13 @@ class Init {
                     left: 0px;
                     width: 100%;
                     height: 100%;
+                    transition: all 0.3s ease-out;
+                    opacity: 0;
+                    display: flex;
+                    align-items: center;
+                }
+                .chuongtrinhdaotao_class .post-item .col-inner:hover .custom_element_chuongtrinhdaotao{
+                    opacity: 1;
                 }
             </style>
             <?php

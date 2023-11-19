@@ -1,4 +1,6 @@
 <?php 
-function __custom_excerpt_length_25(){
-    return 25;
-}
+/**
+Wordpress lỗi excerpt leng ko hoạt động với ajax
+https://core.trac.wordpress.org/ticket/59702
+============ KO FIX ========================
+ */

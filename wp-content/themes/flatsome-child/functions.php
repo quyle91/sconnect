@@ -44,7 +44,9 @@ add_action( 'after_setup_theme', function () {
 
 define('Sconnect_Url', get_stylesheet_directory_uri());
 define('Sconnect_Dir', get_stylesheet_directory());
+
 require __DIR__ ."/helpers.php";
+require __DIR__ ."/hooks.php";
 require __DIR__ ."/vendor/autoload.php";
 
 
@@ -59,6 +61,7 @@ new \Sconnect\Shortcodes\HoiDongHocThuat;
 new \Sconnect\Shortcodes\GiaiDapThacMac;
 new \Sconnect\Shortcodes\MapView;
 new \Sconnect\Shortcodes\BlogSmall;
+new \Sconnect\Shortcodes\DoiNguGiangVien;
 
 // Integration
 new \Sconnect\Integration\Flatsome;

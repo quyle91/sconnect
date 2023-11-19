@@ -8,8 +8,9 @@ class Init {
     }
 
     function custom_element_thongtinhocbong(){
-        add_action( 'fbc_flatsome_custom_blog_col_inner_after', function($repeater){
-            if(!isset($repeater['class']) or $repeater['class'] !== 'thongtinhocbong') return;
+        add_action( 'fbc_flatsome_custom_blog_col_inner_after', function($repeater, $the_query){
+            if(!isset($the_query->query['post_type']) or $the_query->query['post_type'] !== 'hoc_bong') return;
+            // add_filter( 'excerpt_length', '__custom_excerpt_length_25' );
             ?>
             <a href="<?php the_permalink();?> ">
                 <div class="thongtinhocbong_custom">                    
@@ -18,10 +19,10 @@ class Init {
                             <?php the_title(); ?>
                         </div>
                         <div class="excerpt">
-                            <?php the_excerpt(); ?>
+                            <?php echo the_excerpt(); ?>
                         </div>
                         <div class="zbutton">
-                            <button class="button">
+                            <button class="button is-outline">
                                 <?php echo __("Xem chi tiết",'sconnect'); ?>
                             </a>
                         </div>
@@ -29,7 +30,8 @@ class Init {
                 </div>
             </a>
             <?php
-        },10,1 );
+            // remove_filter( 'excerpt_length', '__custom_excerpt_length_25' );
+        },10,2 );
         
         add_action('wp_footer', function(){
             ?>
@@ -44,7 +46,7 @@ class Init {
                     height: 100%;
                     top: 0px;
                     left: 0px;                    
-                    align-items: flex-start;
+                    align-items: center;
                     display: flex;
                     overflow: auto;
                     background: linear-gradient(180deg, rgba(0, 132, 68, 0.47) -16.44%, #008444 89.76%);
@@ -52,11 +54,6 @@ class Init {
                 }
                 .blog-posts-custom-element-wrapper.hoc_bong .col-inner:hover .thongtinhocbong_custom{
                     opacity: 1;
-                }
-                @media (min-width: 768px){
-                    .blog-posts-custom-element-wrapper.hoc_bong .col-inner .thongtinhocbong_custom{
-                        align-items: center;
-                    }
                 }
             </style>
             <?php
