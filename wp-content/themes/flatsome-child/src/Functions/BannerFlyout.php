@@ -22,7 +22,7 @@ class BannerFlyOut {
                             width: 100%;
                             z-index: 1042;
                         }
-                        @media (min-width: 768px){
+                        @media (min-width: 850px){
                             .banner-flyout{
                                 width: 55%;
                                 bottom: 100px;
@@ -73,13 +73,13 @@ class BannerFlyOut {
                                 document.addEventListener('scroll', function() {
                                     isScrolling = true;
                                     clearTimeout(window.scrollTimeout);
-                                    window.scrollTimeout = setTimeout(function() {
+                                    // window.scrollTimeout = setTimeout(function() {
                                         if (isScrolling) {
                                             // Thực hiện các hành động bạn muốn khi người dùng thực sự scroll ở đây
                                             BannerFlyout.classList.add('hidden');
                                             isScrolling = false; // Đặt lại trạng thái scroll
                                         }
-                                    }, 500);
+                                    // }, 500);
                                 });
 
                                 // Thêm sự kiện load để xác định khi trang đã tải xong
