@@ -15,21 +15,12 @@ return [
 				'heading' => 'Replace',
 				'default' => '',
 			],
-
-
-	        'before' => [
+			'template' => [
 				'type' =>'textarea',
-				'heading' => 'Before',
+				'heading' => 'Template',
 				'default' => '',
-				'placeholder' => "{shortcode attr='",
+				'placeholder' => "",
 				"description" => "Make output like a shortcode? Use { and ' instead of [ and \" "
-			],
-			'after' => [
-				'type' =>'textfield',
-				'heading' => 'After',
-				'default' => '',
-				'placeholder' => "'}",
-				"description" => "Don't forget close tag."
 			],
 			'class' => [
 				'type' =>'textfield',

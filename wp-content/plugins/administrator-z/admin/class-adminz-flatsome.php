@@ -133,114 +133,29 @@ class ADMINZ_Flatsome extends Adminz {
 		add_filter('adminz_apply_content_change', function($return,$atts){
 
 			extract(shortcode_atts(array(
-				"before" => "",
-				"after" => "",
 				"search" => "",
 				"replace" => "",
+				"template" => "",
 				"class"=>"",
 				"css"=>""
 		    ), $atts));
+			
 
-			// nếu có search and replace
-			if($search){
-				$return = str_replace($search, $replace, $return);
-			}
+			if($template){
+				$template = str_replace(["'", '{','}'],['"', "[","]"],$template);
+				$template = str_replace("XXX", $return,$template);
+				$return = $template;
 
-			// nếu là shortcode
-			if($before){
-				$before = str_replace('{',"[",$before);
-				$before = str_replace("'",'"',$before);
-				$after = str_replace('}',"]",$after);
-				$after = str_replace("'",'"',$after);
-				$shortcode = $before . $return . $after;
-
-				// echo "<pre>";print_r($shortcode);echo "</pre>";
-
-				$_shortcode = do_shortcode($shortcode);
-				$has_shortcode = false;
-				$has_function = false;
-
-				preg_match('/\[(\w+)(.*?)\]/', $shortcode, $matches);
-				$shortcode_name = $matches[1];
-				$function_name = $matches[1];
-
-
-
-
-
-				if(shortcode_exists( $shortcode_name )){
-					$return = do_shortcode($shortcode);
-					$has_shortcode = true;
-				}
-
-				// nếu shortcode ko tồn tại thì check thử function, lấy param phải theo thứ tự lần lượt
-				if(function_exists( $function_name )){
-					if(!$has_shortcode){
-						// Sử dụng biểu thức chính quy để tìm các giá trị nằm giữa hai dấu ngoặc kép
-						preg_match_all('/"([^"]*)"/', $shortcode, $matches);
-						$return = call_user_func_array($function_name, $matches[1]);
-					}
-				}
-
-
-
-
-				// nếu có shortcode
-				// if($_shortcode !== $shortcode){
-				// 	$return = $_shortcode;
-				// }
-				// // ko có thì kiểm tra có function
-				// else{
-				// 	preg_match('/\[(\w+)(.*?)\]/', $shortcode, $matches);
-				// 	if (isset($matches[1])) {
-				// 		$function_name = $matches[1];		
-				// 		if (function_exists($function_name)) {
-				            
-				//         } else {
-				//             $has_function = false;
-				//         }				
-						
-
-				// 	}
-				// 	$has_shortcode = false;
-				// }
-
-				// if( !$has_shortcode and !$has_function){
-				// 	echo '<pre>Shortcode and Function name not exist!</pre>';
-				// }
-
-
-
-				// echo "<pre>";print_r($return);echo "</pre>";
-				// // add_shortcode trước khi do_shortcode
-
-				// preg_match('/\[(\w+)(.*?)\]/', $return, $matches);
-				// if (isset($matches[1])) {
-				// 	$function_name = $matches[1];
-				// 	$params = array();
-				// 	preg_match_all('/(\w+)="(.*?)"/', $matches[2], $param_matches, PREG_SET_ORDER);
-				// 	foreach ($param_matches as $param_match) {
-			    //         $params[] = $param_match[2];
-			    //     }
-			    //     if (function_exists($function_name)) {
-			    //         $return = call_user_func_array($function_name, $params);
-			    //     } else {
-			    //         echo "Hàm $function_name không tồn tại.";
-			    //     }
-				// }
-
-
-
-				// $return = do_shortcode($return);
 			}
 
 			
-
+			
+			$return = str_replace($search, $replace, $return);
 
 			ob_start();
 			?>
 			<div class="<?php echo esc_attr($class); ?>">
-				<?php echo wp_kses_post( $return ); ?>
+				<?php echo do_shortcode( $return ); ?>
 				<?php if($css): ?>
 					<style type="text/css">
 						<?php echo esc_attr($css); ?>

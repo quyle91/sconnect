@@ -62,6 +62,7 @@ new \Sconnect\Shortcodes\GiaiDapThacMac;
 new \Sconnect\Shortcodes\MapView;
 new \Sconnect\Shortcodes\BlogSmall;
 new \Sconnect\Shortcodes\DoiNguGiangVien;
+new \Sconnect\Shortcodes\GiangVienContent;
 
 // Integration
 new \Sconnect\Integration\Flatsome;
