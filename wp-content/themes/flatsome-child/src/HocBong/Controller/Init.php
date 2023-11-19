@@ -1,0 +1,68 @@
+<?php
+// class test. Tạo 1 file Test.php trong folder src/Controller
+namespace Sconnect\HocBong\Controller;
+class Init {
+    
+    function __construct() {
+        $this->custom_element_thongtinhocbong();
+    }
+
+    function custom_element_thongtinhocbong(){
+        add_action( 'fbc_flatsome_custom_blog_col_inner_after', function($repeater){
+            if(!isset($repeater['class']) or $repeater['class'] !== 'thongtinhocbong') return;
+            ?>
+            <a href="<?php the_permalink();?> ">
+                <div class="thongtinhocbong_custom">                    
+                    <div class="col text-center">
+                        <div class="title">
+                            <?php the_title(); ?>
+                        </div>
+                        <div class="excerpt">
+                            <?php the_excerpt(); ?>
+                        </div>
+                        <div class="zbutton">
+                            <button class="button">
+                                <?php echo __("Xem chi tiết",'sconnect'); ?>
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+            </a>
+            <?php
+        },10,1 );
+        
+        add_action('wp_footer', function(){
+            ?>
+            <style type="text/css">
+                .blog-posts-custom-element-wrapper.hoc_bong .col-inner{
+                    position: relative;
+                }
+                .blog-posts-custom-element-wrapper.hoc_bong .col-inner .thongtinhocbong_custom{
+                    opacity: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0px;
+                    left: 0px;                    
+                    align-items: flex-start;
+                    display: flex;
+                    overflow: auto;
+                    background: linear-gradient(180deg, rgba(0, 132, 68, 0.47) -16.44%, #008444 89.76%);
+                    transition: all 0.3s ease-out;
+                }
+                .blog-posts-custom-element-wrapper.hoc_bong .col-inner:hover .thongtinhocbong_custom{
+                    opacity: 1;
+                }
+                @media (min-width: 768px){
+                    .blog-posts-custom-element-wrapper.hoc_bong .col-inner .thongtinhocbong_custom{
+                        align-items: center;
+                    }
+                }
+            </style>
+            <?php
+        });
+    }
+}
+
+
+

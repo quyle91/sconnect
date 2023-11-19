@@ -27,7 +27,7 @@ $col_class = apply_filters('fbc_flatsome_custom_blog_item_class', $col_class, $t
 ?>
 <div class="<?php echo implode(' ', $col_class); ?>" <?php echo $animate;?>>
     <div class="col-inner">
-        <?php do_action('fbc_flatsome_custom_blog_col_inner_before',$repeater) ?>
+        <?php do_action('fbc_flatsome_custom_blog_col_inner_before',$repeater, $the_query) ?>
         <a href="<?php echo apply_filters('flatsome_custom_blog_link',get_permalink(),$post) ?>" class="plain">
             <div class="box <?php echo implode(' ', $classes_box); ?> box-blog-post has-hover">
                 <?php if(has_post_thumbnail()) { ?>
@@ -130,6 +130,6 @@ $col_class = apply_filters('fbc_flatsome_custom_blog_item_class', $col_class, $t
                 <?php } ?>
             </div>
         </a>
-        <?php do_action('fbc_flatsome_custom_blog_col_inner_after',$repeater) ?>
+        <?php do_action('fbc_flatsome_custom_blog_col_inner_after',$repeater, $the_query) ?>
     </div>
 </div>

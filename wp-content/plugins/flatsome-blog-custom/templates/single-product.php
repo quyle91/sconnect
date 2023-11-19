@@ -25,7 +25,7 @@ if($style == 'default'){
 	?>
 	<div class="<?php echo implode(' ', $classes_col); ?>" <?php echo $animate;?>>
 		<div class="col-inner">
-			<?php do_action('fbc_flatsome_custom_blog_col_inner_before', $repeater) ?>
+			<?php do_action('fbc_flatsome_custom_blog_col_inner_before', $repeater, $the_query) ?>
 			<?php woocommerce_show_product_loop_sale_flash(); ?>
 			<div class="box product-small <?php echo implode(' ', $classes_box); ?> has-hover">
 				<div class="box-image" <?php echo get_shortcode_inline_css($css_args_img); ?>>
@@ -73,7 +73,7 @@ if($style == 'default'){
 					?>
 				</div>
 			</div>
-			<?php do_action('fbc_flatsome_custom_blog_col_inner_after', $repeater) ?>
+			<?php do_action('fbc_flatsome_custom_blog_col_inner_after', $repeater, $the_query) ?>
 		</div>
 	</div>
 	<?php 

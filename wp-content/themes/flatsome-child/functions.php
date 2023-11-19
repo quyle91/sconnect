@@ -44,7 +44,7 @@ add_action( 'after_setup_theme', function () {
 
 define('Sconnect_Url', get_stylesheet_directory_uri());
 define('Sconnect_Dir', get_stylesheet_directory());
-
+require __DIR__ ."/helpers.php";
 require __DIR__ ."/vendor/autoload.php";
 
 
@@ -72,3 +72,5 @@ new \Sconnect\Woocommerce\AccountPage;
 // Post type
 new  \Sconnect\DoAn\Controller\Init;
 new  \Sconnect\BoMon\Controller\Init;
+new  \Sconnect\HocBong\Controller\Init;
+new  \Sconnect\GiangVien\Controller\Init;
