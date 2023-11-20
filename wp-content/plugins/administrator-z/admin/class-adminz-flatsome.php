@@ -130,22 +130,19 @@ class ADMINZ_Flatsome extends Adminz {
 		}
 
 		// shortocdes/inc/flatsome-element-advanced.php
-		add_filter('adminz_apply_content_change', function($return,$atts){
+		add_filter('adminz_apply_content_change', function($return, $atts, $content){
 
 			extract(shortcode_atts(array(
 				"search" => "",
 				"replace" => "",
-				"template" => "",
 				"class"=>"",
 				"css"=>""
 		    ), $atts));
 			
-
-			if($template){
-				$template = str_replace(["'", '{','}'],['"', "[","]"],$template);
-				$template = str_replace("XXX", $return,$template);
-				$return = $template;
-
+			$content = trim($content);			
+			if($content){
+				$content = str_replace("XXX", $return,$content);
+				$return = $content;
 			}
 
 			
@@ -165,7 +162,7 @@ class ADMINZ_Flatsome extends Adminz {
 			<?php
 			return ob_get_clean();
 			
-		},10,2);
+		},10,3);
 
 	}
 	function flatsome_action_hook(){		

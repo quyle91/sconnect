@@ -2,6 +2,7 @@
 use Adminz\Helper\ADMINZ_Helper_Flatsome_Shortcodes;
 $a = new \Adminz\Helper\ADMINZ_Helper_Flatsome_Shortcodes;
 $a->shortcode_name = 'adminz_post_field';
+$a->shortcode_type = 'container';
 $a->shortcode_title = 'Post Field';
 $a->shortcode_icon = 'text';
 $options = [
@@ -43,8 +44,7 @@ $options = array_merge(
 	require ADMINZ_DIR."/shortcodes/inc/flatsome-element-advanced.php",
 );
 $a->options = $options;
-$a->shortcode_callback = function($atts){
-
+$a->shortcode_callback = function($atts, $content){
 	extract(shortcode_atts(array(
 		"post_field" => "post_title",
 		"before" => "",
@@ -62,7 +62,7 @@ $a->shortcode_callback = function($atts){
 	global $post;
 	ob_start();	
 	echo get_post_field( $post_field, $post);
-	return apply_filters('adminz_apply_content_change',ob_get_clean(), $atts);
+	return apply_filters('adminz_apply_content_change',ob_get_clean(), $atts, $content);
 };
 
 $a->general_element();

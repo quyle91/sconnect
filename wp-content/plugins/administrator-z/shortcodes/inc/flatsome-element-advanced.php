@@ -15,12 +15,13 @@ return [
 				'heading' => 'Replace',
 				'default' => '',
 			],
-			'template' => [
-				'type' =>'textarea',
+			'$content' => [
 				'heading' => 'Template',
-				'default' => '',
-				'placeholder' => "",
-				"description" => "Make output like a shortcode? Use { and ' instead of [ and \" "
+				'type' =>'text-editor',
+				'full_width' => false,
+				'height'     => '100px',
+				'tinymce'    => false,
+				"description" => "[ux_image id=\"XXX\"]"
 			],
 			'class' => [
 				'type' =>'textfield',

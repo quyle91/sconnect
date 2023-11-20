@@ -2,6 +2,7 @@
 use Adminz\Helper\ADMINZ_Helper_Flatsome_Shortcodes;
 $a = new \Adminz\Helper\ADMINZ_Helper_Flatsome_Shortcodes;
 $a->shortcode_name = 'adminz_post_meta';
+$a->shortcode_type = 'container';
 $a->shortcode_title = 'Post Meta';
 $a->shortcode_icon = 'text';
 $options = [
@@ -24,7 +25,7 @@ $a->options = $options;
 
 
 
-$a->shortcode_callback = function($atts){
+$a->shortcode_callback = function($atts, $content){
 	extract(shortcode_atts(array(
 		"meta_key" => "_thumbnail_id"
     ), $atts));
@@ -37,7 +38,7 @@ $a->shortcode_callback = function($atts){
 
     ob_start();	
 	echo get_post_meta( get_the_ID(), $meta_key, true);
-	return apply_filters('adminz_apply_content_change',ob_get_clean(), $atts);
+	return apply_filters('adminz_apply_content_change',ob_get_clean(), $atts, $content);
 };
 
 $a->general_element();
