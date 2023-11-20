@@ -78,3 +78,4 @@ new  \Sconnect\DoAn\Controller\Init;
 new  \Sconnect\BoMon\Controller\Init;
 new  \Sconnect\HocBong\Controller\Init;
 new  \Sconnect\GiangVien\Controller\Init;
+new  \Sconnect\KhoaHoc\Controller\Init;

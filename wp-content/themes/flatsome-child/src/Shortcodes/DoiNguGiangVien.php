@@ -21,19 +21,18 @@ class DoiNguGiangVien {
                     foreach ($terms as $key => $term) {
                         ?>
                         [tab title="<?php echo esc_attr($term->name); ?>"]
-
-                        [custom_blog_posts 
-                            style="normal" 
-                            type="row" 
-                            columns="3" 
-                            columns__sm="2" 
-                            columns__md="1" 
-                            post_type="giang_vien" 
-                            __taxonomy_giang_vien="bo-mon" 
-                            __term_bo-mon_giang_vien="<?php echo esc_attr($term->term_id); ?>" 
-                            posts="9" 
-                            image_height="56.25%"
-                        ]
+                            [custom_blog_posts 
+                                style="normal" 
+                                type="row" 
+                                columns="3" 
+                                columns__sm="2" 
+                                columns__md="1" 
+                                post_type="giang_vien" 
+                                __taxonomy_giang_vien="bo-mon" 
+                                __term_bo-mon_giang_vien="<?php echo esc_attr($term->term_id); ?>" 
+                                posts="9" 
+                                image_height="56.25%"
+                            ]
                         [/tab]
                         <?php
                     }

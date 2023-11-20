@@ -13,7 +13,7 @@ class Init {
             // add_filter( 'excerpt_length', '__custom_excerpt_length_25' );
             ?>
             <a href="<?php the_permalink();?> ">
-                <div class="thongtinhocbong_custom">                    
+                <div class="thongtinhocbong_custom dark">                    
                     <div class="col text-center">
                         <div class="title">
                             <?php the_title(); ?>

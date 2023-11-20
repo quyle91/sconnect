@@ -25,6 +25,14 @@
 @media (min-width: 850px){
     .section-BGR-BOTTOM-RIGHT-Z:after{
         width: 528px;
-        height: 160px;
+        height: 158px;
     }
+}
+
+.section-BGR-CUSTOM-ZZ .section-bg{
+    background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr_timhieuthem (1).svg");
+    background-position: top left, 10% 70%, bottom right;
+    background-repeat: no-repeat, no-repeat, no-repeat !important;
+    background-size: auto !important;
+
 }

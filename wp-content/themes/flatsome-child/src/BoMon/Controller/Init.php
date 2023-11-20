@@ -11,7 +11,9 @@ class Init {
 
     function custom_element_chuongtrinhdaotao(){
         add_action('fbc_flatsome_custom_blog_col_inner_after', function($repeater,$the_query){
-            if(!isset($repeater['class']) or $repeater['class'] !== 'chuongtrinhdaotao_class') return;
+            if(!isset($the_query->query['post_type']) or $the_query->query['post_type'] !== 'khoa_hoc') return;
+
+            echo "<pre>"; print_r('Coming soon!'); echo "</pre>";
             $term_id = get_field('sync_chuongtrinh');
             $color = get_field('color','term_'.$term_id);
             if(!$color){
@@ -77,10 +79,10 @@ class Init {
         add_action( 'wp_footer', function(){
             ?>
             <style type="text/css">
-                .chuongtrinhdaotao_class .post-item .col-inner{
+                .blog-posts-custom-element-wrapper.khoa_hoc .post-item .col-inner{
                     position: relative;
                 } 
-                .chuongtrinhdaotao_class .post-item .col-inner .custom_element_chuongtrinhdaotao{
+                .blog-posts-custom-element-wrapper.khoa_hoc .post-item .col-inner .custom_element_chuongtrinhdaotao{
                     position: absolute;
                     top: 0px;
                     left: 0px;
@@ -91,7 +93,7 @@ class Init {
                     display: flex;
                     align-items: center;
                 }
-                .chuongtrinhdaotao_class .post-item .col-inner:hover .custom_element_chuongtrinhdaotao{
+                .blog-posts-custom-element-wrapper.khoa_hoc .post-item .col-inner:hover .custom_element_chuongtrinhdaotao{
                     opacity: 1;
                 }
             </style>
