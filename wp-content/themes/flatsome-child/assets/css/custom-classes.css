@@ -36,3 +36,15 @@
     background-size: auto !important;
 
 }
+
+.bgr-zzzz-9999>.col-inner {
+    background-image: url("../images/bgr-zzzz-9999.svg");
+    background-size: auto;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+@media (min-width: 850px){
+    .bgr-zzzz-9999>.col-inner {
+        background-position: center right;
+    }
+}

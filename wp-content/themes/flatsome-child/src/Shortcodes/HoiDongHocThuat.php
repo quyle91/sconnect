@@ -41,7 +41,7 @@ class HoiDongHocThuat {
                                         echo '[tab title="'.$term->name.'"]';
                                             echo '<div class="row row-full-width row-collapse">';
                                                 while ( $the_query->have_posts() ) : $the_query->the_post();
-                                                    echo '<div class="item col small-12 large-6">';
+                                                    echo '<div class="item col medium-6 small-12 large-6">';
                                                         get_template_part( 'template-parts/single-hoidonghocthuat', 'item' );
                                                     echo '</div>';
                                                 endwhile;

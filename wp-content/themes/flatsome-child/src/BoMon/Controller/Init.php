@@ -14,7 +14,7 @@ class Init {
 
     function sync____bo_mon_do_an(){
         $sync = new \Adminz\Helper\ADMINZ_Helper_Taxonomy_Sync;
-        $sync->taxname = 'bo_mon_do_an';
+        $sync->taxname = 'bo-mon';
         $sync->post_type = 'bo_mon';
         $sync->init();
     }

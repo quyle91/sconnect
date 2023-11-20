@@ -5,12 +5,14 @@ class Init {
     
     function __construct() {
         $this->custom_element_duannoibat();
+        $this->custom_element_doantieubieu();
         
     }
 
     function custom_element_duannoibat(){
         add_action( 'fbc_flatsome_custom_blog_col_inner_after', function($repeater,$the_query){
             if(!isset($the_query->query['post_type']) or $the_query->query['post_type'] !== 'doan') return;
+            if($repeater['style'] !=='none') return;
             ?>
             <a href="<?php the_permalink();?> ">
                 <div class="doanabsolue dark">
@@ -72,6 +74,33 @@ class Init {
             </style>
             <?php
         });
+    }
+
+    
+
+    function custom_element_doantieubieu(){
+        add_action('fbc_flatsome_custom_blog_col_inner_before', function($repeater,$the_query){
+            if(!isset($the_query->query['post_type']) or $the_query->query['post_type'] !== 'doan') return;
+            if($repeater['style'] !=='default') return;
+
+            
+
+            add_action('flatsome_custom_blog_title_before', [$this,'____________'],10,1);
+        },10,2);
+    }
+
+    function ____________($args){
+        $terms = wp_get_post_terms( get_the_ID(), 'bo-mon' );
+        echo '<div class="__bomon_doantieubieu">';
+        if(!empty($terms) and is_array($terms)){
+            foreach ($terms as $key => $value) {
+                if($key){
+                    break;
+                }
+                echo $value->name;
+            }
+        }
+        echo '</div>';
     }
 }
 
