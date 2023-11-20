@@ -46,7 +46,7 @@ class Init {
                     height: 100%;
                     top: 0px;
                     left: 0px;                    
-                    align-items: center;
+                    /* align-items: center; */
                     display: flex;
                     overflow: auto;
                     background: linear-gradient(180deg, rgba(0, 132, 68, 0.47) -16.44%, #008444 89.76%);

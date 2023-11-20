@@ -50,7 +50,7 @@ class Init {
                     overflow: auto;
                     transition: all 0.3s ease-out;
                     background: rgba(0, 132, 68, 0.85);
-                    align-items: center;
+                    /* align-items: center; */
                 }
                 .blog-posts-custom-element-wrapper.giang_vien .col-inner:hover .giangvien_custom{
                     opacity: 1;
