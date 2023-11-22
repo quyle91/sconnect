@@ -6,11 +6,3 @@
 .single-bomon-item a .icon-angle-right{
     margin-left: auto;
 }
-
-/*Dự án nổi bật*/
-@media (max-width: 849px){
-    .doan{
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}

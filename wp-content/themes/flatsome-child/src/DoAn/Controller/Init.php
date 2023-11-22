@@ -6,7 +6,19 @@ class Init {
     function __construct() {
         $this->custom_element_duannoibat();
         $this->custom_element_doantieubieu();
-        
+        $this->create_widget_single_layout();      
+        $this->set_query_args();  
+    }
+
+    function create_widget_single_layout(){
+        register_sidebar( array(
+            'name'          => __( 'Đồ Án detail', 'sconnect' ),
+            'id'            => 'doan-sidebar',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<span class="widget-title doan-sidebar">',
+            'after_title'   => '</span><div class="is-divider small"></div>',
+        ) );
     }
 
     function custom_element_duannoibat(){
@@ -76,6 +88,15 @@ class Init {
         });
     }
 
+    // related bỏ qua đồ án hiện tại
+    function set_query_args(){        
+        add_filter('custom_blog_posts_args',function($args){
+            if(get_post_type() == 'doan'){
+                $args['post__not_in'] = [get_the_ID()];
+            }
+            return $args;
+        },10,1);
+    }
     
 
     function custom_element_doantieubieu(){
@@ -85,11 +106,11 @@ class Init {
 
             
 
-            add_action('flatsome_custom_blog_title_before', [$this,'____________'],10,1);
+            add_action('flatsome_custom_blog_title_before', [$this,'set_flatsome_custom_blog_title_before'],10,1);
         },10,2);
     }
 
-    function ____________($args){
+    function set_flatsome_custom_blog_title_before($args){
         $terms = wp_get_post_terms( get_the_ID(), 'bo-mon' );
         echo '<div class="__bomon_doantieubieu">';
         if(!empty($terms) and is_array($terms)){

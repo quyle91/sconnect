@@ -54,7 +54,8 @@
 		white-space: nowrap;
 	}
 	/*contact group*/
-	.adminz_ctg svg{
+	.adminz_ctg svg,
+	.adminz_ctg img{
 		width: 30px;
 		height: 30px;
 	}
