@@ -12,7 +12,7 @@ class Init {
     function custom_element_chuongtrinhdaotao(){
         add_action('fbc_flatsome_custom_blog_col_inner_after', function($repeater,$the_query){
             if(!isset($the_query->query['post_type']) or $the_query->query['post_type'] !== 'khoa_hoc') return;
-
+            if(!isset($repeater['style']) or $repeater['style'] !== 'default') return;
             $term = $this->sync->get_terms(get_the_ID());
             $color = get_field('color');
             if(!$color){
