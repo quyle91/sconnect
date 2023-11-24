@@ -19,9 +19,11 @@ class Init {
                     <?php echo get_field('vitri') ?>
                 </div>
                 <div class="hocvan">
+                    <span><?php echo __('Học vấn: ','sconnect') ?></span>
                     <?php echo get_field('hocvan') ?>
                 </div>
                 <div class="chucvu">
+                    <span><?php echo __('Chức vụ: ','sconnect') ?></span>
                     <?php echo get_field('chucvu') ?>
                 </div>
             </div>
