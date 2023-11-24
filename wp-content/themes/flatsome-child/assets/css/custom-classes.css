@@ -43,8 +43,3 @@
     background-position: bottom right;
     background-repeat: no-repeat;
 }
-@media (min-width: 850px){
-    .bgr-zzzz-9999>.col-inner {
-        background-position: center right;
-    }
-}

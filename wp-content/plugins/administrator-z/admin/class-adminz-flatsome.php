@@ -421,6 +421,13 @@ class ADMINZ_Flatsome extends Adminz {
 	        					}
 	        				}
 	        			?>
+						<div>
+							<small>
+								To avoid the post's default sidebar,</br>
+								Let's create a <strong>block</strong> and element named: <strong>post field</strong> = post content</br>
+								Then set that block to the post type layout in <strong>Uxbuilder Layout Support</strong></br>
+							</small>
+						</div>
 	        		</td>
 	        	</tr>
 	        	<tr valign="top">

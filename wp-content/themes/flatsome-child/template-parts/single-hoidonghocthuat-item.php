@@ -7,7 +7,7 @@
                 ?>
             </div>
         </div>
-        <div class="col small-12 large-6 right dark">
+        <div class="col small-12 large-6 right dark bgr-zzzz-9999">
             <div class="col-inner">
                 <p class="mb-half h4">
                     <?php the_title() ?>
