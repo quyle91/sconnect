@@ -256,6 +256,9 @@ class ADMINZ_Helper_Taxonomy_Sync {
 
 
     // helper
+    // lấy term tương ứng theo post id
+    // trả về số ít. 
+    // trả về sai nếu ko tìm thấy
     function get_terms($post_id){
         $args = [
             'taxonomy'=> $this->taxname,
@@ -263,7 +266,7 @@ class ADMINZ_Helper_Taxonomy_Sync {
             'posts_per_page'=> 1,
             'meta_query'=> [
                 [
-                    'key'=> $this->taxname,
+                    'key'=> $this->term_meta_key,
                     'value'=> $post_id,
                     'compare' => '='
                 ]
