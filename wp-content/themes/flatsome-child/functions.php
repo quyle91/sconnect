@@ -63,6 +63,7 @@ new \Sconnect\Shortcodes\MapView;
 new \Sconnect\Shortcodes\BlogSmall;
 new \Sconnect\Shortcodes\DoiNguGiangVien;
 new \Sconnect\Shortcodes\GiangVienContent;
+new \Sconnect\Shortcodes\PolylangCustomSwitcher;
 
 // Integration
 new \Sconnect\Integration\Flatsome;

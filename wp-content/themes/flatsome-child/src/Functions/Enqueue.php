@@ -11,6 +11,7 @@ class Enqueue {
             wp_enqueue_style( 'sconnect-woo-main', Sconnect_Url."/assets/css/woocommerce-main.css", [], null, 'all' );
             wp_enqueue_style( 'sconnect-woo-cart-checkout', Sconnect_Url."/assets/css/woocommerce-cart-checkout.css", [], null, 'all' );
             wp_enqueue_style( 'sconnect-single-product', Sconnect_Url."/assets/css/woocommerce-single-product.css", [], null, 'all' );
+            wp_enqueue_style( 'tai-custom-style', Sconnect_Url."/assets/css/tai-custom-style.css", [], null, 'all' );
 
 
             // JS - GLobal Js
