@@ -11,7 +11,7 @@ class DoiNguGiangVien {
             ob_start();
 
             $terms = get_terms([
-                'taxonomy' => 'bo-mon'
+                'taxonomy' => '_bo_mon'
             ]);
 
             if(!empty($terms) and is_array($terms)){
@@ -19,8 +19,9 @@ class DoiNguGiangVien {
                 [tabgroup align="center"]
                     <?php
                     foreach ($terms as $key => $term) {
+                        $name = trim(str_replace(__('Bộ môn','sconnect'), '', $term->name));
                         ?>
-                        [tab title="<?php echo esc_attr($term->name); ?>"]
+                        [tab title="<?php echo esc_attr($name); ?>"]
                             [custom_blog_posts 
                                 style="normal" 
                                 type="row" 
@@ -28,8 +29,8 @@ class DoiNguGiangVien {
                                 columns__sm="1" 
                                 columns__md="2" 
                                 post_type="giang_vien" 
-                                __taxonomy_giang_vien="bo-mon" 
-                                __term_bo-mon_giang_vien="<?php echo esc_attr($term->term_id); ?>" 
+                                __taxonomy_giang_vien="_bo_mon" 
+                                __term__bo_mon_giang_vien="<?php echo esc_attr($term->term_id); ?>" 
                                 posts="9" 
                                 image_height="56.25%"
                             ]

@@ -138,6 +138,12 @@ class HoiDongHocThuat {
                     justify-content: center;
                     align-items: flex-end;
                 }
+                @media (min-width: 1200px){
+                    .hoidonghocthuat .item:nth-child(4n) .single-hoidonghocthuat-item,
+                    .hoidonghocthuat .item:nth-child(4n-1) .single-hoidonghocthuat-item{
+                        flex-direction: row-reverse;
+                    }
+                }
             </style>
             <?php
         } );
