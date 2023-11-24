@@ -88,6 +88,8 @@ $col_class = apply_filters('fbc_flatsome_custom_blog_item_class', $col_class, $t
                             <div class="is-divider"></div>
                         <?php endif; ?>
 
+                        <?php do_action('flatsome_blog_post_after_title', $repeater, $the_query, ['classes_box'=>$classes_box, 'classes'=>$classes_text]); ?>
+
                         <?php if($show_excerpt !== 'false') { ?>
                             <p class="from_the_blog_excerpt <?php if($show_excerpt !== 'visible'){ echo 'show-on-hover hover-'.$show_excerpt; } ?>"><?php
                               $the_excerpt  = get_the_excerpt();

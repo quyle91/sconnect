@@ -5,12 +5,34 @@ class Init {
     
     function __construct() {
         $this->custom_element_thongtinhocbong();
+        $this->custom_element_giangvien();
+    }
+
+    function custom_element_giangvien(){
+        add_action('flatsome_blog_post_after_title', function($repeater, $the_query){
+            if(!isset($the_query->query['post_type']) or $the_query->query['post_type'] !== 'giang_vien') return;
+            if(!isset($repeater['style']) or $repeater['style'] !=='vertical') return;
+
+            ?>
+            <div class="custom_element_giangvien">
+                <div class="vitri">
+                    <?php echo get_field('vitri') ?>
+                </div>
+                <div class="hocvan">
+                    <?php echo get_field('hocvan') ?>
+                </div>
+                <div class="chucvu">
+                    <?php echo get_field('chucvu') ?>
+                </div>
+            </div>
+            <?php
+        },10,2);
     }
 
     function custom_element_thongtinhocbong(){
-        add_action( 'fbc_flatsome_custom_blog_col_inner_after', function($repeater,$the_query){
-            
+        add_action( 'fbc_flatsome_custom_blog_col_inner_after', function($repeater,$the_query){            
             if(!isset($the_query->query['post_type']) or $the_query->query['post_type'] !== 'giang_vien') return;
+            if(!isset($repeater['style']) or $repeater['style'] !=='normal') return;
             // add_filter( 'excerpt_length', '__custom_excerpt_length_25' );
 
             ?>

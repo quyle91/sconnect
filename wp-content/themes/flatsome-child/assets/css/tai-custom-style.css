@@ -1,3 +1,49 @@
+/*
+Sau này khi kết thúc dự án hoặc mỗi lần commit anh sẽ move toàn bộ code css của em về nơi nó nên ở đó.
+Vì vậy anh yêu cầu
+	- Css cho element thì đặt class của element trước và viết dồn lại thành 1 chỗ sao cho dễ copy nhiều dòng 1 lúc
+	- Css cho header và footer cũng thế. (xem code mẫu flatsome-main)
+	- Không bao giờ được viết css cho 1 class riêng lẻ mà ko bao gồm class parent (trừ khi nó dùng toàn cục)
+	- Xem code mẫu flatsome-elements.css và flatsome-main.css
+
+	thực hiện Edit bên dưới, anh sẽ tự move sang sau.
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header-nav-main li a{
 	color: #333;
 	font-size: 15px;
