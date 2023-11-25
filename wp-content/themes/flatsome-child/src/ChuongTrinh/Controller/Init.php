@@ -33,7 +33,7 @@ class Init {
                     <div class="items mb">
                         <?php
                             $args = [
-                                'post_type' => 'bo_mon',
+                                'post_type' => ['bo_mon', 'khoa','lop'],
                                 'post_status' => ['publish'],
                                 'posts_per_page' => -1,
                                 'tax_query' => [
