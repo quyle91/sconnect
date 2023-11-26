@@ -423,7 +423,7 @@ class ADMINZ_Flatsome extends Adminz {
 	        			?>
 						<div>
 							<small>
-								To avoid the post's default sidebar,</br>
+								Looking for: Remove the post's default <strong>sidebar</strong>?</br>
 								Let's create a <strong>block</strong> and element named: <strong>post field</strong> = post content</br>
 								Then set that block to the post type layout in <strong>Uxbuilder Layout Support</strong></br>
 							</small>
@@ -480,7 +480,7 @@ class ADMINZ_Flatsome extends Adminz {
 		        								        		) echo 'selected';
 		        								        	?>
 		        								        	value="<?php echo esc_attr($_value); ?>">
-		        								        	UX Block: <?php echo esc_attr($block_title); ?>
+		        								        	<?php echo esc_attr($block_title); ?>
 		        								        </option>
 		        								        <?php
 		        								    }
@@ -500,7 +500,7 @@ class ADMINZ_Flatsome extends Adminz {
 		        								        		) echo 'selected';
 		        								        	?>
 		        								        	value="<?php echo esc_attr($_value); ?>">
-		        								        	Taxonomy: <?php echo esc_attr($_tax); ?>
+		        								        	<?php echo esc_attr($_tax); ?>
 		        								        </option>
 		        								        <?php
 		        								    }

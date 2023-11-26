@@ -44,13 +44,14 @@ class ADMINZ_Helper_Flatsome_Ux_Builder{
 				'title'  => 'Edit with UX Builder',
 				'href'   => ux_builder_edit_url( $post->ID ),
 			) );
+			
 
+			
 			$wp_admin_bar->add_menu( array(
 				'parent' => 'edit',
 				'id'     => 'edit_uxbuilder_product_layout',
 				'title'  => 'Edit '.$this->post_type.' layout with UX Builder',
-				// 'href'   => ux_builder_edit_url( $post->ID, $this->template_block_id ),
-				'href'   => ux_builder_edit_url( self::get_block_id($this->template_block_id) ),
+				'href'   => ux_builder_edit_url( $post->ID, self::get_block_id($this->template_block_id) ),
 			) );
 		});
 	}
@@ -58,7 +59,6 @@ class ADMINZ_Helper_Flatsome_Ux_Builder{
 	function build_template(){		
 		if(!$this->post_type) return;
 
-		// echo "<pre>";print_r($this->template_block_id);echo "</pre>";
 		add_filter('single_template', function ($template, $type, $templates) {
 		    if (is_single() && get_post_type() == $this->post_type) {
 		    	$template = ADMINZ_DIR."inc/file/flatsome_post_type_template.php";
