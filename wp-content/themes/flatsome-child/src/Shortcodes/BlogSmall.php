@@ -30,7 +30,7 @@ class BlogSmall {
             ];
             $the_query = new \WP_Query( $args );
             if ( $the_query->have_posts() ) :
-                echo '<ul>';
+                echo '<ul class="'.sconnect_get_file_class(__FILE__).'">';
                     while ( $the_query->have_posts() ) : $the_query->the_post();
                         // echo "<pre>"; print_r(get_the_title()); echo "</pre>";
                         ?>

@@ -1,4 +1,4 @@
-<div class="single-bomon-item term_id_<?php echo esc_attr($args['term_id']); ?>">
+<div class="<?php echo sconnect_get_file_class(__FILE__); ?> term_id_<?php echo esc_attr($args['term_id']); ?>">
     <a href="<?php the_permalink(); ?>">
         <?php
             $avatar = get_field('avatar');
@@ -18,7 +18,9 @@
 
         <?php
             $icon = get_field('icon');
-            if(!$icon){ $icon = 7;}
+            if(!$icon){ 
+                $icon = Sconnect_Default_image;
+            }
             ?>
             <span class="icon" style="min-width: 40px; display: inline-block;">
                 <?php

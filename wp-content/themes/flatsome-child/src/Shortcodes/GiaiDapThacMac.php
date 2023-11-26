@@ -12,7 +12,7 @@ class GiaiDapThacMac {
             
             ob_start();
             ?>
-            <div class="giaidapthacmac">
+            <div class="<?php echo sconnect_get_file_class(__FILE__); ?>">
                 <div class="row">
                 <?php
                     $option = get_field('giai_dap_thac_mac_pho_bien','option');
@@ -69,16 +69,6 @@ class GiaiDapThacMac {
             ),
         ];
         $a->general_element();
-
-        add_action('wp_footer', function(){
-            ?>
-            <style type="text/css">
-                .giaidapthacmac{
-
-                }
-            </style>
-            <?php
-        });
 
     }
 }

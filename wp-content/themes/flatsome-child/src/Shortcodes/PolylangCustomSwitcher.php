@@ -49,7 +49,9 @@ class PolylangCustomSwitcher {
                 'hide_current' => 1,         
                 'raw' => 0                    
             );
+            // echo '<div class="'.sconnect_get_file_class(__FILE__).'">';
             pll_the_languages($args);
+            // echo '</div>';
             return ob_get_clean(); 
         };
         $element->general_header_element();

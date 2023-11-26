@@ -12,50 +12,50 @@ class GiangVienContent {
             $content = get_field('content');
             if(!empty($content) and is_array($content)){
                 ?>
-                    [section]
-                    <?php
-                    foreach ($content as $key => $item) {
-                        
-                        ob_start();
-                        ?>
-                        [col span="6" span__sm="12"]
-                            [row_inner h_align="center"]
-                                [col_inner span="7" span__sm="12"]
-                                <p>
-                                    <?php echo do_shortcode( $item['content'] ) ?>
-                                </p>
-                                [/col_inner]
-
-                            [/row_inner]
-                        [/col]
+                    [section class="<?php echo sconnect_get_file_class(__FILE__);?>"]
                         <?php
-                        $image = ob_get_clean();
+                        foreach ($content as $key => $item) {
+                            
+                            ob_start();
+                            ?>
+                            [col span="6" span__sm="12"]
+                                [row_inner h_align="center"]
+                                    [col_inner span="7" span__sm="12"]
+                                    <p>
+                                        <?php echo do_shortcode( $item['content'] ) ?>
+                                    </p>
+                                    [/col_inner]
+
+                                [/row_inner]
+                            [/col]
+                            <?php
+                            $image = ob_get_clean();
 
 
-                        
-                        ob_start();
-                        ?>
-                        [col span="6" span__sm="12" force_first="small"]
-                            [ux_image id="<?php echo do_shortcode($item['image']); ?>"]
-                        [/col]
-                        <?php
-                        
-                        $content = ob_get_clean();
+                            
+                            ob_start();
+                            ?>
+                            [col span="6" span__sm="12" force_first="small"]
+                                [ux_image id="<?php echo do_shortcode($item['image']); ?>"]
+                            [/col]
+                            <?php
+                            
+                            $content = ob_get_clean();
 
-                        // Méo nghĩ ra dc tên biến nào. :v
-                        $____________________ = $image.$content;
-                        if($key%2 == 1){
-                            $____________________ = $content.$image;
+                            // Méo nghĩ ra dc tên biến nào. :v
+                            $____________________ = $image.$content;
+                            if($key%2 == 1){
+                                $____________________ = $content.$image;
+                            }
+
+
+                            ?>
+                            [row width="full-width" v_align="middle"]
+                                <?php echo wp_kses_post($____________________) ?>
+                            [/row]
+                            <?php
                         }
-
-
                         ?>
-                        [row width="full-width" v_align="middle"]
-                            <?php echo wp_kses_post($____________________) ?>
-                        [/row]
-                        <?php
-                    }
-                    ?>
                     [/section]
                 <?php
             }

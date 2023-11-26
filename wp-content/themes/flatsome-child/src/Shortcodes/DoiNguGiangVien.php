@@ -16,7 +16,7 @@ class DoiNguGiangVien {
 
             if(!empty($terms) and is_array($terms)){
                 ?>
-                [tabgroup align="center"]
+                [tabgroup align="center" class="<?php echo sconnect_get_file_class(__FILE__); ?>"]
                     <?php
                     foreach ($terms as $key => $term) {
                         $name = trim(str_replace(__('Bộ môn','sconnect'), '', $term->name));

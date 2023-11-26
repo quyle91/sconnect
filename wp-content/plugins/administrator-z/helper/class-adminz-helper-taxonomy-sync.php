@@ -13,7 +13,7 @@ class ADMINZ_Helper_Taxonomy_Sync {
     public $term_metakey_thumbnail = 'thumbnail_id';
 
     function __construct() {
-
+        
     }
 
     function init(){
@@ -282,6 +282,14 @@ class ADMINZ_Helper_Taxonomy_Sync {
             return $return[0];
         }
         return false;
+    }
+
+    function get_term($post_id){
+        return $this->get_terms($post_id);
+    }
+
+    function get_term_sync($post_id){
+        return $this->get_terms($post_id);
     }
 	
 	
