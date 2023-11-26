@@ -47,7 +47,7 @@
 					if(isset($_POST['ux_builder_action'])){
 						?>
 						<span style="padding: 15px; background: #71cedf; border: 2px dashed #000; display: flex; color: white; justify-content: center; align-items: center;">
-							<?php echo esc_attr($meta_value) ; ?>
+							<?php echo do_shortcode($meta_value) ; ?>
 						</span>
 						<?php
 					}else{
@@ -56,7 +56,7 @@
 						if($content){
 							echo do_shortcode(str_replace("XXX", $meta_value, $content));
 						}else{
-							echo esc_attr($meta_value);
+							echo do_shortcode($meta_value);
 						}
 					}
 					
