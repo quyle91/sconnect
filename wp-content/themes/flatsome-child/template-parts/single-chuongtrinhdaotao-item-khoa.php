@@ -1,17 +1,36 @@
 <?php
-    $__args = $args;
+    $__post_id = get_the_ID(); // Lưu lại id trước khi thực hiện bất kỳ một query nào khác
 ?>
-[col span__sm="12" span="12" color="light"]
+[col span__sm="12" span="12" color="light" class="<?php echo sconnect_get_file_class(__FILE__); ?>"]
     [row_inner class="row-nopaddingbottom"]
         <?php
             // ======================= LEFT ========================
             ob_start();
-            ?>
+            ?>                
                 [col_inner span="5" span__sm="12" force_first="small" class="left"]                        
-                    [title style="center" text="<?php the_title() ?>" class="item_title"]
+                    [title style="center" text="<?php the_title() ?>" class="ztitle"]                    
+                    <style type="text/css">
+                        <?php
+                            $icon = wp_get_attachment_image_src(get_field('icon', $__post_id),'thumbnail');
+                            if(isset($icon[0])){
+                                ?>
+                                    .__post_id_<?php echo esc_attr($__post_id);?> .ztitle .section-title-main::before{
+                                        content: "";
+                                        display: inline-block;
+                                        background-image: url(<?php echo esc_url($icon[0]); ?>);
+                                        background-size: contain;
+                                        background-repeat: no-repeat;
+                                        width: 22px;
+                                        height: 22px;
+                                    }
+                                <?php
+                            }
+                        ?>
+                        
+                    </style>
                     <div class="gallery_wrap relative">
                         <?php
-                            $data_gallery = get_field('data_gallery');
+                            $data_gallery = get_field('data_gallery', $__post_id);
                             if(empty($data_gallery)){
                                 $data_gallery = [Sconnect_Default_image,Sconnect_Default_image,Sconnect_Default_image,Sconnect_Default_image,Sconnect_Default_image,Sconnect_Default_image,Sconnect_Default_image,Sconnect_Default_image,Sconnect_Default_image];
                             }
@@ -61,7 +80,7 @@
                     [row_inner_1 style="large" class="cohoinghenghiep"]
 
                         <?php
-                            $cohoisunghiep = get_field('cohoisunghiep');
+                            $cohoisunghiep = get_field('cohoisunghiep', $__post_id);                            
                             if(empty($cohoisunghiep)){
                                 $cohoisunghiep= [
                                     [
@@ -106,20 +125,20 @@
 
                     [/row_inner_1]
                     
-                    [title text="Chương trình học"]
+                    [title text="<?php echo __('Chương trình học', 'sconnect') ?>"]
                     [divider width="100%" margin="0" height="2px"]
 
                     [row_inner_1 class="chuongtrinhhoc"]
 
-                        [col_inner_1 span__sm="12"]
-
+                        [col_inner_1 span__sm="12"]                            
                             <ul>
                                 <?php
                                     global $Sconnect_Khoa;
                                     $sync = $Sconnect_Khoa->sync;
-                                    $term = $sync->get_term_sync(get_the_ID());
+                                    $term = $sync->get_term_sync($__post_id);                                    
+
                                     if(!is_wp_error( $term )){
-                                        $args = [
+                                        $__args = [
                                             'post_type' => ['bo_mon'],
                                             'post_status' => ['publish'],
                                             'posts_per_page' => -1,
@@ -133,12 +152,12 @@
                                                     'operator' => 'IN'
                                                 ]
                                             ],
-                                        ];
-                                        $the_query = new \WP_Query( $args );
-                                        if ( $the_query->have_posts() ) :
-                                            while ( $the_query->have_posts() ) : $the_query->the_post();
+                                        ];                                        
+                                        $__the_query = new \WP_Query( $__args );
+                                        if ( $__the_query->have_posts() ) :
+                                            while ( $__the_query->have_posts() ) : $__the_query->the_post();
                                                 ?>
-                                                <li>
+                                                <li class="list-style-none">
                                                     <a href="<?php the_permalink(); ?>">
                                                         <?php
                                                             $icon = get_field('icon');
@@ -168,16 +187,15 @@
                         [/col_inner_1]
 
                     [/row_inner_1]
-                    
-                    [button text="Tìm hiểu thêm" expand="true" link="<?php the_permalink(); ?>" class="mb-0"]
+                    [button text="<?php echo __('Tìm hiểu thêm', 'sconnect') ?>" expand="true" link="<?php echo get_the_permalink($__post_id); ?>" class="mb-0"]
 
 
                 [/col_inner]
             <?php
             $right_html = ob_get_clean();
 
-            // truyền the_query từ loop
-            $current_post = $__args['the_query']->current_post;
+            // truyền the_query từ loop            
+            $current_post = $args['the_query']->current_post;
             if($current_post%2 == 0){
                 echo $left_html;
                 echo $right_html;
@@ -187,26 +205,5 @@
             }
         
         ?>
-    [/row_inner] 
+    [/row_inner]
 [/col]
-<style type="text/css">
-    <?php
-        $icon = wp_get_attachment_image_src(get_field('icon'),'thumbnail');
-        if(isset($icon[0])){
-            ?>
-                .__post_id_<?php the_ID();?> .item_title .section-title-main::before{
-                    content: "";
-                    display: inline-block;
-                    background-image: url(<?php echo esc_url($icon[0]); ?>);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    width: 22px;
-                    height: 22px;
-                }
-            <?php
-        }
-    ?>
-    
-</style>
-
-
