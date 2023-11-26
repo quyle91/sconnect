@@ -6,3 +6,35 @@
 .single-bomon-item a .icon-angle-right{
     margin-left: auto;
 }
+
+/*Chương trình đào tạo sinh viên*/
+.ChuongTrinhDaoTaoChiTiet .top .ztitle .section-title-main::before,
+.ChuongTrinhDaoTaoChiTiet .top .ztitle .section-title-main::before,
+.ChuongTrinhDaoTaoChiTiet .top .ztitle .section-title-main::before,
+.ChuongTrinhDaoTaoChiTiet .top .ztitle .section-title-main::before,
+x {
+    content: "";
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-image: url(../images/book-saved.svg);
+}
+.ChuongTrinhDaoTaoChiTiet .top .ztitle.dangkyhoc .section-title-main::before{
+    background-image: url(../images/sms-edit.svg);
+}
+.ChuongTrinhDaoTaoChiTiet .top .ztitle.quatrinhhoc .section-title-main::before{
+    background-image: url(../images/book-saved.svg);
+}
+.ChuongTrinhDaoTaoChiTiet .top .ztitle.hotrosautotnghiep .section-title-main::before{
+    background-image: url(../images/book-saved.svg);
+}
+.ChuongTrinhDaoTaoChiTiet .top .ztitle.thoigiandaotao .section-title-main::before{
+    background-image: url(../images/calendar-tick.svg);
+}
+
+.ChuongTrinhDaoTaoChiTiet .top .zitem:nth-child(2),
+.ChuongTrinhDaoTaoChiTiet .top .zitem:nth-child(3){
+    background-image: url(../images/Vector\ 9.svg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}

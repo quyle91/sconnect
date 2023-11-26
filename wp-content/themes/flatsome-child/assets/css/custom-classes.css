@@ -43,3 +43,10 @@
     background-position: bottom right;
     background-repeat: no-repeat;
 }
+
+.bgr-zzzz-8888>.col-inner {
+    background-image: url("../images/bgr-zzzz-8888.svg");
+    background-size: auto;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
