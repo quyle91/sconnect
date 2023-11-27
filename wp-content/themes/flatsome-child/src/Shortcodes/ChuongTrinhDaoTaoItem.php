@@ -17,45 +17,45 @@ class ChuongTrinhDaoTaoItem {
             ob_start();
             echo '<div class="'.sconnect_get_file_class(__FILE__).'">';
 
-            $args = [
-                'post_type' => ['khoa', 'bo_mon', 'lop'],
-                'post_status' => ['publish'],
-                'posts_per_page' => -1,
-                'tax_query' => [
-                    'relation' => 'AND',
-                    [
-                        'taxonomy' => $sync->taxname,
-                        'field' => 'id',
-                        'terms' => [$term->term_id],
-                        'include_children'=> false,
-                        'operator' => 'IN'
-                    ]
-                ],
-            ];
+                $args = [
+                    'post_type' => ['khoa', 'bo_mon', 'lop'],
+                    'post_status' => ['publish'],
+                    'posts_per_page' => -1,
+                    'tax_query' => [
+                        'relation' => 'AND',
+                        [
+                            'taxonomy' => $sync->taxname,
+                            'field' => 'id',
+                            'terms' => [$term->term_id],
+                            'include_children'=> false,
+                            'operator' => 'IN'
+                        ]
+                    ],
+                ];
 
-            $the_query = new \WP_Query( $args );
-            if ( $the_query->have_posts() ) :
-                ?>
-                    [row 
-                        col_bg="var(--primary-color)" 
-                        padding="20px 20px 20px 20px" 
-                        class="<?php echo sconnect_get_file_class(__FILE__); ?>"
-                    ]
-                    <?php
-                        while ( $the_query->have_posts() ) : $the_query->the_post();                    
-                            echo get_template_part( 
-                                'template-parts/single-chuongtrinhdaotao-item', 
-                                get_post_type(), 
-                                [
-                                    'the_query'=>$the_query
-                                ]
-                            );                    
-                        endwhile;
-                        ?>
-                    [/row]
-                <?php 
-                wp_reset_postdata();
-            endif;
+                $the_query = new \WP_Query( $args );
+                if ( $the_query->have_posts() ) :
+                    ?>
+                        [row 
+                            col_bg="var(--primary-color)" 
+                            padding="20px 20px 20px 20px" 
+                            class="<?php echo sconnect_get_file_class(__FILE__); ?>"
+                        ]
+                        <?php
+                            while ( $the_query->have_posts() ) : $the_query->the_post();                                
+                                echo get_template_part( 
+                                    'template-parts/single-chuongtrinhdaotao-item', 
+                                    get_post_type(), 
+                                    [
+                                        'the_query'=>$the_query
+                                    ]
+                                );                    
+                            endwhile;
+                            ?>
+                        [/row]
+                    <?php 
+                    wp_reset_postdata();
+                endif;
             echo '</div>';
             return do_shortcode(ob_get_clean());
         };

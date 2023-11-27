@@ -73,7 +73,7 @@
 					// Nếu là admin thì call luôn post field 
 					if(isset($_POST['ux_builder_action'])){
 						?>
-						<span style="padding: 15px; background: #71cedf; border: 2px dashed #000; display: flex; color: white; justify-content: center; align-items: center;">
+						<span style="padding: 15px; background: #71cedf; border: 2px dashed #000; display: flex; flex-direction: column; color: white; justify-content: center; align-items: center;">
 							<?php echo do_shortcode($field) ?>
 						</span>
 						<?php
