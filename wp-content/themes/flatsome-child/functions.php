@@ -89,3 +89,4 @@ new \Sconnect\Shortcodes\GiangVienContent;
 new \Sconnect\Shortcodes\PolylangCustomSwitcher;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoItem;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoChiTiet;
+new \Sconnect\Shortcodes\TestHuongNghiep;

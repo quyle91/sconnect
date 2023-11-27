@@ -64,19 +64,19 @@ class ChuongTrinhDaoTaoChiTiet {
                     [/col]
                 [/row]
                 [row col_bg="#008444" h_align="right" class="bot"]
-                    [col span="7" span__sm="12" margin="-80px 0px 0px 0px" class="bgr-zzzz-8888"]
+                    [col span="7" span__sm="12" margin="0px 0px -80px 0px" class="bgr-zzzz-8888"]
 
                         [row_inner v_align="bottom" padding="30px 0px 10px 20px" padding__md="30px 0px 10px 10px" class="row-nopaddingbottom"]
 
                             [col_inner span="5" span__sm="12" span__md="7" margin="0px 0px 0px 0px" margin__sm="0px 0px -35px 0px" margin__md="0px 0px 0px 0px" color="light"]
 
-                                [title text="KIỂM TRA HƯỚNG NGHIỆP" class="mb-0"]
+                                [title text="<?php echo __("Kiểm tra hướng nghiệp",'sconnect'); ?>" class="mb-0"]
 
 
                             [/col_inner]
                             [col_inner span="7" span__sm="12" span__md="5" class="pt-0"]
 
-                                [button text="Làm bài test" color="success" link="https://sconnect.htecom.com/bai-test-huong-nghiep/"]
+                                [button text="<?php echo __("Làm bài test",'sconnect'); ?>" color="success" link="https://sconnect.htecom.com/bai-test-huong-nghiep/"]
 
 
                             [/col_inner]
