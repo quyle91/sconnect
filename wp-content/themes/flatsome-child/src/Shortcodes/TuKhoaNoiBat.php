@@ -1,20 +1,20 @@
 <?php
 // class test. Tạo 1 file Test.php trong folder src/Controller
 namespace Sconnect\Shortcodes;
-class TrendingTopic {
+class TuKhoaNoiBat {
     
     function __construct() {
         $a = new \Adminz\Helper\ADMINZ_Helper_Flatsome_Shortcodes;
-        $a->shortcode_name = 'sconnect-trending-topic';
-        $a->shortcode_title = 'Sconnect Trending Topic';
+        $a->shortcode_name = 'sconnect-tukhoa-noibat';
+        $a->shortcode_title = 'Sconnect Từ khoá nổi bật';
         $a->shortcode_callback = function() use($a){
             ob_start();
             ?>
-            <div class="trendingtopic">
+            <div class="tukhoanoibat">
                 <div class="row align-middle">
                     <div class="col small-12 large-3">
                         <h3 class="mb-0 uppercase">
-                            <?php echo __("TRENDING TOPICS",'sconnect') ?>
+                            <?php echo __("Từ khoá nổi bật",'sconnect') ?>
                         </h3>
                     </div>
                     <div class="col small-12 large-9">
@@ -72,14 +72,14 @@ class TrendingTopic {
         add_action('wp_footer', function(){
             ?>
             <style type="text/css">
-                .trendingtopic{
+                .tukhoanoibat{
                     
                 }
-                .trendingtopic .tagcloud{
+                .tukhoanoibat .tagcloud{
                     padding: 0 5px;
                 }
                 @media (min-width: 850px){
-                    .trendingtopic .tagcloud{
+                    .tukhoanoibat .tagcloud{
                         padding: 0 40px;
                     }
                 }

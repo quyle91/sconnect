@@ -80,6 +80,7 @@ $Sconnect_ChuongTrinh = new  \Sconnect\ChuongTrinh\Controller\Init;
 
 // Shortcodes
 new \Sconnect\Shortcodes\TrendingTopic;
+new \Sconnect\Shortcodes\TuKhoaNoiBat; // custom yes or no?
 new \Sconnect\Shortcodes\HoiDongHocThuat;
 new \Sconnect\Shortcodes\GiaiDapThacMac;
 new \Sconnect\Shortcodes\MapView;
@@ -90,3 +91,4 @@ new \Sconnect\Shortcodes\PolylangCustomSwitcher;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoItem;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoChiTiet;
 new \Sconnect\Shortcodes\TestHuongNghiep;
+new \Sconnect\Shortcodes\ChuongTrinhDaoTaoKhoa;

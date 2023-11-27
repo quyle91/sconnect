@@ -15,7 +15,8 @@ class MapView {
             ?>
             <div class="mapview">
                 <div class="kh_map_container">
-                    <?php echo do_shortcode('[Sconnect-MapView]') ?>
+                    <?php echo do_shortcode('[ux_image id="1408"]') ?>
+                    <?php //echo do_shortcode('[Sconnect-MapView]') ?>
                     <div class="kh_list_building">
                         <?php  
                         if (have_rows('buildings', 'building')) {
