@@ -423,8 +423,8 @@ class ADMINZ_Flatsome extends Adminz {
 	        			?>
 						<div>
 							<small>
-								Looking for: Remove the post's default <strong>sidebar</strong>?</br>
-								Let's create a <strong>block</strong> and element named: <strong>post field</strong> = post content</br>
+								Looking for: Remove the post's default <strong>sidebar</strong>? | 
+								Let's create a <strong>block</strong> valued: <strong>[adminz_post_field post_field="post_content"][/adminz_post_field]</strong> | 
 								Then set that block to the post type layout in <strong>Uxbuilder Layout Support</strong></br>
 							</small>
 						</div>
@@ -500,7 +500,7 @@ class ADMINZ_Flatsome extends Adminz {
 		        								        		) echo 'selected';
 		        								        	?>
 		        								        	value="<?php echo esc_attr($_value); ?>">
-		        								        	<?php echo esc_attr($_tax); ?>
+		        								        	Terms of: <?php echo esc_attr($_tax); ?>
 		        								        </option>
 		        								        <?php
 		        								    }
