@@ -112,7 +112,7 @@ class TestHuongNghiep {
 
 										[col_inner_1 span="6" span__sm="12" class="pb-0"]
 
-											[featured_box img="1338" inline_svg="0" img_width="24" pos="left"]
+											[featured_box img="1339" inline_svg="0" img_width="24" pos="left"]
 
 												<h4 class="mb-0">'.__('Giống tôi nhất', 'sconnect').'</h4>
 
