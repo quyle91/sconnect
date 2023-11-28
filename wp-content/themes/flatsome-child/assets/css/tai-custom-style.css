@@ -10,6 +10,36 @@ Vì vậy anh yêu cầu
 
 */
 
+/* Heading style  */
+/* Global */
+.pre-title{
+	color: #333;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+	border-bottom: none!important;
+}
+.pre-title-2{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+ul li.bullet-arrow:before {
+    content: ""!important;
+    font-weight: bolder;
+    color: var(--primary-color)!important;
+    font-size: 24px!important;
+}
+.section-title-container h2 {
+	color: #008444;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 800;
+	letter-spacing: 0.72px;
+	margin-bottom: 0px!important;
+}
 
 
 
@@ -43,7 +73,7 @@ Vì vậy anh yêu cầu
 
 
 
-
+/* Header Style */
 .header-nav-main li a{
 	color: #333;
 	font-size: 15px;
@@ -80,6 +110,32 @@ Vì vậy anh yêu cầu
 	width : 145px;
 	
 }
+#header .nav-top-not-logged-in{
+	width: 100%;
+  	text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 850px){
+	.account-login {
+	display : flex!important;
+	align-items: center!important;
+	padding : 0px;
+	border-radius : 0!important;
+	justify-content : left;
+}
+	.account-login .header-account-title {
+	color: #333333;
+}
+}
+
 /*  Mega Menu*/
 .title-mega-menu{
 	margin-right: -55px;
@@ -131,4 +187,5 @@ Vì vậy anh yêu cầu
 .absolute-footer ul {
     border-bottom: none!important;
 }
+
 
