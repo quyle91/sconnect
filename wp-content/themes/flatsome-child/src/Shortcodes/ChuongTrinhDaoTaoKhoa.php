@@ -11,7 +11,7 @@ class ChuongTrinhDaoTaoKhoa {
             ob_start();
             ?>
                 [section 
-                    class="<?php echo sconnect_get_file_class(__FILE__); ?>" 
+                    class="<?php echo sconnect_get_file_class(__FILE__); ?> section-BGR-CUSTOM-XX " 
                     bg_color="var(--primary-color)" 
                     dark="true"]
 
