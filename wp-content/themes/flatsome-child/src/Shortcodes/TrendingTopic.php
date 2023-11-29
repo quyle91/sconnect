@@ -11,10 +11,11 @@ class TrendingTopic {
             ob_start();
             ?>
             <div class="trendingtopic">
-                <div class="row">
+                <div class="row align-middle">
                     <div class="col small-12 large-3">
-                        [title text="<?php echo __("TRENDING TOPICS",'sconnect') ?>"]
-                        
+                        <h3 class="mb-0 uppercase">
+                            <?php echo __("TRENDING TOPICS",'sconnect') ?>
+                        </h3>
                     </div>
                     <div class="col small-12 large-9">
                         <div class="tagcloud">
@@ -28,7 +29,16 @@ class TrendingTopic {
                                     ]
                                 );
                                 if(!empty($terms) and is_array($terms)){
-                                    echo '[adminz_slider_custom slide_item_padding="5px"  bullets="false" freescroll="true" nav_pos="outside" hide_nav="true"  nav_color="dark" nav_style="simple"]';
+                                    echo '
+                                    [adminz_slider_custom 
+                                        slide_item_padding="5px"  
+                                        bullets="false" 
+                                        freescroll="true" 
+                                        nav_pos="outside" 
+                                        hide_nav="true"  
+                                        nav_color="dark" 
+                                        nav_style="simple"
+                                    ]';
                                     foreach ($terms as $key => $term) {
                                         ?>
                                             [adminz_slider_custom_item_wrap]

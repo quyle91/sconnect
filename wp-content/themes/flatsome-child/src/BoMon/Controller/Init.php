@@ -5,7 +5,7 @@ class Init {
     
     function __construct() {
         
-        $this->sync____bo_mon_do_an();
+        $this->sync = $this->sync____bo_mon_do_an();
         
     }
 
@@ -17,6 +17,7 @@ class Init {
         $sync->taxname = '_bo_mon';
         $sync->post_type = 'bo_mon';
         $sync->init();
+        return $sync;
     }
 }
 

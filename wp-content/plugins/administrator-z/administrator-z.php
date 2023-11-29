@@ -2,7 +2,7 @@
 /*
 Plugin Name: Administrator Z
 Description: <a href="https://webkhoinghiep.net">Webkhoinghiep.net</a> Theme WP chuẩn Seo - Dễ dàng cài đặt - GIao diện kéo thả - Dễ tùy biến và chỉnh sửa. Hỗ trợ cài đặt - 5p có ngay website - Có video Hướng dẫn sử dụng - Dễ dàng thao tác.
-Version: 2023.11.09
+Version: 2023.11.28
 Author: Quyle91
 Author URI: https://quyle91.github.io/
 License: GPLv2 or later
