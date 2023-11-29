@@ -294,3 +294,140 @@ Vì vậy anh yêu cầu
 }
 
 
+
+
+
+/*CSS FROM CUSTOMIZE ======================================================================================== */
+.header-nav-main li a {
+	color: #333;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 15px;
+}
+
+.lang-item a img {
+	width: 23px !important;
+	height: 15px !important;
+	border-radius: 2px;
+}
+
+.icon-search:before {
+	content: "";
+	color: #333333
+}
+
+.account-login {
+	display: flex !important;
+	align-items: center !important;
+	color: #fff;
+	padding: 0 10px;
+	border-radius: 5px !important;
+	justify-content: center;
+}
+
+.account-login span,
+.account-login i {
+	color: #fff !important;
+	padding: 0 5px;
+	font-size: 14px !important;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 23.4px;
+}
+
+.account-item .header-button {
+	width: 145px;
+}
+
+/* 28/11 */
+#header .nav-top-not-logged-in {
+	width: 100%;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 23.4px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+@media and (max-width 850px) {
+	.account-login {
+		display: flex !important;
+		align-items: center !important;
+		padding: 0px;
+		border-radius: 0 !important;
+		justify-content: left;
+	}
+
+	.account-login .header-account-title {
+		color: #333333;
+	}
+}
+
+/*  Mega Menu*/
+.title-mega-menu {
+	margin-right: -55px;
+	position: relative;
+}
+
+.title-mega-menu:before {
+	position: absolute;
+	width: 34px;
+	height: 2px;
+	background-color: #008444;
+	left: -50px;
+	top: 14px;
+	z-index: 9;
+	content: "";
+}
+
+/* Footer */
+.text-des-footer,
+.copyright-footer {
+	color: #FFF;
+	leading-trim: both;
+	text-edge: cap;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.list-footer-1 .ux-menu-link .ux-menu-link__link {
+	color: #FFF;
+	leading-trim: both;
+	text-edge: cap;
+	font-family: SVN-Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.list-footer-1 .ux-menu-link__link {
+	border-bottom-style: none !important;
+}
+
+.list-footer-1 .ux-menu-link .ux-menu-link__link i:before {
+	color: #0FB239;
+}
+
+.clearfix li a {
+	color: #fff !important;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 26.88px;
+	text-transform: none;
+}
+
+.absolute-footer ul {
+	border-bottom: none !important;
+}
+
+/* ================================ END CSS FROM CUSTOMMIZE*/

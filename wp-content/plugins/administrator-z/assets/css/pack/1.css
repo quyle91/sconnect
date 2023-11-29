@@ -632,8 +632,8 @@ body.pack1 .tabbed-content>ul{
 	display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
-    overflow-y: hidden;
-    overflow-x: auto;
+    /* overflow-y: hidden; */
+    /* overflow-x: auto; */
 }
 
 body.pack1 .tabbed-content .nav-tabs+.tab-panels {
