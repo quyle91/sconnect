@@ -19,6 +19,7 @@ class Enqueue {
             
             if(!$is_quy){
                 wp_enqueue_style( 'tai-custom-style', Sconnect_Url."/assets/css/tai-custom-style.css", [], null, 'all' );
+                wp_enqueue_style( 'tai-base-css', Sconnect_Url."/assets/css/tai-base-css.css", [], null, 'all' );
             }
 
             // JS - GLobal Js
