@@ -1,12 +1,17 @@
+#wordpress 
 /wp-admin/
 /wp-content/uploads/
 /wp-content/languages/
 /wp-includes/
-
-
+/wp-content/cache
 wp-config.php
 *.log
 /.htaccess
-
 *.sql
 *.zip
+
+
+
+# dependencies
+/node_modules
+/build
