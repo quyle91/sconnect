@@ -96,3 +96,4 @@ new \Sconnect\Shortcodes\ChuongTrinhDaoTaoKhoa;
 new \Sconnect\Shortcodes\GiangVien;
 new \Sconnect\Shortcodes\QuyenLoiHocVien;
 new \Sconnect\Shortcodes\TongQuanKhoaHoc;
+new \Sconnect\Shortcodes\HoTroSauKhoaHoc;

@@ -9,11 +9,38 @@ class TongQuanKhoaHoc {
         $a->shortcode_title = 'Sconnect Tổng Quan Khoá Học';
         $a->shortcode_callback = function() use($a){
             ob_start();
-            echo "<pre class=sconnectpre>"; 
-            echo '<h4>Element name: '.$a->shortcode_name ."</h4>"; 
-            print_r(__FILE__); 
-            echo "</pre>";
-            return ob_get_clean();
+            $tongquankhoahoc = get_field('tongquankhoahoc');
+            if(empty($tongquankhoahoc)){
+                $tongquankhoahoc = [
+                    [
+                        'ztitle' => 'khoá basic',
+                        'block' => 1682
+                    ],
+                    [
+                        'ztitle' => 'khoá master',
+                        'block' => 1684
+                    ],
+                ];
+            }
+            ?>
+                [section class="<?php echo sconnect_get_file_class(__FILE__); ?>]
+                    [title style="center" text="<?php echo __('Tổng quan khoá học', 'sconnect'); ?>" tag_name="h2"]
+                    [tabgroup nav_size="large" align="center"]
+                        <?php
+                            if(!empty($tongquankhoahoc) and is_array($tongquankhoahoc)){
+                                foreach ($tongquankhoahoc as $key => $khoahoc) {
+                                    ?>
+                                        [tab title="<?php echo esc_attr($khoahoc['ztitle']);?>"] 
+                                            [block id="<?php echo esc_attr($khoahoc['block']);?>"]
+                                        [/tab]
+                                    <?php
+                                }
+                            }
+                        ?>
+                    [/tabgroup]
+                [/section]
+            <?php
+            return do_shortcode(ob_get_clean());
         };
         $a->options = [
             'text' => array(
