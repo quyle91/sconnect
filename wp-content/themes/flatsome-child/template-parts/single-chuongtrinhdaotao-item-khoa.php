@@ -74,6 +74,8 @@
                 [col_inner span="7" span__sm="12" class="right"]
                     [gap visibility="show-for-small"]
 
+
+                    <!-- block 1 -->
                     [title text="<?php echo __('Cơ hội Sự nghiệp', 'sconnect') ?>"]
                     [divider width="100%" margin="0" height="2px"]
 
@@ -125,6 +127,8 @@
 
                     [/row_inner_1]
                     
+
+                    <!-- block 2 -->
                     [title text="<?php echo __('Chương trình học', 'sconnect') ?>"]
                     [divider width="100%" margin="0" height="2px"]
 
@@ -187,6 +191,9 @@
                         [/col_inner_1]
 
                     [/row_inner_1]
+
+
+                    <!-- block 3 -->
                     [button text="<?php echo __('Tìm hiểu thêm', 'sconnect') ?>" expand="true" link="<?php echo get_the_permalink($__post_id); ?>" class="mb-0"]
 
 

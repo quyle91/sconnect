@@ -7,8 +7,14 @@
     flex-direction: column;
 }
 
-
-
+.section-BGR-BOTTOM-RIGHT-A>.col-inner,
+.section-BGR-BOTTOM-RIGHT-A .section-bg {
+    background-image:
+        linear-gradient(180deg, #008444 0%, #09293F 100%);
+    background-size: auto !important;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
 
 
 
@@ -18,7 +24,9 @@
 }
 
 .section-BGR-BOTTOM-RIGHT-X .section-bg {
-    background-image: url("../images/Mask group.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+    background-image: 
+        url("../images/Mask group.svg"), 
+        linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
     background-size: auto, auto !important;
     background-position: top right, top right;
     background-repeat: no-repeat no-repeat;
@@ -26,7 +34,8 @@
 
 .section-BGR-BOTTOM-RIGHT-X:after {
     content: "";
-    background-image: url("../images/day_la_section_co_image_bottom_left.svg");
+    background-image: 
+        url("../images/day_la_section_co_image_bottom_left.svg");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -54,7 +63,9 @@
 }
 
 .section-BGR-BOTTOM-RIGHT-Y .section-bg {
-    background-image: url("../images/Mask group.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+    background-image: 
+        url("../images/Mask group.svg"), 
+        linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
     background-size: auto, auto !important;
     background-position: top right, top right;
     background-repeat: no-repeat no-repeat;
@@ -116,7 +127,10 @@
 
 
 .section-BGR-CUSTOM-ZZ .section-bg{
-    background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr_timhieuthem (1).svg");
+    background-image: 
+        url("../images/bgr_timhieuthem (3).svg"), 
+        url("../images/bgr_timhieuthem (2).svg"), 
+        url("../images/bgr_timhieuthem (1).svg");
     background-position: top left, 10% 70%, bottom right;
     background-repeat: no-repeat, no-repeat, no-repeat !important;
     background-size: auto !important;
