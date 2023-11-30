@@ -3,39 +3,25 @@ return [
 	'advanced_settings'=> array(
 	    'type'=> 'group',
 	    'heading'=> 'Advanced Settings',
-	    'description' => 'Can be use as shortcode or function name',
+	    'description' => '',
 	    'options'=> array(	    	
-	    	'search' => [
-				'type' =>'textfield',
-				'heading' => 'Search',
-				'default' => '',
-			],
-			'replace' => [
-				'type' =>'textfield',
-				'heading' => 'Replace',
-				'default' => '',
-			],
-
-
-	        'before' => [
-				'type' =>'textarea',
-				'heading' => 'Before',
-				'default' => '',
-				'placeholder' => "{shortcode attr='",
-				"description" => "Make output like a shortcode? Use { and ' instead of [ and \" "
-			],
-			'after' => [
-				'type' =>'textfield',
-				'heading' => 'After',
-				'default' => '',
-				'placeholder' => "'}",
-				"description" => "Don't forget close tag."
-			],
-			'class' => [
-				'type' =>'textfield',
-				'heading' => 'Class',
-				'default' => '',
-				'placeholder' => "",				
+	    	// 'search' => [
+			// 	'type' =>'textfield',
+			// 	'heading' => 'Search',
+			// 	'default' => '',
+			// ],
+			// 'replace' => [
+			// 	'type' =>'textfield',
+			// 	'heading' => 'Replace',
+			// 	'default' => '',
+			// ],
+			'$content' => [
+				'heading' => 'Template',
+				'type' =>'text-editor',
+				'full_width' => false,
+				'height'     => '100px',
+				'tinymce'    => false,
+				"description" => "[ux_image id=\"XXX\"]"
 			],
 			'css' => [
 				'type' =>'textarea',
@@ -43,6 +29,28 @@ return [
 				'default' => '',
 				'placeholder' => "",				
 			],
+			'class' => [
+				'type' =>'textfield',
+				'heading' => 'Class',
+				'default' => '',
+				'placeholder' => "",				
+			],
+			'visibility'  => array(
+				'type' => 'select',
+				'heading' => 'Visibility',
+				'default' => '',
+				'options' => array(
+					''   => 'Visible',
+					'hidden'  => 'Hidden',
+					'hide-for-medium'  => 'Only for Desktop',
+					'show-for-small'   =>  'Only for Mobile',
+					'show-for-medium hide-for-small' =>  'Only for Tablet',
+					'show-for-medium'   =>  'Hide for Desktop',
+					'hide-for-small'   =>  'Hide for Mobile',
+				),
+			),
+			
+			
 	    )
 	)
 ];

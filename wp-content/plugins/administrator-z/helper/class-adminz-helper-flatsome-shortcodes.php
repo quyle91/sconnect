@@ -7,8 +7,11 @@ class ADMINZ_Helper_Flatsome_Shortcodes{
 	public $shortcode_title;
 	public $shortcode_type;
 	public $shortcode_allow;
+	public $shortcode_compile = false;
+	public $shortcode_overlay = true;
 	public $shortcode_icon = 'icon_box';
 	public $shortcode_callback;
+	public $shortcode_template = '';
 	public $options = [];
 
 	function __construct() {
@@ -34,9 +37,13 @@ class ADMINZ_Helper_Flatsome_Shortcodes{
 		    add_ux_builder_shortcode($this->shortcode_name, array(
 		        'name'      => $this->shortcode_title,
 		        'type'		=> $this->shortcode_type,
+				'compile'   => $this->shortcode_compile,
+				'overlay'   => $this->shortcode_overlay,
+				'info'      => '{{ label }}',
 		        'allow' 	=> $this->shortcode_allow,
 		        'category'  => Adminz::get_adminz_menu_title(),
 		        'thumbnail' =>  get_template_directory_uri() . '/inc/builder/shortcodes/thumbnails/' . $this->shortcode_icon . '.svg',
+				'template'  => $this->shortcode_template,
 		        'options' => $this->options,
 		    ));
 		});		

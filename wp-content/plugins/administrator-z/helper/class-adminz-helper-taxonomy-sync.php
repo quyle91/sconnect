@@ -13,7 +13,7 @@ class ADMINZ_Helper_Taxonomy_Sync {
     public $term_metakey_thumbnail = 'thumbnail_id';
 
     function __construct() {
-
+        
     }
 
     function init(){
@@ -55,6 +55,7 @@ class ADMINZ_Helper_Taxonomy_Sync {
         $post = get_post($post_id);
         // search by old slug
         $term = $this->get_terms($post_id);
+
         if($post->post_status == 'publish'){
             if($term){
                 $termid = $term->term_id;
@@ -75,7 +76,7 @@ class ADMINZ_Helper_Taxonomy_Sync {
                     'post_name' => sanitize_title($post->post_title)
                 ));
                 add_action( 'save_post_'.$this->post_type, [$this,'update_term_by_post_type'], 10, 1 );
-            }else{
+            }else{                
                 // create
                 $term_return = wp_insert_term(
                     $post->post_title,   // the term 
@@ -84,9 +85,11 @@ class ADMINZ_Helper_Taxonomy_Sync {
                         'description' => $post->post_excerpt,
                         'slug'        => sanitize_title($post->post_name),
                     )
-                );
-                if(is_wp_error($term_return)){
-                    $termid = $term_return->error_data['term_exists'];
+                );                
+                if(is_wp_error($term_return)){                    
+                    if(isset($term_return->error_data['term_exists'])){
+                        $termid = $term_return->error_data['term_exists'];
+                    }                    
                 }else{
                     $termid = $term_return['term_taxonomy_id'];
                     update_term_meta($termid, $this->term_meta_key, $post_id);
@@ -115,9 +118,10 @@ class ADMINZ_Helper_Taxonomy_Sync {
         $post = get_post($postid);
         if($post->post_type !== $this->post_type) return;
 
-        $term = $this->get_terms($post_id);
-        $term_id = $termid = $term->term_id;
-        wp_delete_term( $termid, $this->taxname );
+        if($term = $this->get_terms($post_id)){
+            $term_id = $termid = $term->term_id;
+            wp_delete_term( $termid, $this->taxname );
+        }        
     }
 
     function update_post_type_by_term($termid, $taxonomy){
@@ -252,6 +256,9 @@ class ADMINZ_Helper_Taxonomy_Sync {
 
 
     // helper
+    // lấy term tương ứng theo post id
+    // trả về số ít. 
+    // trả về sai nếu ko tìm thấy
     function get_terms($post_id){
         $args = [
             'taxonomy'=> $this->taxname,
@@ -259,15 +266,30 @@ class ADMINZ_Helper_Taxonomy_Sync {
             'posts_per_page'=> 1,
             'meta_query'=> [
                 [
-                    'key'=> $this->taxname,
+                    'key'=> $this->term_meta_key,
                     'value'=> $post_id,
                     'compare' => '='
                 ]
             ]
         ];
         $return = get_terms($args);
-        if(isset($return[0])) return $return[0];
+
+        if(is_wp_error( $return)){
+            return false;
+        }
+
+        if(isset($return[0])) {
+            return $return[0];
+        }
         return false;
+    }
+
+    function get_term($post_id){
+        return $this->get_terms($post_id);
+    }
+
+    function get_term_sync($post_id){
+        return $this->get_terms($post_id);
     }
 	
 	

@@ -100,7 +100,7 @@ class ADMINZ_Helper_Flatsome_Header_Element{
     $element->callback = function (){
         ob_start();
         echo '<pre>'; print_r(88); echo '</pre>';
-        return ob_get_clean();
+        return ob_get_clean(); 
     };
     $element->general_header_element();
 

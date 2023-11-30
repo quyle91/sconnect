@@ -32,6 +32,10 @@ if(!defined( 'ADMINZ' )){
     return;
 }
 
+if(!function_exists('get_field')){
+    return;
+}
+
 
 add_action( 'after_setup_theme', function () {
     load_child_theme_textdomain( 'sconnect', get_stylesheet_directory() . '/languages' );
@@ -44,19 +48,17 @@ add_action( 'after_setup_theme', function () {
 
 define('Sconnect_Url', get_stylesheet_directory_uri());
 define('Sconnect_Dir', get_stylesheet_directory());
+define('Sconnect_Default_image', 440);
 
+require __DIR__ ."/helpers.php";
+require __DIR__ ."/hooks.php";
 require __DIR__ ."/vendor/autoload.php";
 
 
 // Functions
 new \Sconnect\Functions\Enqueue;
 new \Sconnect\Functions\AutoViewMore;
-
-// Shortcodes
-new \Sconnect\Shortcodes\TrendingTopic;
-new \Sconnect\Shortcodes\HoiDongHocThuat;
-new \Sconnect\Shortcodes\GiaiDapThacMac;
-new \Sconnect\Shortcodes\MapView;
+new \Sconnect\Functions\BannerFlyout;
 
 // Integration
 new \Sconnect\Integration\Flatsome;
@@ -68,5 +70,29 @@ new \Sconnect\Integration\ImageMapPro;
 new \Sconnect\Woocommerce\AccountPage;
 
 // Post type
-new  \Sconnect\DoAn\Controller\Init;
-new  \Sconnect\BoMon\Controller\Init;
+$Sconnect_Lop = new  \Sconnect\Lop\Controller\Init;
+$Sconnect_Khoa = new  \Sconnect\Khoa\Controller\Init;
+$Sconnect_DoAn = new  \Sconnect\DoAn\Controller\Init;
+$Sconnect_BoMon = new  \Sconnect\BoMon\Controller\Init;
+$Sconnect_HocBong = new  \Sconnect\HocBong\Controller\Init;
+$Sconnect_GiangVien = new  \Sconnect\GiangVien\Controller\Init;
+$Sconnect_ChuongTrinh = new  \Sconnect\ChuongTrinh\Controller\Init;
+
+
+// Shortcodes
+new \Sconnect\Shortcodes\TrendingTopic;
+new \Sconnect\Shortcodes\TuKhoaNoiBat; // custom yes or no?
+new \Sconnect\Shortcodes\HoiDongHocThuat;
+new \Sconnect\Shortcodes\GiaiDapThacMac;
+new \Sconnect\Shortcodes\MapView;
+new \Sconnect\Shortcodes\BlogSmall;
+new \Sconnect\Shortcodes\DoiNguGiangVien;
+new \Sconnect\Shortcodes\GiangVienContent;
+new \Sconnect\Shortcodes\PolylangCustomSwitcher;
+new \Sconnect\Shortcodes\ChuongTrinhDaoTaoItem;
+new \Sconnect\Shortcodes\ChuongTrinhDaoTaoChiTiet;
+new \Sconnect\Shortcodes\TestHuongNghiep;
+new \Sconnect\Shortcodes\ChuongTrinhDaoTaoKhoa;
+new \Sconnect\Shortcodes\GiangVien;
+new \Sconnect\Shortcodes\QuyenLoiHocVien;
+new \Sconnect\Shortcodes\TongQuanKhoaHoc;

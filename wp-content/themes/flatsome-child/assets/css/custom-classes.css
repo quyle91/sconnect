@@ -6,3 +6,147 @@
     justify-content: center;
     flex-direction: column;
 }
+
+
+
+
+
+
+
+.section-BGR-BOTTOM-RIGHT-X {
+    position: relative;
+}
+
+.section-BGR-BOTTOM-RIGHT-X .section-bg {
+    background-image: url("../images/Mask group.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+    background-size: auto, auto !important;
+    background-position: top right, top right;
+    background-repeat: no-repeat no-repeat;
+}
+
+.section-BGR-BOTTOM-RIGHT-X:after {
+    content: "";
+    background-image: url("../images/day_la_section_co_image_bottom_left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+    content: "";
+    width: 230px;
+    height: 71px;
+}
+
+@media (min-width: 850px) {
+    .section-BGR-BOTTOM-RIGHT-X:after {
+        width: 700px;
+        height: 200px;
+    }
+}
+
+
+
+
+
+.section-BGR-BOTTOM-RIGHT-Y {
+    position: relative;
+}
+
+.section-BGR-BOTTOM-RIGHT-Y .section-bg {
+    background-image: url("../images/Mask group.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+    background-size: auto, auto !important;
+    background-position: top right, top right;
+    background-repeat: no-repeat no-repeat;
+}
+
+.section-BGR-BOTTOM-RIGHT-Y:after {
+    content: "";
+    background-image: url("../images/day_la_section_co_image_bottom_left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+    content: "";
+    width: 230px;
+    height: 71px;
+}
+
+@media (min-width: 850px) {
+    .section-BGR-BOTTOM-RIGHT-Y:after {
+        width: 700px;
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+.section-BGR-BOTTOM-RIGHT-Z {
+    position: relative;
+}
+
+.section-BGR-BOTTOM-RIGHT-Z:after{
+    content: "";
+    background-image: url("../images/day_la_section_co_image_bottom_left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    content: "";    
+    width: 230px;
+    height: 71px;
+}
+@media (min-width: 850px){
+    .section-BGR-BOTTOM-RIGHT-Z:after{
+        width: 528px;
+        height: 158px;
+    }
+}
+
+
+
+
+.section-BGR-CUSTOM-ZZ .section-bg{
+    background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr_timhieuthem (1).svg");
+    background-position: top left, 10% 70%, bottom right;
+    background-repeat: no-repeat, no-repeat, no-repeat !important;
+    background-size: auto !important;
+
+}
+
+.section-BGR-CUSTOM-XX .section-bg {
+    background-image:         
+        url("../images/bgr_timhieuthem (3).svg"),
+        url("../images/bgr_timhieuthem (2).svg"),
+        url("../images/bgr_timhieuthem (1).svg"),
+        linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%)
+    ;
+    background-position: top left, 10% 70%, bottom right, top left;
+    background-repeat: no-repeat, no-repeat, no-repeat , no-repeat !important;
+    background-size: auto !important;
+}
+
+.bgr-zzzz-9999>.col-inner {
+    background-image: url("../images/bgr-zzzz-9999.svg");
+    background-size: auto;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+.bgr-zzzz-8888>.col-inner {
+    background-image: url("../images/bgr-zzzz-8888.svg");
+    background-size: auto;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+
+

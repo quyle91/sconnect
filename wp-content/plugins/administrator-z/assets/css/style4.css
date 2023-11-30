@@ -17,7 +17,7 @@
 }
 .admz_ctg4 .item.bottom {
   background-color: #00aeef;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -28,8 +28,8 @@
 }
 .admz_ctg4 .inner .item svg,
 .admz_ctg4 .inner .item .svg {
-  width: 49px;
-  height: 49px;
+  width: 55px;
+  height: 55px;
   margin: 0;
   padding: 8px;
   background-color: inherit;
@@ -40,7 +40,6 @@
   font-weight: bold;
   text-transform: capitalize;
   transition: all ease 0.3s;
-  margin-left: -50px;
   opacity: 0;
   display: block !important;
   width: 0px;

@@ -17,15 +17,81 @@
 	.primary-color, .primary-color *{
 		color: var(--primary-color);
 	}
+	.primary{
+		background-color: var(--primary-color);
+	}
+	.primary.is-link,
+	.primary.is-outline,
+	.primary.is-underline {
+		color: var(--primary-color);
+	}
+	.primary.is-outline:hover {
+		background-color: var(--primary-color);
+		border-color: var(--primary-color);
+		color: #fff;
+	}
+	.primary:focus-visible{
+		outline-color: var(--primary-color);
+	}
+	
+
+
 	.secondary-color, .secondary-color *{
 		color: var(--secondary-color);
 	}
+	.secondary {
+		background-color: var(--secondary-color);
+	}
+	.secondary.is-link,
+	.secondary.is-outline,
+	.secondary.is-underline {
+		color: var(--secondary-color);
+	}
+	.secondary.is-outline:hover {
+		background-color: var(--secondary-color);
+		border-color: var(--secondary-color);
+	}
+	.secondary:focus-visible {
+		outline-color: var(--secondary-color);
+	}
+
 	.success-color, .success-color *{
 		color: var(--success-color);
 	}
+	.success {
+		background-color: var(--success-color);
+	}
+	.success.is-link,
+	.success.is-outline,
+	.success.is-underline {
+		color: var(--success-color);
+	}
+	.success.is-outline:hover {
+		background-color: var(--success-color);
+		border-color: var(--success-color);
+	}
+	.success-border {
+		border-color: var(--success-color);
+	}
+
 	.alert-color, .alert-color *{
 		color: var(--alert-color);
 	}
+	.alert {
+		background-color: var(--alert-color);
+	}
+	.alert.is-link,
+	.alert.is-outline,
+	.alert.is-underline {
+		color: var(--alert-color);
+	}
+	.alert.is-outline:hover {
+		background-color: var(--alert-color);
+		border-color: var(--alert-color);
+	}
+
+
+
 	blockquote, table, table td{
 		color:  inherit;
 	}
@@ -54,7 +120,8 @@
 		white-space: nowrap;
 	}
 	/*contact group*/
-	.adminz_ctg svg{
+	.adminz_ctg svg,
+	.adminz_ctg img{
 		width: 30px;
 		height: 30px;
 	}

@@ -130,117 +130,29 @@ class ADMINZ_Flatsome extends Adminz {
 		}
 
 		// shortocdes/inc/flatsome-element-advanced.php
-		add_filter('adminz_apply_content_change', function($return,$atts){
+		add_filter('adminz_apply_content_change', function($return, $atts, $content){
 
 			extract(shortcode_atts(array(
-				"before" => "",
-				"after" => "",
 				"search" => "",
 				"replace" => "",
 				"class"=>"",
 				"css"=>""
 		    ), $atts));
-
-			// nếu có search and replace
-			if($search){
-				$return = str_replace($search, $replace, $return);
-			}
-
-			// nếu là shortcode
-			if($before){
-				$before = str_replace('{',"[",$before);
-				$before = str_replace("'",'"',$before);
-				$after = str_replace('}',"]",$after);
-				$after = str_replace("'",'"',$after);
-				$shortcode = $before . $return . $after;
-
-				// echo "<pre>";print_r($shortcode);echo "</pre>";
-
-				$_shortcode = do_shortcode($shortcode);
-				$has_shortcode = false;
-				$has_function = false;
-
-				preg_match('/\[(\w+)(.*?)\]/', $shortcode, $matches);
-				$shortcode_name = $matches[1];
-				$function_name = $matches[1];
-
-
-
-
-
-				if(shortcode_exists( $shortcode_name )){
-					$return = do_shortcode($shortcode);
-					$has_shortcode = true;
-				}
-
-				// nếu shortcode ko tồn tại thì check thử function, lấy param phải theo thứ tự lần lượt
-				if(function_exists( $function_name )){
-					if(!$has_shortcode){
-						// Sử dụng biểu thức chính quy để tìm các giá trị nằm giữa hai dấu ngoặc kép
-						preg_match_all('/"([^"]*)"/', $shortcode, $matches);
-						$return = call_user_func_array($function_name, $matches[1]);
-					}
-				}
-
-
-
-
-				// nếu có shortcode
-				// if($_shortcode !== $shortcode){
-				// 	$return = $_shortcode;
-				// }
-				// // ko có thì kiểm tra có function
-				// else{
-				// 	preg_match('/\[(\w+)(.*?)\]/', $shortcode, $matches);
-				// 	if (isset($matches[1])) {
-				// 		$function_name = $matches[1];		
-				// 		if (function_exists($function_name)) {
-				            
-				//         } else {
-				//             $has_function = false;
-				//         }				
-						
-
-				// 	}
-				// 	$has_shortcode = false;
-				// }
-
-				// if( !$has_shortcode and !$has_function){
-				// 	echo '<pre>Shortcode and Function name not exist!</pre>';
-				// }
-
-
-
-				// echo "<pre>";print_r($return);echo "</pre>";
-				// // add_shortcode trước khi do_shortcode
-
-				// preg_match('/\[(\w+)(.*?)\]/', $return, $matches);
-				// if (isset($matches[1])) {
-				// 	$function_name = $matches[1];
-				// 	$params = array();
-				// 	preg_match_all('/(\w+)="(.*?)"/', $matches[2], $param_matches, PREG_SET_ORDER);
-				// 	foreach ($param_matches as $param_match) {
-			    //         $params[] = $param_match[2];
-			    //     }
-			    //     if (function_exists($function_name)) {
-			    //         $return = call_user_func_array($function_name, $params);
-			    //     } else {
-			    //         echo "Hàm $function_name không tồn tại.";
-			    //     }
-				// }
-
-
-
-				// $return = do_shortcode($return);
+			
+			$content = trim($content);			
+			if($content){
+				$content = str_replace("XXX", $return,$content);
+				$return = $content;
 			}
 
 			
-
+			
+			$return = str_replace($search, $replace, $return);
 
 			ob_start();
 			?>
 			<div class="<?php echo esc_attr($class); ?>">
-				<?php echo wp_kses_post( $return ); ?>
+				<?php echo do_shortcode( $return ); ?>
 				<?php if($css): ?>
 					<style type="text/css">
 						<?php echo esc_attr($css); ?>
@@ -250,7 +162,7 @@ class ADMINZ_Flatsome extends Adminz {
 			<?php
 			return ob_get_clean();
 			
-		},10,2);
+		},10,3);
 
 	}
 	function flatsome_action_hook(){		
@@ -509,6 +421,13 @@ class ADMINZ_Flatsome extends Adminz {
 	        					}
 	        				}
 	        			?>
+						<div>
+							<small>
+								Looking for: Remove the post's default <strong>sidebar</strong>? | 
+								Let's create a <strong>block</strong> valued: <strong>[adminz_post_field post_field="post_content"][/adminz_post_field]</strong> | 
+								Then set that block to the post type layout in <strong>Uxbuilder Layout Support</strong></br>
+							</small>
+						</div>
 	        		</td>
 	        	</tr>
 	        	<tr valign="top">
@@ -561,7 +480,7 @@ class ADMINZ_Flatsome extends Adminz {
 		        								        		) echo 'selected';
 		        								        	?>
 		        								        	value="<?php echo esc_attr($_value); ?>">
-		        								        	UX Block: <?php echo esc_attr($block_title); ?>
+		        								        	<?php echo esc_attr($block_title); ?>
 		        								        </option>
 		        								        <?php
 		        								    }
@@ -581,7 +500,7 @@ class ADMINZ_Flatsome extends Adminz {
 		        								        		) echo 'selected';
 		        								        	?>
 		        								        	value="<?php echo esc_attr($_value); ?>">
-		        								        	Taxonomy: <?php echo esc_attr($_tax); ?>
+		        								        	Terms of: <?php echo esc_attr($_tax); ?>
 		        								        </option>
 		        								        <?php
 		        								    }

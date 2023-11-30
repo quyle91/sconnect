@@ -41,7 +41,7 @@ class HoiDongHocThuat {
                                         echo '[tab title="'.$term->name.'"]';
                                             echo '<div class="row row-full-width row-collapse">';
                                                 while ( $the_query->have_posts() ) : $the_query->the_post();
-                                                    echo '<div class="item col small-12 large-6">';
+                                                    echo '<div class="item col medium-6 small-12 large-6">';
                                                         get_template_part( 'template-parts/single-hoidonghocthuat', 'item' );
                                                     echo '</div>';
                                                 endwhile;
@@ -137,6 +137,12 @@ class HoiDongHocThuat {
                     display: flex;
                     justify-content: center;
                     align-items: flex-end;
+                }
+                @media (min-width: 1200px){
+                    .hoidonghocthuat .item:nth-child(4n) .single-hoidonghocthuat-item,
+                    .hoidonghocthuat .item:nth-child(4n-1) .single-hoidonghocthuat-item{
+                        flex-direction: row-reverse;
+                    }
                 }
             </style>
             <?php
