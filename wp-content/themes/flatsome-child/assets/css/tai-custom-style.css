@@ -16,87 +16,11 @@ Vì vậy anh yêu cầu
 	--secondary-color : #333333;
 	--success-color : #A6E027;
 	--alert-color : #ff611a;
+	--white : #fff;
 }
-
-/* Heading style  */
-.pre-title{
-	color: #333;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 25px;
-	border-bottom: none!important;
-}
-.pre-title-2{
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 700;
-	margin-bottom: 1rem;
-}
-.bullet-arrow:before {
-    content: ""!important;
-    font-weight: bolder;
-    color: var(--primary-color)!important;
-    font-size: 24px!important;
-}
-.section-title-container h2 {
-	color: #008444;
-	font-size: 36px;
-	font-style: normal;
-	font-weight: 800;
-	letter-spacing: 0.72px;
-	margin-bottom: 0px!important;
-}
-.section-title-container h3 {
-	color: #FFF;
-	margin-bottom: 0px!important;
-	font-size: 32px;
-	font-style: normal;
-	font-weight: 700;
-}
-
-/* Button */
-.button-style-2{
-	position: relative;
-	overflow: hidden;
-	padding: 5px 30px!important;
-}
-.button-style-2 span{
-	color: var(--primary-color);
-}
-.button-style-2::before{
-	opacity: 0.2;
-    background-color: #F6F5F5;
-    transform: rotate(25deg);
-    width: 2rem;
-    height: 4rem;
-    position: absolute;
-    right: -10%;
-    bottom: -29%;
-    padding: 10px;
-    content: "";
-}
-.button-style-1{
-	position: relative;
-	overflow: hidden;
-	padding: 5px 30px!important;
-}
-.button-style-1::before{
-	opacity: 0.2;
-    background-color: #F6F5F5;
-    transform: rotate(25deg);
-    width: 2rem;
-    height: 4rem;
-    position: absolute;
-    right: -10%;
-    bottom: -29%;
-    padding: 10px;
-    content: "";
-}
-
 
 /* -----------------End Global */
-/* Slider Home */
+/* Slider Home ==================================*/
 .slider-home .flickity-page-dots {
 	overflow: hidden;
 }
@@ -126,7 +50,7 @@ Vì vậy anh yêu cầu
 	}
 }
 
-/* Banner tuyển sinh 2024 - 2026 */
+/* Banner tuyển sinh 2024 - 2026 ======================================*/
 .baner-tuyen-sinh-24-26 .border-slide .col-inner{ 
 	border-radius: 5px 0px 0px 5px!important;
 }
@@ -137,28 +61,34 @@ Vì vậy anh yêu cầu
 	bottom: 3px!important;	
 }
 
-/* Intro Home */
-.intro-home .wrapper-title-intro-home{
-	border: solid 2px var(--primary-color);
-    margin-top: -40px;
-    margin-left: -100px;
-    padding: 4% 4% 4% 19%;
-    z-index: -1;
-    position: relative;
-    border-radius: 5px;
-}
-.intro-home .wrapper-title-intro-home ul{
-	margin-bottom: 10px!important;
-}
-.intro-home .intro-home-wrapper-2 p{
-	margin-top: -40px;
-    margin-left: -100px;
-    padding: 3% 4% 3% 19%;
-}
-.intro-home .intro-home-wrapper-2 .button-style-1{
-    margin-left: 4%;
-}
+/* Intro Home ===========================================*/
 
+.intro-home sup{
+	vertical-align: text-bottom;
+    font-size: -webkit-xxx-large;
+}
+@media screen and (min-width : 850px){
+	.intro-home .wrapper-title-intro-home{
+		border: solid 2px var(--primary-color);
+		margin-top: -40px;
+		margin-left: -100px;
+		padding: 4% 4% 4% 19%;
+		z-index: -1;
+		position: relative;
+		border-radius: 5px;
+	}
+	.intro-home .wrapper-title-intro-home ul{
+		margin-bottom: 10px!important;
+	}
+	.intro-home .intro-home-wrapper-2 p{
+		margin-top: -40px;
+		margin-left: -100px;
+		padding: 3% 4% 3% 19%;
+	}
+	.intro-home .intro-home-wrapper-2 .button-style-1{
+		margin-left: 4%;
+	}
+}
 
 
 
@@ -180,10 +110,10 @@ Vì vậy anh yêu cầu
 
 /* Header Style */
 .header-nav-main li a{
-	color: #333;
-	font-size: 15px;
+	color:  var(--secondary-color)!important;
+	font-size: 0.9375rem!important;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 500!important;
 	line-height: 15px;
 }
 .lang-item a img {
@@ -206,7 +136,7 @@ Vì vậy anh yêu cầu
 .account-login span, .account-login i {
 	color: #fff!important;
 	padding : 0 5px;
-	font-size: 14px!important;
+	font-size: 0.875rem!important;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 23.4px;
@@ -219,7 +149,7 @@ Vì vậy anh yêu cầu
 	width: 100%;
   	text-align: center;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     line-height: 23.4px;
@@ -237,44 +167,54 @@ Vì vậy anh yêu cầu
 	justify-content : left;
 }
 	.account-login .header-account-title {
-	color: #333333;
+	color:  var(--secondary-color)!important;
+	font-size: 1em!important;
+	font-style: normal;
+	font-weight: 500!important;
+	line-height: 15px;
 }
 }
 
 /*  Mega Menu*/
-.title-mega-menu{
-	margin-right: -55px;
+.mega-menu-style .title-mega-menu{
+	margin-left: 50px!important;
 	position : relative;
+	color: var(--primary-color)!important;
+	font-size: 1.5 em;
 }
-.title-mega-menu:before {
+.mega-menu-style .title-mega-menu .section-title-main{
+	color: var(--primary-color)!important;
+	font-size: 1.625rem;
+}
+.mega-menu-style .ux-menu-link a{
+	text-transform: uppercase;
+	border-bottom: none!important;
+}
+.mega-menu-style .title-mega-menu:before {
     position: absolute;
     width: 34px;
     height: 2px;
     background-color: #008444;
     left: -50px;
-    top: 14px;
+    top: 1.25rem;
     z-index: 9;
     content: "";
 }
 /* Footer */
 .text-des-footer , .copyright-footer {
 	color: #FFF;
-	leading-trim: both;
-	text-edge: cap;
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 22px; 
 }
 .list-footer-1 .ux-menu-link .ux-menu-link__link {
 	color: #FFF;
-	leading-trim: both;
-	text-edge: cap;
 	font-family: SVN-Gilroy;
-	font-size: 16px;
+	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 20px;
+	line-height: 1.25rem;
 }
 .list-footer-1 .ux-menu-link__link {
 	border-bottom-style: none!important;
@@ -284,7 +224,7 @@ Vì vậy anh yêu cầu
 }
 .clearfix li a {
 	color: #fff!important;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 500;
 	line-height: 26.88px;
 	text-transform: none;
@@ -298,136 +238,7 @@ Vì vậy anh yêu cầu
 
 
 /*CSS FROM CUSTOMIZE ======================================================================================== */
-.header-nav-main li a {
-	color: #333;
-	font-size: 15px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 15px;
-}
 
-.lang-item a img {
-	width: 23px !important;
-	height: 15px !important;
-	border-radius: 2px;
-}
-
-.icon-search:before {
-	content: "";
-	color: #333333
-}
-
-.account-login {
-	display: flex !important;
-	align-items: center !important;
-	color: #fff;
-	padding: 0 10px;
-	border-radius: 5px !important;
-	justify-content: center;
-}
-
-.account-login span,
-.account-login i {
-	color: #fff !important;
-	padding: 0 5px;
-	font-size: 14px !important;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 23.4px;
-}
-
-.account-item .header-button {
-	width: 145px;
-}
-
-/* 28/11 */
-#header .nav-top-not-logged-in {
-	width: 100%;
-	text-align: center;
-	font-family: Montserrat;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 23.4px;
-	color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-}
-
-@media and (max-width 850px) {
-	.account-login {
-		display: flex !important;
-		align-items: center !important;
-		padding: 0px;
-		border-radius: 0 !important;
-		justify-content: left;
-	}
-
-	.account-login .header-account-title {
-		color: #333333;
-	}
-}
-
-/*  Mega Menu*/
-.title-mega-menu {
-	margin-right: -55px;
-	position: relative;
-}
-
-.title-mega-menu:before {
-	position: absolute;
-	width: 34px;
-	height: 2px;
-	background-color: #008444;
-	left: -50px;
-	top: 14px;
-	z-index: 9;
-	content: "";
-}
-
-/* Footer */
-.text-des-footer,
-.copyright-footer {
-	color: #FFF;
-	leading-trim: both;
-	text-edge: cap;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 22px;
-}
-
-.list-footer-1 .ux-menu-link .ux-menu-link__link {
-	color: #FFF;
-	leading-trim: both;
-	text-edge: cap;
-	font-family: SVN-Gilroy;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 20px;
-}
-
-.list-footer-1 .ux-menu-link__link {
-	border-bottom-style: none !important;
-}
-
-.list-footer-1 .ux-menu-link .ux-menu-link__link i:before {
-	color: #0FB239;
-}
-
-.clearfix li a {
-	color: #fff !important;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 26.88px;
-	text-transform: none;
-}
-
-.absolute-footer ul {
-	border-bottom: none !important;
-}
+ /* Đã xóa và update */
 
 /* ================================ END CSS FROM CUSTOMMIZE*/
