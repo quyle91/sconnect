@@ -100,15 +100,15 @@
     padding: 10px;
     content: "";
 }
-/* Navigation Arrow and Dots */
- .flickity-page-dots {
+/* ========================= Slide Navigation */
+ /* .flickity-page-dots {
 	overflow: hidden;
-}
-.slider-nav-light .flickity-prev-next-button .arrow, .slider-nav-light .flickity-prev-next-button svg {
+} */
+ .slider-nav-light .flickity-prev-next-button .arrow, .slider-nav-light .flickity-prev-next-button svg {
     fill: var(--primary-color)!important;
 }
 
-.flickity-page-dots .dot.is-selected {
+ .flickity-page-dots .dot.is-selected {
     background-color: var(--alert-color)!important;
 }
  .flickity-page-dots .dot {
