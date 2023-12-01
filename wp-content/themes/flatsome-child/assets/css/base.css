@@ -1,343 +1,237 @@
+@charset "UTF-8";
 /**
 ----------------------------
             MAIN
 ----------------------------
 */
 :root {
-    --xanh-nhat: #EDF5F1;
+  --xanh-nhat: #EDF5F1;
 }
-
 
 /*========================================= HEADER*/
 @media (min-width: 1024px) {
-    #masthead .header-nav.nav.nav-left {
-        justify-content: center;
-    }
-
-    #masthead .header-inner #logo,
-    #masthead .header-inner>.flex-right .header-nav {
-        min-width: 240px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-    }
-
-    #masthead .header-inner #logo:after,
-    #masthead .header-inner>.flex-right .header-nav:after {
-        content: "";
-        width: 1px;
-        background: #EAEAEB;
-        height: 90px;
-        right: 0px;
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-    }
-
-    #masthead .header-inner>.flex-right .header-nav:after {
-        right: unset;
-        left: 0px;
-    }
-
-    .stuck #masthead .header-inner #logo:after,
-    .stuck #masthead .header-inner>.flex-right .header-nav:after {
-        height: 70px;
-    }
+  #masthead .header-nav.nav.nav-left {
+    justify-content: center;
+  }
+  #masthead .header-inner #logo,
+  #masthead .header-inner > .flex-right .header-nav {
+    min-width: 240px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #masthead .header-inner #logo:after,
+  #masthead .header-inner > .flex-right .header-nav:after {
+    content: "";
+    width: 1px;
+    background: #EAEAEB;
+    height: 90px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+  #masthead .header-inner > .flex-right .header-nav:after {
+    right: unset;
+    left: 0px;
+  }
+  .stuck #masthead .header-inner #logo:after,
+  .stuck #masthead .header-inner > .flex-right .header-nav:after {
+    height: 70px;
+  }
 }
-
 @media (min-width: 850px) {
-    #masthead .sub-menu {
-        background: none !important;
-    }
-
-    #masthead .sub-menu>.row {
-        background-color: white;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 30px;
-    }
+  #masthead .sub-menu {
+    background: none !important;
+  }
+  #masthead .sub-menu > .row {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+  }
 }
-
 /*========================================= FOOTER*/
 .absolute-footer:not(.text-center) .footer-primary {
-    border-radius: 10px;
-    border: 1px solid #333;
-    width: 100%;
-    padding: 15px !important;
-
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
-    flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #333;
+  width: 100%;
+  padding: 15px !important;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .menu-footer-menu-container {
-    display: none;
+  display: none;
 }
 
-@media(min-width: 850px) {
-    .absolute-footer:not(.text-center) .footer-primary {
-        flex-direction: row-reverse;
-        padding: 30px 50px !important;
-    }
-
-    .menu-footer-menu-container {
-        display: block;
-    }
+@media (min-width: 850px) {
+  .absolute-footer:not(.text-center) .footer-primary {
+    flex-direction: row-reverse;
+    padding: 30px 50px !important;
+  }
+  .menu-footer-menu-container {
+    display: block;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
 ----------------------------
         CUSTOM CLASS
 ----------------------------
 */
 .sconnectpre {
-    background: #71cedf;
-    border: 2px dashed #000;
-    display: flex;
-    color: white;
-    justify-content: center;
-    flex-direction: column;
+  background: #71cedf;
+  border: 2px dashed #000;
+  display: flex;
+  color: white;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.section-BGR-BOTTOM-RIGHT-A>.col-inner,
+.section-BGR-BOTTOM-RIGHT-A > .col-inner,
 .section-BGR-BOTTOM-RIGHT-A .section-bg {
-    background-image:
-        linear-gradient(180deg, #008444 0%, #09293F 100%);
-    background-size: auto !important;
-    background-position: top right;
-    background-repeat: no-repeat;
+  background-image: linear-gradient(180deg, #008444 0%, #09293F 100%);
+  background-size: auto !important;
+  background-position: top right;
+  background-repeat: no-repeat;
 }
-
-
-
 
 .section-BGR-BOTTOM-RIGHT-X {
-    position: relative;
+  position: relative;
 }
 
 .section-BGR-BOTTOM-RIGHT-X .section-bg {
-    background-image:
-        url("../images/Mask group.svg"),
-        linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
-    background-size: auto, auto !important;
-    background-position: top right, top right;
-    background-repeat: no-repeat no-repeat;
+  background-image: url("../images/Mask group.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+  background-size: auto, auto !important;
+  background-position: top right, top right;
+  background-repeat: no-repeat no-repeat;
 }
 
 .section-BGR-BOTTOM-RIGHT-X:after {
-    content: "";
-    background-image:
-        url("../images/day_la_section_co_image_bottom_left.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    z-index: 0;
-    content: "";
-    width: 230px;
-    height: 71px;
+  content: "";
+  background-image: url("../images/day_la_section_co_image_bottom_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0;
+  content: "";
+  width: 230px;
+  height: 71px;
 }
 
 @media (min-width: 850px) {
-    .section-BGR-BOTTOM-RIGHT-X:after {
-        width: 700px;
-        height: 200px;
-    }
+  .section-BGR-BOTTOM-RIGHT-X:after {
+    width: 700px;
+    height: 200px;
+  }
 }
-
-
-
-
-
 .section-BGR-BOTTOM-RIGHT-Y {
-    position: relative;
+  position: relative;
 }
 
 .section-BGR-BOTTOM-RIGHT-Y .section-bg {
-    background-image:
-        url("../images/Mask group.svg"),
-        linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
-    background-size: auto, auto !important;
-    background-position: top right, top right;
-    background-repeat: no-repeat no-repeat;
+  background-image: url("../images/Mask group.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+  background-size: auto, auto !important;
+  background-position: top right, top right;
+  background-repeat: no-repeat no-repeat;
 }
 
 .section-BGR-BOTTOM-RIGHT-Y:after {
-    content: "";
-    background-image: url("../images/day_la_section_co_image_bottom_left.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    z-index: 0;
-    content: "";
-    width: 230px;
-    height: 71px;
+  content: "";
+  background-image: url("../images/day_la_section_co_image_bottom_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0;
+  content: "";
+  width: 230px;
+  height: 71px;
 }
 
 @media (min-width: 850px) {
-    .section-BGR-BOTTOM-RIGHT-Y:after {
-        width: 700px;
-        height: 200px;
-    }
+  .section-BGR-BOTTOM-RIGHT-Y:after {
+    width: 700px;
+    height: 200px;
+  }
 }
-
-
-
-
-
-
-
-
 .section-BGR-BOTTOM-RIGHT-Z {
-    position: relative;
+  position: relative;
 }
 
 .section-BGR-BOTTOM-RIGHT-Z:after {
-    content: "";
-    background-image: url("../images/day_la_section_co_image_bottom_left.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    z-index: 1;
-    content: "";
-    width: 230px;
-    height: 71px;
+  content: "";
+  background-image: url("../images/day_la_section_co_image_bottom_left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
+  content: "";
+  width: 230px;
+  height: 71px;
 }
 
 @media (min-width: 850px) {
-    .section-BGR-BOTTOM-RIGHT-Z:after {
-        width: 528px;
-        height: 158px;
-    }
+  .section-BGR-BOTTOM-RIGHT-Z:after {
+    width: 528px;
+    height: 158px;
+  }
 }
-
-
-
-
 .section-BGR-CUSTOM-ZZ .section-bg {
-    background-image:
-        url("../images/bgr_timhieuthem (3).svg"),
-        url("../images/bgr_timhieuthem (2).svg"),
-        url("../images/bgr_timhieuthem (1).svg");
-    background-position: top left, 10% 70%, bottom right;
-    background-repeat: no-repeat, no-repeat, no-repeat !important;
-    background-size: auto !important;
-
+  background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr_timhieuthem (1).svg");
+  background-position: top left, 10% 70%, bottom right;
+  background-repeat: no-repeat, no-repeat, no-repeat !important;
+  background-size: auto !important;
 }
 
 .section-BGR-CUSTOM-XX .section-bg {
-    background-image:
-        url("../images/bgr_timhieuthem (3).svg"),
-        url("../images/bgr_timhieuthem (2).svg"),
-        url("../images/bgr_timhieuthem (1).svg"),
-        linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
-    background-position: top left, 10% 70%, bottom right, top left;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
-    background-size: auto !important;
+  background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr_timhieuthem (1).svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+  background-position: top left, 10% 70%, bottom right, top left;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
+  background-size: auto !important;
 }
 
 .section-BGR-CUSTOM-XXX .section-bg {
-    background-image:
-        url("../images/bgr_timhieuthem (3).svg"),
-        url("../images/bgr_timhieuthem (2).svg"),
-        url("../images/bgr-xxx.svg"),
-        linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
-    background-position: top left, 10% 70%, bottom right, top left;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
-    background-size: auto !important;
+  background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr-xxx.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+  background-position: top left, 10% 70%, bottom right, top left;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
+  background-size: auto !important;
 }
 
-
-.bgr-zzzz-9999>.col-inner {
-    background-image: url("../images/bgr-zzzz-9999.svg");
-    background-size: auto;
-    background-position: bottom right;
-    background-repeat: no-repeat;
+.bgr-zzzz-9999 > .col-inner {
+  background-image: url("../images/bgr-zzzz-9999.svg");
+  background-size: auto;
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
 
-.bgr-zzzz-8888>.col-inner {
-    background-image: url("../images/bgr-zzzz-8888.svg");
-    background-size: auto;
-    background-position: bottom right;
-    background-repeat: no-repeat;
+.bgr-zzzz-8888 > .col-inner {
+  background-image: url("../images/bgr-zzzz-8888.svg");
+  background-size: auto;
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
 ----------------------------
         ELEMENTS
 ----------------------------
 */
-
 /*single-bomon-item --------------------------------------------------*/
 .single-bomon-item a {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .single-bomon-item a .icon-angle-right {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 /*Chương trình đào tạo sinh viên*/
@@ -346,52 +240,32 @@
 .ChuongTrinhDaoTaoChiTiet .top .ztitle .section-title-main::before,
 .ChuongTrinhDaoTaoChiTiet .top .ztitle .section-title-main::before,
 x {
-    content: "";
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    background-image: url(../images/book-saved.svg);
+  content: "";
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-image: url(../images/book-saved.svg);
 }
 
 .ChuongTrinhDaoTaoChiTiet .top .ztitle.dangkyhoc .section-title-main::before {
-    background-image: url(../images/sms-edit.svg);
+  background-image: url(../images/sms-edit.svg);
 }
 
 .ChuongTrinhDaoTaoChiTiet .top .ztitle.quatrinhhoc .section-title-main::before {
-    background-image: url(../images/book-saved.svg);
+  background-image: url(../images/book-saved.svg);
 }
 
 .ChuongTrinhDaoTaoChiTiet .top .ztitle.hotrosautotnghiep .section-title-main::before {
-    background-image: url(../images/book-saved.svg);
+  background-image: url(../images/book-saved.svg);
 }
 
 .ChuongTrinhDaoTaoChiTiet .top .ztitle.thoigiandaotao .section-title-main::before {
-    background-image: url(../images/calendar-tick.svg);
+  background-image: url(../images/calendar-tick.svg);
 }
 
 .ChuongTrinhDaoTaoChiTiet .top .zitem:nth-child(2),
 .ChuongTrinhDaoTaoChiTiet .top .zitem:nth-child(3) {
-    background-image: url(../images/Vector\ 9.svg);
-    background-position: bottom left;
-    background-repeat: no-repeat;
+  background-image: url(../images/Vector\ 9.svg);
+  background-position: bottom left;
+  background-repeat: no-repeat;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
