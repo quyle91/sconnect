@@ -84,6 +84,7 @@ new \Sconnect\Shortcodes\TrendingTopic;
 new \Sconnect\Shortcodes\TuKhoaNoiBat; // custom yes or no?
 new \Sconnect\Shortcodes\HoiDongHocThuat;
 new \Sconnect\Shortcodes\GiaiDapThacMac;
+new \Sconnect\Shortcodes\CauHoiThuongGap;
 new \Sconnect\Shortcodes\MapView;
 new \Sconnect\Shortcodes\BlogSmall;
 new \Sconnect\Shortcodes\DoiNguGiangVien;
