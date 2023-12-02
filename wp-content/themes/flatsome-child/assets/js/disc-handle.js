@@ -77,7 +77,6 @@
 		 * Bắt sự kiện submit form cf7 để xử lý data
 		 */
 		document.addEventListener( 'wpcf7submit', function( event ) {
-			console.log(event);
 		    var idForm = event.detail.contactFormId;
 			if (idForm == sconnect_disc.cf7_form_id) {
 				if (event.detail.apiResponse.faild) {
@@ -86,6 +85,7 @@
 					  	icon: "warning",
 					  	confirmButtonText: sconnect_disc.string.warning_button_text
 					});
+					$(this).find('.wpcf7-submit.button').closest('.processing').removeClass('processing');
 				}
 				if (event.detail.apiResponse.success) {
 					 location.href = sconnect_disc.disc_resuilt_page+'?_disc_data='+event.detail.apiResponse.success; 
