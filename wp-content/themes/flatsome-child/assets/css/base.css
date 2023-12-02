@@ -5,7 +5,7 @@
 ----------------------------
 */
 :root {
-  --xanh-nhat: #EDF5F1;
+  --xanh-nhat: #edf5f1;
 }
 
 /*========================================= HEADER*/
@@ -24,7 +24,7 @@
   #masthead .header-inner > .flex-right .header-nav:after {
     content: "";
     width: 1px;
-    background: #EAEAEB;
+    background: #eaeaeb;
     height: 90px;
     right: 0px;
     top: 50%;
@@ -92,7 +92,7 @@
 
 .section-BGR-BOTTOM-RIGHT-A > .col-inner,
 .section-BGR-BOTTOM-RIGHT-A .section-bg {
-  background-image: linear-gradient(180deg, #008444 0%, #09293F 100%);
+  background-image: linear-gradient(180deg, #008444 0%, #09293f 100%);
   background-size: auto !important;
   background-position: top right;
   background-repeat: no-repeat;
@@ -103,7 +103,8 @@
 }
 
 .section-BGR-BOTTOM-RIGHT-X .section-bg {
-  background-image: url("../images/Mask group.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+  background-image: url("../images/Mask group.svg"),
+    linear-gradient(180deg, #008444 -19.41%, #09293f 99.7%);
   background-size: auto, auto !important;
   background-position: top right, top right;
   background-repeat: no-repeat no-repeat;
@@ -134,7 +135,8 @@
 }
 
 .section-BGR-BOTTOM-RIGHT-Y .section-bg {
-  background-image: url("../images/Mask group.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+  background-image: url("../images/Mask group.svg"),
+    linear-gradient(180deg, #008444 -19.41%, #09293f 99.7%);
   background-size: auto, auto !important;
   background-position: top right, top right;
   background-repeat: no-repeat no-repeat;
@@ -185,21 +187,28 @@
   }
 }
 .section-BGR-CUSTOM-ZZ .section-bg {
-  background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr_timhieuthem (1).svg");
+  background-image: url("../images/bgr_timhieuthem (3).svg"),
+    url("../images/bgr_timhieuthem (2).svg"),
+    url("../images/bgr_timhieuthem (1).svg");
   background-position: top left, 10% 70%, bottom right;
   background-repeat: no-repeat, no-repeat, no-repeat !important;
   background-size: auto !important;
 }
 
 .section-BGR-CUSTOM-XX .section-bg {
-  background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr_timhieuthem (1).svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+  background-image: url("../images/bgr_timhieuthem (3).svg"),
+    url("../images/bgr_timhieuthem (2).svg"),
+    url("../images/bgr_timhieuthem (1).svg"),
+    linear-gradient(180deg, #008444 -19.41%, #09293f 99.7%);
   background-position: top left, 10% 70%, bottom right, top left;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
   background-size: auto !important;
 }
 
 .section-BGR-CUSTOM-XXX .section-bg {
-  background-image: url("../images/bgr_timhieuthem (3).svg"), url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr-xxx.svg"), linear-gradient(180deg, #008444 -19.41%, #09293F 99.7%);
+  background-image: url("../images/bgr_timhieuthem (3).svg"),
+    url("../images/bgr_timhieuthem (2).svg"), url("../images/bgr-xxx.svg"),
+    linear-gradient(180deg, #008444 -19.41%, #09293f 99.7%);
   background-position: top left, 10% 70%, bottom right, top left;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat !important;
   background-size: auto !important;
@@ -255,11 +264,17 @@ x {
   background-image: url(../images/book-saved.svg);
 }
 
-.ChuongTrinhDaoTaoChiTiet .top .ztitle.hotrosautotnghiep .section-title-main::before {
+.ChuongTrinhDaoTaoChiTiet
+  .top
+  .ztitle.hotrosautotnghiep
+  .section-title-main::before {
   background-image: url(../images/book-saved.svg);
 }
 
-.ChuongTrinhDaoTaoChiTiet .top .ztitle.thoigiandaotao .section-title-main::before {
+.ChuongTrinhDaoTaoChiTiet
+  .top
+  .ztitle.thoigiandaotao
+  .section-title-main::before {
   background-image: url(../images/calendar-tick.svg);
 }
 

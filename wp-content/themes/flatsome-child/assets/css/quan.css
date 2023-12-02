@@ -26,6 +26,10 @@
   background-color: rgba(244, 119, 48, 1);
 }
 
+.q__doi-tac > .section-content > .row > .col > .col-inner > a::before {
+  right: -7%;
+}
+
 .q__slide-doi-tac > .slider > .flickity-button {
   background-color: #999;
   border-radius: 50%;
