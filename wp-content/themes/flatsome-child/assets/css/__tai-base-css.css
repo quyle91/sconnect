@@ -100,6 +100,27 @@
     padding: 10px;
     content: "";
 }
+.button-style-3{
+	position: relative;
+	overflow: hidden;
+	padding: 5px 30px!important;
+    border: solid 1px var(--white)!important;
+}
+.button-style-3:hover{
+	background-color: #ffffff82!important;
+}
+.button-style-3::before{
+	opacity: 0.2;
+    background-color: var(--white);
+    transform: rotate(25deg);
+    width: 2rem;
+    height: 4rem;
+    position: absolute;
+    right: -10%;
+    bottom: -29%;
+    padding: 10px;
+    content: "";
+}
 /* ========================= Slide Navigation */
  /* .flickity-page-dots {
 	overflow: hidden;

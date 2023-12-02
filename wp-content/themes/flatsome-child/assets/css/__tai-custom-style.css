@@ -17,6 +17,7 @@ Vì vậy anh yêu cầu
 	--success-color : #A6E027;
 	--alert-color : #ff611a;
 	--white : #fff;
+	--strong-green-color : #0FB239;
 }
 
 /* -----------------End Global */
@@ -115,14 +116,116 @@ Vì vậy anh yêu cầu
 		white-space: nowrap;
 		overflow: hidden;
 	}
-	/* .ceo-home .flickity-slider>div {
-		border : 1px solid var(--primary-color);
+	.ceo-home blockquote::after {
+		display: none!important;
 
-	} */
+	}
+	.ceo-home blockquote {
+		border: none!important;
+		border-left: none!important;
+
+	}
+	.ceo-home .flickity-slider > div  .text {
+		border : 1px solid var(--primary-color);
+		min-height: 10.5rem;
+		border-radius: 5px;
+	}
+	.ceo-home .flickity-slider > div  .text p {
+		padding: 0 5px;
+		margin-bottom: 0!important;
+	}
+	.ceo-home .flickity-slider > div  .text strong {
+		padding: 0 5px;
+		margin-bottom: 0!important;
+	}
 }
 
 
-
+/* Chương trình đào tạo ======================== */
+.chuong-trinh-dao-tao{
+	background: linear-gradient(180deg, #008444 -20.44%, #09293F 93.78%);
+}
+.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+	background-image: url(../images/khung1.svg);
+	background-size:  95%;
+  	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.chuong-trinh-dao-tao .strong_color{
+	color: var(--strong-green-color);
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+.chuong-trinh-dao-tao .icon-box-text .text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.chuong-trinh-dao-tao .icon-box-text ul li{
+	margin-bottom: 0!important;
+	padding: 0 40px 0 5px;
+}
+.chuong-trinh-dao-tao .icon-box .icon-box-img {
+	display: flex;
+	flex-direction: column;
+	   justify-content: center;
+}
+@media screen and (min-width : 850px) and (max-width :1100px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background : none;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li {
+		margin-bottom: 0;
+		padding: 0;
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		color: var(--strong-green-color);
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+	.chuong-trinh-dao-tao .text:first-child {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+}
+@media screen and (min-width : 1100px) and (max-width :1384px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background-image: url(../images/khung1.svg);
+		background-size: contain 80%;
+		background-repeat: no-repeat;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li {
+		margin-bottom: 0;
+		padding: 0;
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		color: var(--strong-green-color);
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+	.chuong-trinh-dao-tao .text:first-child {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+}
+@media screen and (min-width : 1385px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background-image: url(../images/khung1.svg);
+		background-size: contain 80%;
+		  background-repeat: no-repeat;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li{
+		margin-bottom: 0!important;
+		padding: 0 40px 0 5px;
+	}
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .pd-res{
+		  padding-top : 1rem
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		font-size: 1.875rem;
+		font-weight: 700;
+	}
+}
 
 
 
