@@ -111,6 +111,7 @@ class TraCuuDiemThiSA {
 					background: url(<?php echo Sconnect_Url ?>/assets/images/sa-header-form.png) no-repeat center;
 					background-size: contain;
 					padding: 20px;
+					font-size: 1.6em;
 				}
 				.error {
 					color: var(--alert-color);
