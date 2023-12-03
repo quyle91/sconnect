@@ -1,0 +1,241 @@
+/* DATDT CUSTOM CSS */
+/* PAGE TUYEN SINH */
+.message-box.relative.dangky-thamgia.dark {
+    width: 61%;
+    float: right;
+}
+div#text-4155857759 p {
+    margin: unset;
+    padding: 18px 0px 0px 0px;
+}
+.p-dangki p {
+    margin: unset;
+    padding: 8px 0px 0px 0px;
+    font-size: 24px;
+    font-weight: 800;
+}
+.hocphi01 {
+    background-image: url(../images/Aries_Pose3.svg);
+    background-size: cover;
+}
+.hocphi02 {
+    background-image: url(../images/02.svg);
+    background-size: cover;
+}
+.hocphi03 {
+    background-image: url(../images/03.svg);
+    background-size: cover;
+}
+.hocphi04 {
+    background-image: url(../images/04.svg);
+    background-size: cover;
+}
+.hocphi05 {
+    background-image: url(../images/05.svg);
+    background-size: cover;
+}
+.hocphi06 {
+    background-image: url(../images/06.svg);
+    background-size: cover;
+}
+.bg-hocphi {
+    background-image: url(../images/Group1598.svg);
+    background-size: cover;
+    height: 150px;
+}
+.text-hocphi p {
+    font-weight: 800;
+}
+.text-hocphi h5 {
+    color: #fff;
+    font-weight: 400;
+}
+.text-hocphi {
+    margin-left: 94px;
+    margin-top: 52px;
+    color: #fff;
+}
+.bg-hocphi2 {
+    background-image: url(../images/Group1599.svg);
+    background-size: cover;
+    height: 150px;
+}
+.bg-lotrinh {
+    background-image: url(../images/Group1714.svg);
+    background-size: cover;
+    height: 171px;
+}
+.text.bg-lotrinh h3 {
+    text-align: center;
+    padding-top: 55px;
+    color: #fff;
+}
+.icon-box-img {
+    margin: 0 auto;
+    margin-bottom: -42px !important;
+}
+.hocphi01 p, .hocphi02 p, .hocphi03 p, .hocphi04 p, .hocphi05 p, .hocphi06 p {
+    position: absolute;
+    bottom: -250px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+}
+.col-hocphi {
+    padding: unset !important;
+}
+.image-hocphi .img-inner {
+    border-radius: unset !important;
+}
+.bg-top-cs {
+    background-image: url(../images/bg-top-cs.svg);
+    background-size: cover;
+    height: 86px;
+}
+.bg-top-cs h2 {
+    font-size: 24px;
+    color: #fff;
+    padding: 6px 35px;
+    text-align: center;
+}
+.col-chinhsach .col-inner {
+    background: aqua;
+    border-radius: 10px;
+}
+
+.col-chinhsach .col-inner {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.trigia {
+    margin: 0 12px;
+    background-image: url(../images/bg-trg.svg);
+    background-size: contain;
+    height: 115px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.trigia h2 {
+    text-align: center;
+    line-height: 127px;
+    font-weight: 800;
+    font-size: 31px;
+}
+.trigia h2 span {
+    color: #333;
+    font-size: 21px;
+}
+.soluong {
+    text-align: center;
+    margin: 19px 0px;
+}
+.soluong p {
+    margin: unset;
+    font-weight: 600;
+}
+.soluong h5 {
+    font-weight: 900;
+}
+.doituong {
+    text-align: center;
+    padding-bottom: 16px;
+    padding-top: 15px;
+}
+.doituong ul {
+    list-style: none;
+    text-align: left;
+}
+.doituong li i {
+    margin-right: 9px;
+    color: #008443;
+}
+.doituong h3 {
+    color: #333;
+}
+.bg-top-cs h2 {
+    font-size: 23px;
+    color: #fff;
+    padding: 6px 59px;
+    text-align: center;
+}
+/* background-image: url(../images/banner-ctdt1.svg) */
+/* background-image: url(../images/bg-trg.svg);
+background-image: url(../images/Group 1599.svg); */
+
+/*HET PAGE TUYEN SINH */
+
+/* PAGE HOC PHI */
+.banner-ctdt, .banner-ctdt1 {
+    padding: unset !important;
+}
+body.pack1 .row:not(.row-collapse) .col-inner .banner, body.pack1 .row:not(.row-collapse) .col-inner .banner-bg, body.pack1 .row:not(.row-collapse) .col-inner .banner-layers, body.pack1 .row:not(.row-collapse) .col-inner .banner-bg>*, body.pack1 .adminz_flickity .col>div, body.pack1 .pswp__img, body.pack1 .fotorama .fotorama__stage__frame, body.pack1 .map_div_check, body.pack1 iframe {
+    border-radius: unset !important;
+}
+.banner.bannerr1 {
+    background-color: transparent;
+}
+.grid-col-1.banner-ctdt {
+    height: 664px !important;
+}
+.grid-col-1-2.banner-ctdt1 {
+    height: 332px !important;
+}
+.text-banner {
+    background-image: url(../images/banner-ctdt1.png);
+    height: 80px;
+    background-size: contain;
+    width: 468.23px;
+    font-size: 14px;
+    padding-left: 73px;
+    padding-top: 16px;
+    background-blend-mode: multiply;
+}
+.text-banner1 {
+    background-image: url(../images/banner-ctdt2.svg);
+    height: 80px;
+    background-size: contain;
+    width: 551.23px;
+    font-size: 14px;
+    padding-left: 73px;
+    padding-top: 16px;
+    background-blend-mode: multiply;
+}
+.text-banner2 {
+    background-image: url(../images/banner-ctdt3.svg);
+    height: 80px;
+    background-size: contain;
+    width: 471.23px;
+    font-size: 14px;
+    padding-left: 73px;
+    padding-top: 16px;
+    background-blend-mode: multiply;
+}
+.col-tthb1 {
+    padding-left: unset !important;
+}
+.col-tthb2 {
+    padding-right: unset !important;
+}
+.bg-text-bottom {
+    background-image: url(../images/bg-bottom.svg);
+}
+.bg-text-bottom {
+    background-image: url(../images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    height: 108px;
+    width: 692px;
+    padding-top: 49px;
+    padding-left: 41px;
+}
+.h-ctdt {
+    margin-top: 122px;
+    margin-bottom: 55px;
+    font-size: 22px;
+    font-weight: 800;
+}
+.h-tthb {
+    margin-top: 150px;
+    margin-bottom: 51px;
+    font-size: 22px;
+}
