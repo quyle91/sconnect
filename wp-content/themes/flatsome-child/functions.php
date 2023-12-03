@@ -92,6 +92,7 @@ new \Sconnect\Shortcodes\PolylangCustomSwitcher;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoItem;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoChiTiet;
 new \Sconnect\Shortcodes\TestHuongNghiep;
+new \Sconnect\Shortcodes\KetQuaTestDISC;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoKhoa;
 new \Sconnect\Shortcodes\GiangVien;
 new \Sconnect\Shortcodes\QuyenLoiHocVien;

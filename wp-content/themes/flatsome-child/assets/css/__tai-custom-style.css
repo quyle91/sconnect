@@ -170,6 +170,9 @@ Vì vậy anh yêu cầu
 	flex-direction: column;
 	   justify-content: center;
 }
+@media screen and (min-width : 850px){
+	
+}
 @media screen and (min-width : 850px) and (max-width :1100px){
 	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
 		background : none;
@@ -228,9 +231,136 @@ Vì vậy anh yêu cầu
 }
 
 
+/* Cảm nhận học viên */
+.CamNhanHocVien .camnhan-text .col-inner{
+	background-color: rgb(6, 25, 39);
+    border-radius: 10px;
+    border: solid 1px var(--primary-color);
+	position: relative;
+	z-index: 2;
+	box-shadow: 11px 15px 30px 0px rgba(2, 2, 2, 0.37);
+}
+.CamNhanHocVien .star-rating{
+	display: none;
+}
+.CamNhanHocVien .testimonial-meta{
+	display: flex;
+	flex-direction: column;
+}
+.CamNhanHocVien .testimonial-meta .testimonial-name-divider {
+	display: none;
+}
+.CamNhanHocVien .testimonial-meta .testimonial-company  {
+	color: var(--primary-color);
+}
+.CamNhanHocVien .slider  .previous {
+	left: 70%!important;
+}
+.CamNhanHocVien .slider  .flickity-prev-next-button {
+	top: 95%!important;
+}
+@media screen and (min-width : 550px){
+.CamNhanHocVien .img-camnhan{
+	margin-left: -3%;;
+}
+}
+@media screen and (min-width : 850px){
+.CamNhanHocVien .img-camnhan{
+	margin-left: -3%;;
+}
+.CamNhanHocVien .slider  .previous {
+	left: 80%!important;
+}
+}
 
+/*  Chương trình tuyển sinh 2024- 2026*/
+.bgr-zzzz-9999 > .col-inner{
+	position: relative;
+	border-radius: 10px;
+}
+.bgr-zzzz-9999 > .col-inner::after{
+	background: url(../images/title-back-1.svg)  ;
+	/* left: 0;
+	bottom: 0; */
+	content : "";
+	position: absolute;
+}
 
+/* Hội đồng học thuật */
+.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien .ten-giang-vien{
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-container{
+	margin-bottom: 0!important;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main{
+	font-size: 1.25rem;
+	font-weight: 700;
+	display: flex;
+}
+.hoidonghocthuat  .button-style-3{
+	margin-bottom: -10%;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main .icon-angle-right{
+	opacity: 1!important;
+	padding-right: 8px;
+	padding-top: 3px;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main .icon-angle-right::before{
+	font-size: 1.5rem;
+	font-weight: 700;
 
+}
+@media screen and (min-width : 850px){
+	.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien{
+		position: relative;
+	}
+	.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien::before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: -4%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent var(--primary-color) transparent transparent;
+	}
+	.hoidonghocthuat .item:nth-child(4n+2) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: -4%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent var(--secondary-color)transparent transparent;
+	}
+	.hoidonghocthuat .item:nth-child(4n+3) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left : 104%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent transparent transparent var(--success-color);
+	}
+	.hoidonghocthuat .item:nth-child(4n+4) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left : 104%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent transparent transparent var(--alert-color);
+	}       
+}
 
 
 
