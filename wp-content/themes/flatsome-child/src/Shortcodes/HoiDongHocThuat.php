@@ -60,11 +60,11 @@ class HoiDongHocThuat {
                         <div class="col large-6 hide-for-small"></div>
                         <div class="col large-6 primary dark" style="padding: 15px !important;">
                             <div class="row row-nopaddingbottom">
-                                <div class="col large-6 small-7">
+                                <div class="col large-6 small-7 form-title">
                                     [title icon="icon-angle-right" text="<?php echo esc_attr($option['form_title']) ?>"]                         
                                 </div>
                                 <div class="col large-6 small-5">
-                                    <a href="#datlich" class="button is-outline">
+                                    <a href="#datlich" class="button is-outline button-style-3">
                                         <?php echo __("Đặt lịch", 'sconnect'); ?>
                                     </a>
                                 </div>

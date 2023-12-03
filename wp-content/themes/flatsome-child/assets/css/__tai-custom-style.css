@@ -1,0 +1,508 @@
+/*
+Sau này khi kết thúc dự án hoặc mỗi lần commit anh sẽ move toàn bộ code css của em về nơi nó nên ở đó.
+Vì vậy anh yêu cầu
+	- Css cho element thì đặt class của element trước và viết dồn lại thành 1 chỗ sao cho dễ copy nhiều dòng 1 lúc
+	- Css cho header và footer cũng thế. (xem code mẫu flatsome-main)
+	- Không bao giờ được viết css cho 1 class riêng lẻ mà ko bao gồm class parent (trừ khi nó dùng toàn cục)
+	- Xem code mẫu flatsome-elements.css và flatsome-main.css
+
+	thực hiện Edit bên dưới, anh sẽ tự move sang sau.
+
+*/
+
+/* ----------------- Global */
+*:root {
+	--primary-color : #008444;
+	--secondary-color : #333333;
+	--success-color : #A6E027;
+	--alert-color : #ff611a;
+	--white : #fff;
+	--strong-green-color : #0FB239;
+}
+
+/* -----------------End Global */
+/* Slider Home ==================================*/
+.slider-home .flickity-page-dots {
+	overflow: hidden;
+}
+.slider-home .slider-nav-light .flickity-prev-next-button .arrow, .slider-nav-light .flickity-prev-next-button svg {
+    fill: var(--primary-color)!important;
+}
+
+.slider-home .flickity-page-dots .dot.is-selected {
+    background-color: var(--alert-color)!important;
+}
+.slider-home .flickity-page-dots .dot {
+    border: 2px solid #008444!important;
+}
+@media screen and (min-width : 850px) {
+	.slider-home .previous{
+		top: 80%!important;
+		left: 11%!important;
+	}
+	.slider-home .next{
+		top: 80%!important;
+		left: 22%;
+	}
+	.slider-home .flickity-page-dots {
+		width: 11%;
+		top: 82%!important;
+		left: 12%!important;
+	}
+}
+
+/* Banner tuyển sinh 2024 - 2026 ======================================*/
+.baner-tuyen-sinh-24-26 .border-slide .col-inner{ 
+	border-radius: 5px 0px 0px 5px!important;
+}
+.baner-tuyen-sinh-24-26 .alignnone {
+    margin-bottom: 0!important;
+}
+.baner-tuyen-sinh-24-26 .hinh-anh {
+	bottom: 3px!important;	
+}
+
+/* Intro Home ===========================================*/
+
+.intro-home sup{
+	vertical-align: text-bottom;
+    font-size: -webkit-xxx-large;
+}
+@media screen and (min-width : 850px){
+	.intro-home .wrapper-title-intro-home{
+		border: solid 2px var(--primary-color);
+		margin-top: -40px;
+		margin-left: -100px;
+		padding: 4% 4% 4% 19%;
+		z-index: -1;
+		position: relative;
+		border-radius: 5px;
+	}
+	.intro-home .wrapper-title-intro-home ul{
+		margin-bottom: 10px!important;
+	}
+	.intro-home .intro-home-wrapper-2 p{
+		margin-top: -40px;
+		margin-left: -100px;
+		padding: 3% 4% 3% 19%;
+	}
+	.intro-home .intro-home-wrapper-2 .button-style-1{
+		margin-left: 4%;
+	}
+}
+/* CEO Home ===========================================*/
+
+@media screen and (min-width : 850px){
+	.ceo-home .ceo-home-slider{
+		position: relative;
+		/* padding-bottom: 50px; */
+	}
+	.ceo-home .ceo-home-slider> .slider{
+		height: 250px;
+	}
+	.ceo-home .previous{
+		top: 87%!important;
+		left: 40%!important;
+	}
+	.ceo-home .next{
+		top: 87%!important;
+		left: 60%;
+	}
+	.ceo-home .flickity-page-dots {
+		width: 14%;
+		top: 90%!important;
+		left: 45%!important;
+		/* overflow-x: hidden; */
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.ceo-home blockquote::after {
+		display: none!important;
+
+	}
+	.ceo-home blockquote {
+		border: none!important;
+		border-left: none!important;
+
+	}
+	.ceo-home .flickity-slider > div  .text {
+		border : 1px solid var(--primary-color);
+		min-height: 10.5rem;
+		border-radius: 5px;
+	}
+	.ceo-home .flickity-slider > div  .text p {
+		padding: 0 5px;
+		margin-bottom: 0!important;
+	}
+	.ceo-home .flickity-slider > div  .text strong {
+		padding: 0 5px;
+		margin-bottom: 0!important;
+	}
+}
+
+
+/* Chương trình đào tạo ======================== */
+.chuong-trinh-dao-tao{
+	background: linear-gradient(180deg, #008444 -20.44%, #09293F 93.78%);
+}
+.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+	background-image: url(../images/khung1.svg);
+	background-size:  95%;
+  	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.chuong-trinh-dao-tao .strong_color{
+	color: var(--strong-green-color);
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+.chuong-trinh-dao-tao .icon-box-text .text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.chuong-trinh-dao-tao .icon-box-text ul li{
+	margin-bottom: 0!important;
+	padding: 0 40px 0 5px;
+}
+.chuong-trinh-dao-tao .icon-box .icon-box-img {
+	display: flex;
+	flex-direction: column;
+	   justify-content: center;
+}
+@media screen and (min-width : 850px){
+	
+}
+@media screen and (min-width : 850px) and (max-width :1100px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background : none;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li {
+		margin-bottom: 0;
+		padding: 0;
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		color: var(--strong-green-color);
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+	.chuong-trinh-dao-tao .text:first-child {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+}
+@media screen and (min-width : 1100px) and (max-width :1384px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background-image: url(../images/khung1.svg);
+		background-size: contain 80%;
+		background-repeat: no-repeat;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li {
+		margin-bottom: 0;
+		padding: 0;
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		color: var(--strong-green-color);
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+	.chuong-trinh-dao-tao .text:first-child {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+}
+@media screen and (min-width : 1385px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background-image: url(../images/khung1.svg);
+		background-size: contain 80%;
+		  background-repeat: no-repeat;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li{
+		margin-bottom: 0!important;
+		padding: 0 40px 0 5px;
+	}
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .pd-res{
+		  padding-top : 1rem
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		font-size: 1.875rem;
+		font-weight: 700;
+	}
+}
+
+
+/* Cảm nhận học viên */
+.CamNhanHocVien .camnhan-text .col-inner{
+	background-color: rgb(6, 25, 39);
+    border-radius: 10px;
+    border: solid 1px var(--primary-color);
+	position: relative;
+	z-index: 2;
+	box-shadow: 11px 15px 30px 0px rgba(2, 2, 2, 0.37);
+}
+.CamNhanHocVien .star-rating{
+	display: none;
+}
+.CamNhanHocVien .testimonial-meta{
+	display: flex;
+	flex-direction: column;
+}
+.CamNhanHocVien .testimonial-meta .testimonial-name-divider {
+	display: none;
+}
+.CamNhanHocVien .testimonial-meta .testimonial-company  {
+	color: var(--primary-color);
+}
+.CamNhanHocVien .slider  .previous {
+	left: 70%!important;
+}
+.CamNhanHocVien .slider  .flickity-prev-next-button {
+	top: 95%!important;
+}
+@media screen and (min-width : 550px){
+.CamNhanHocVien .img-camnhan{
+	margin-left: -3%;;
+}
+}
+@media screen and (min-width : 850px){
+.CamNhanHocVien .img-camnhan{
+	margin-left: -3%;;
+}
+.CamNhanHocVien .slider  .previous {
+	left: 80%!important;
+}
+}
+
+/*  Chương trình tuyển sinh 2024- 2026*/
+.bgr-zzzz-9999 > .col-inner{
+	position: relative;
+	border-radius: 10px;
+}
+.bgr-zzzz-9999 > .col-inner::after{
+	background: url(../images/title-back-1.svg)  ;
+	/* left: 0;
+	bottom: 0; */
+	content : "";
+	position: absolute;
+}
+
+/* Hội đồng học thuật */
+.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien .ten-giang-vien{
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-container{
+	margin-bottom: 0!important;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main{
+	font-size: 1.25rem;
+	font-weight: 700;
+	display: flex;
+}
+.hoidonghocthuat  .button-style-3{
+	margin-bottom: -10%;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main .icon-angle-right{
+	opacity: 1!important;
+	padding-right: 8px;
+	padding-top: 3px;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main .icon-angle-right::before{
+	font-size: 1.5rem;
+	font-weight: 700;
+
+}
+@media screen and (min-width : 850px){
+	.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien{
+		position: relative;
+	}
+	.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien::before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: -4%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent var(--primary-color) transparent transparent;
+	}
+	.hoidonghocthuat .item:nth-child(4n+2) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: -4%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent var(--secondary-color)transparent transparent;
+	}
+	.hoidonghocthuat .item:nth-child(4n+3) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left : 104%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent transparent transparent var(--success-color);
+	}
+	.hoidonghocthuat .item:nth-child(4n+4) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left : 104%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent transparent transparent var(--alert-color);
+	}       
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Header Style */
+.header-nav-main li a{
+	color:  var(--secondary-color)!important;
+	font-size: 0.9375rem!important;
+	font-style: normal;
+	font-weight: 500!important;
+	line-height: 15px;
+}
+.lang-item a img {
+	width : 23px!important;
+	height : 15px!important;
+	border-radius: 2px;
+}
+.icon-search:before {
+    content: "";
+    color: #333333;
+}
+.account-login{
+	display : flex!important;
+	align-items: center!important;
+	color: #fff;
+	padding : 10px;
+	border-radius : 5px!important;
+	justify-content : center;
+}
+.account-login span, .account-login i {
+	color: #fff!important;
+	padding : 0 5px;
+	font-size: 0.875rem!important;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 23.4px;
+}
+.account-item .header-button{
+	width : 145px;
+	
+}
+#header .nav-top-not-logged-in{
+	width: 100%;
+  	text-align: center;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 850px){
+	.account-login {
+	display : flex!important;
+	align-items: center!important;
+	padding : 0px;
+	border-radius : 0!important;
+	justify-content : left;
+}
+	.account-login .header-account-title {
+	color:  var(--secondary-color)!important;
+	font-size: 1em!important;
+	font-style: normal;
+	font-weight: 500!important;
+	line-height: 15px;
+}
+}
+
+/*  Mega Menu*/
+.mega-menu-style .title-mega-menu{
+	margin-left: 50px!important;
+	position : relative;
+	color: var(--primary-color)!important;
+	font-size: 1.5 em;
+}
+.mega-menu-style .title-mega-menu .section-title-main{
+	color: var(--primary-color)!important;
+	font-size: 1.625rem;
+}
+.mega-menu-style .ux-menu-link a{
+	text-transform: uppercase;
+	border-bottom: none!important;
+}
+.mega-menu-style .title-mega-menu:before {
+    position: absolute;
+    width: 34px;
+    height: 2px;
+    background-color: #008444;
+    left: -50px;
+    top: 1.25rem;
+    z-index: 9;
+    content: "";
+}
+/* Footer */
+.text-des-footer , .copyright-footer {
+	color: #FFF;
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px; 
+}
+.list-footer-1 .ux-menu-link .ux-menu-link__link {
+	color: #FFF;
+	font-family: SVN-Gilroy;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.25rem;
+}
+.list-footer-1 .ux-menu-link__link {
+	border-bottom-style: none!important;
+}
+.list-footer-1 .ux-menu-link .ux-menu-link__link i:before{
+	color: #0FB239;
+}
+.clearfix li a {
+	color: #fff!important;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 26.88px;
+	text-transform: none;
+}
+.absolute-footer ul {
+    border-bottom: none!important;
+}
+
+
+
+
+
+/*CSS FROM CUSTOMIZE ======================================================================================== */
+
+ /* Đã xóa và update */
+
+/* ================================ END CSS FROM CUSTOMMIZE*/
