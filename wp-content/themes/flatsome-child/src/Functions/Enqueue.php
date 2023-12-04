@@ -8,6 +8,7 @@ class Enqueue {
             // ko sửa css ở đây nhé.
             wp_enqueue_style( 'sconnect-base', Sconnect_Url."/assets/css/base.css", [], null, 'all' );
             wp_enqueue_style( 'sconnect-base-woo', Sconnect_Url."/assets/css/base-woo.css", [], null, 'all' );
+            if(get_current_user_id(  ) == 1) return; // quy
 
 
 // // <<<<<<< HEAD

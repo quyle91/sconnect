@@ -7,7 +7,14 @@ class GiaiDapThacMac {
         $a = new \Adminz\Helper\ADMINZ_Helper_Flatsome_Shortcodes;
         $a->shortcode_name = 'sconnect-giaidapthacmac';
         $a->shortcode_title = 'Sconnect Giải đáp thắc mắc';
-        $a->shortcode_callback = function() use($a){
+        $a->shortcode_callback = function($atts) use($a){
+            $atts = shortcode_atts(
+                array(
+                    "has_form" => "true",
+                ),
+                $atts,
+            );
+            extract($atts);
             // sử dụng element tab
             
             ob_start();
@@ -39,9 +46,7 @@ class GiaiDapThacMac {
                         </div>
                         <?php
                     }
-
-
-                    if($form){
+                    if($form and $has_form !=='false'){
                         ?>
                         <div class="form col">
                             [row class="row-nopaddingbottom"]
@@ -62,10 +67,14 @@ class GiaiDapThacMac {
             return do_shortcode(ob_get_clean());
         };
         $a->options = [
-            'text' => array(
-                'type'       => 'textfield',
-                'heading'    => 'Text ',
-                'default' => 'Text',
+            'has_form' => array(
+                'type'       => 'select',
+                'heading'    => 'Has form',
+                'default' => 'true',
+                'options' => [
+                    'false' => 'False',
+                    'true' => 'True'
+                ]
             ),
         ];
         $a->general_element();

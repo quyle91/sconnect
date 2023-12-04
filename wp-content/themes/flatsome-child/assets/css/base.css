@@ -81,6 +81,10 @@
         CUSTOM CLASS
 ----------------------------
 */
+
+.bgr-xanhnhat>.col-inner{
+  background-color: var(--xanh-nhat);
+}
 .sconnectpre {
   background: #71cedf;
   border: 2px dashed #000;
