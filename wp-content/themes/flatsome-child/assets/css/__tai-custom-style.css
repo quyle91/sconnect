@@ -417,7 +417,7 @@ Vì vậy anh yêu cầu
     font-style: normal;
     font-weight: 400;
     line-height: 23.4px;
-    color: #fff;
+    color: #fff!important;
     display: flex;
     justify-content: center;
     align-items: center;
