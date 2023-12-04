@@ -67,6 +67,7 @@
 	position: relative;
 	overflow: hidden;
 	padding: 5px 30px!important;
+    border-radius: 6px;
 }
 .button-style-2 span{
 	color: var(--primary-color);
@@ -87,6 +88,7 @@
 	position: relative;
 	overflow: hidden;
 	padding: 5px 30px!important;
+    border-radius: 6px;
 }
 .button-style-1::before{
 	opacity: 0.2;
@@ -100,15 +102,37 @@
     padding: 10px;
     content: "";
 }
-/* Navigation Arrow and Dots */
- .flickity-page-dots {
+.button-style-3{
+	position: relative;
 	overflow: hidden;
+	padding: 5px 30px!important;
+    border: solid 1px var(--white)!important;
+    border-radius: 6px;
 }
-.slider-nav-light .flickity-prev-next-button .arrow, .slider-nav-light .flickity-prev-next-button svg {
+.button-style-3:hover{
+	background-color: #ffffff82!important;
+}
+.button-style-3::before{
+	opacity: 0.2;
+    background-color: var(--white);
+    transform: rotate(25deg);
+    width: 2rem;
+    height: 4rem;
+    position: absolute;
+    right: -10%;
+    bottom: -29%;
+    padding: 10px;
+    content: "";
+}
+/* ========================= Slide Navigation */
+ /* .flickity-page-dots {
+	overflow: hidden;
+} */
+ .slider-nav-light .flickity-prev-next-button .arrow, .slider-nav-light .flickity-prev-next-button svg {
     fill: var(--primary-color)!important;
 }
 
-.flickity-page-dots .dot.is-selected {
+ .flickity-page-dots .dot.is-selected {
     background-color: var(--alert-color)!important;
 }
  .flickity-page-dots .dot {
