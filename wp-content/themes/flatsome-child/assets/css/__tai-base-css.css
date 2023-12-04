@@ -124,10 +124,29 @@
     padding: 10px;
     content: "";
 }
-/* ========================= Slide Navigation */
+/* ========================= Flicky/ Slide Navigation */
  /* .flickity-page-dots {
 	overflow: hidden;
 } */
+.flickity-prev-next-button {
+    opacity: 1!important;
+}
+#header .nav-top-not-logged-in{
+	width: 100%;
+  	text-align: center;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.4px;
+    color: #fff!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flickity-prev-next-button {
+    opacity: 1!important;
+}
  .slider-nav-light .flickity-prev-next-button .arrow, .slider-nav-light .flickity-prev-next-button svg {
     fill: var(--primary-color)!important;
 }

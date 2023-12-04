@@ -362,14 +362,75 @@ Vì vậy anh yêu cầu
 	}       
 }
 
+/* Học phí ========================= */
+ .stt-loaiHocPhi{
+	font-size: 5rem; 
+	font-weight: 700; 
+	-webkit-text-stroke: 0.3px white; 
+	color: transparent; 
+	letter-spacing: 1.6px;
+	margin-bottom: 0;
+}
+.hoc-phi .row-hoc-phi:nth-last-child(-n+3)>.col> .row-equal>.col-inner>.row-equal{
+	display: flex;
+    flex-direction: row-reverse;
+}
+ .thongtin-chiphi >col-inner {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* End Học phí ========================= */
 
 
 
 
 
 
+/* Page Liên hệ ======================================================== */
 
 
+.contact-us .lienhe-row-thongtienlienlac>.col>.col-inner{
+	border-radius: 5px;
+    border: 1px solid #BDBDBD;
+	/* min-height: 9.8125rem; */
+}
+.contact-us .lienhe-row-thongtienlienlac  .lienhe-icon-box > .icon-box-img{
+	margin-top: -12%;
+}
+.contact-us form .wpcf7-form-control-wrap .wpcf7-text{
+	background: #EDF5F1!important;
+    border: none!important;
+	box-shadow: none!important;
+}
+.contact-us form .button-style-1{
+	width: 100%;
+}
+@media screen and (min-width : 850px){
+	.contact-us .lienhe-row-thongtienlienlac>.col>.col-inner{
+		min-height: 14.8125rem;
+	}
+}
+@media screen and (min-width : 1241px){
+	.contact-us .lienhe-row-thongtienlienlac>.col>.col-inner{
+		min-height: 9.8125rem;
+	}
+}
+/* .contact-us form .button-style-1:after{
+	opacity: 0.2;
+    background-color: var(--white);
+    transform: rotate(25deg);
+    width: 2rem;
+    height: 4rem;
+    position: absolute;
+    right: -10%;
+    bottom: -29%;
+    padding: 10px;
+    content: "";
+} */
+/* class:button class:success */
+/* EndPage Liên hệ ======================================================== */
 
 
 /* Header Style */
@@ -417,7 +478,7 @@ Vì vậy anh yêu cầu
     font-style: normal;
     font-weight: 400;
     line-height: 23.4px;
-    color: #fff;
+    color: #fff!important;
     display: flex;
     justify-content: center;
     align-items: center;
