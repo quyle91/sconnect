@@ -23,74 +23,72 @@ Vì vậy anh yêu cầu
 /* -----------------End Global */
 /* Slider Home ==================================*/
 .slider-home .flickity-page-dots {
-  overflow: hidden;
+	overflow: hidden;
 }
-.slider-home .slider-nav-light .flickity-prev-next-button .arrow,
-.slider-nav-light .flickity-prev-next-button svg {
-  fill: var(--primary-color) !important;
+.slider-home .slider-nav-light .flickity-prev-next-button .arrow, .slider-nav-light .flickity-prev-next-button svg {
+    fill: var(--primary-color)!important;
 }
 
 .slider-home .flickity-page-dots .dot.is-selected {
-  background-color: var(--alert-color) !important;
+    background-color: var(--alert-color)!important;
 }
 .slider-home .flickity-page-dots .dot {
-  border: 2px solid #008444 !important;
+    border: 2px solid #008444!important;
 }
-
-@media screen and (min-width: 850px) {
-  .slider-home .previous {
-    top: 80% !important;
-    left: 11% !important;
-  }
-  .slider-home .next {
-    top: 80% !important;
-    left: 22%;
-  }
-  .slider-home .flickity-page-dots {
-    width: 11%;
-    top: 82% !important;
-    left: 12% !important;
-  }
+@media screen and (min-width : 850px) {
+	.slider-home .previous{
+		top: 80%!important;
+		left: 11%!important;
+	}
+	.slider-home .next{
+		top: 80%!important;
+		left: 22%;
+	}
+	.slider-home .flickity-page-dots {
+		width: 11%;
+		top: 82%!important;
+		left: 12%!important;
+	}
 }
 
 /* Banner tuyển sinh 2024 - 2026 ======================================*/
-.baner-tuyen-sinh-24-26 .border-slide .col-inner {
-  border-radius: 5px 0px 0px 5px !important;
+.baner-tuyen-sinh-24-26 .border-slide .col-inner{ 
+	border-radius: 5px 0px 0px 5px!important;
 }
 .baner-tuyen-sinh-24-26 .alignnone {
-  margin-bottom: 0 !important;
+    margin-bottom: 0!important;
 }
 .baner-tuyen-sinh-24-26 .hinh-anh {
-  bottom: 3px !important;
+	bottom: 3px!important;	
 }
 
 /* Intro Home ===========================================*/
 
-.intro-home sup {
-  vertical-align: text-bottom;
-  font-size: -webkit-xxx-large;
+.intro-home sup{
+	vertical-align: text-bottom;
+    font-size: -webkit-xxx-large;
 }
-@media screen and (min-width: 850px) {
-  .intro-home .wrapper-title-intro-home {
-    border: solid 2px var(--primary-color);
-    margin-top: -40px;
-    margin-left: -100px;
-    padding: 4% 4% 4% 19%;
-    z-index: -1;
-    position: relative;
-    border-radius: 5px;
-  }
-  .intro-home .wrapper-title-intro-home ul {
-    margin-bottom: 10px !important;
-  }
-  .intro-home .intro-home-wrapper-2 p {
-    margin-top: -40px;
-    margin-left: -100px;
-    padding: 3% 4% 3% 19%;
-  }
-  .intro-home .intro-home-wrapper-2 .button-style-1 {
-    margin-left: 4%;
-  }
+@media screen and (min-width : 850px){
+	.intro-home .wrapper-title-intro-home{
+		border: solid 2px var(--primary-color);
+		margin-top: -40px;
+		margin-left: -100px;
+		padding: 4% 4% 4% 19%;
+		z-index: -1;
+		position: relative;
+		border-radius: 5px;
+	}
+	.intro-home .wrapper-title-intro-home ul{
+		margin-bottom: 10px!important;
+	}
+	.intro-home .intro-home-wrapper-2 p{
+		margin-top: -40px;
+		margin-left: -100px;
+		padding: 3% 4% 3% 19%;
+	}
+	.intro-home .intro-home-wrapper-2 .button-style-1{
+		margin-left: 4%;
+	}
 }
 /* CEO Home ===========================================*/
 
@@ -120,6 +118,7 @@ Vì vậy anh yêu cầu
 	}
 	.ceo-home blockquote::after {
 		display: none!important;
+
 	}
 	.ceo-home blockquote {
 		border: none!important;
@@ -140,6 +139,7 @@ Vì vậy anh yêu cầu
 		margin-bottom: 0!important;
 	}
 }
+
 
 /* Chương trình đào tạo ======================== */
 .chuong-trinh-dao-tao{
@@ -371,134 +371,138 @@ Vì vậy anh yêu cầu
 
 
 
+
 /* Header Style */
-.header-nav-main li a {
-  color: var(--secondary-color) !important;
-  font-size: 0.9375rem !important;
-  font-style: normal;
-  font-weight: 500 !important;
-  line-height: 15px;
+.header-nav-main li a{
+	color:  var(--secondary-color)!important;
+	font-size: 0.9375rem!important;
+	font-style: normal;
+	font-weight: 500!important;
+	line-height: 15px;
 }
 .lang-item a img {
-  width: 23px !important;
-  height: 15px !important;
-  border-radius: 2px;
+	width : 23px!important;
+	height : 15px!important;
+	border-radius: 2px;
 }
 .icon-search:before {
-  content: "";
-  color: #333333;
+    content: "";
+    color: #333333;
 }
-.account-login {
-  display: flex !important;
-  align-items: center !important;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px !important;
-  justify-content: center;
+.account-login{
+	display : flex!important;
+	align-items: center!important;
+	color: #fff;
+	padding : 10px;
+	border-radius : 5px!important;
+	justify-content : center;
 }
-.account-login span,
-.account-login i {
-  color: #fff !important;
-  padding: 0 5px;
-  font-size: 0.875rem !important;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23.4px;
+.account-login span, .account-login i {
+	color: #fff!important;
+	padding : 0 5px;
+	font-size: 0.875rem!important;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 23.4px;
 }
-.account-item .header-button {
-  width: 145px;
+.account-item .header-button{
+	width : 145px;
+	
 }
-#header .nav-top-not-logged-in {
-  width: 100%;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23.4px;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (max-width: 850px) {
-  .account-login {
-    display: flex !important;
-    align-items: center !important;
-    padding: 0px;
-    border-radius: 0 !important;
-    justify-content: left;
-  }
-  .account-login .header-account-title {
-    color: var(--secondary-color) !important;
-    font-size: 1em !important;
+#header .nav-top-not-logged-in{
+	width: 100%;
+  	text-align: center;
+    font-family: Montserrat;
+    font-size: 0.875rem;
     font-style: normal;
-    font-weight: 500 !important;
-    line-height: 15px;
-  }
+    font-weight: 400;
+    line-height: 23.4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 850px){
+	.account-login {
+	display : flex!important;
+	align-items: center!important;
+	padding : 0px;
+	border-radius : 0!important;
+	justify-content : left;
+}
+	.account-login .header-account-title {
+	color:  var(--secondary-color)!important;
+	font-size: 1em!important;
+	font-style: normal;
+	font-weight: 500!important;
+	line-height: 15px;
+}
 }
 
 /*  Mega Menu*/
-.mega-menu-style .title-mega-menu {
-  margin-left: 50px !important;
-  position: relative;
-  color: var(--primary-color) !important;
-  font-size: 1.5 em;
+.mega-menu-style .title-mega-menu{
+	margin-left: 50px!important;
+	position : relative;
+	color: var(--primary-color)!important;
+	font-size: 1.5 em;
 }
-.mega-menu-style .title-mega-menu .section-title-main {
-  color: var(--primary-color) !important;
-  font-size: 1.625rem;
+.mega-menu-style .title-mega-menu .section-title-main{
+	color: var(--primary-color)!important;
+	font-size: 1.625rem;
 }
-.mega-menu-style .ux-menu-link a {
-  text-transform: uppercase;
-  border-bottom: none !important;
+.mega-menu-style .ux-menu-link a{
+	text-transform: uppercase;
+	border-bottom: none!important;
 }
 .mega-menu-style .title-mega-menu:before {
-  position: absolute;
-  width: 34px;
-  height: 2px;
-  background-color: #008444;
-  left: -50px;
-  top: 1.25rem;
-  z-index: 9;
-  content: "";
+    position: absolute;
+    width: 34px;
+    height: 2px;
+    background-color: #008444;
+    left: -50px;
+    top: 1.25rem;
+    z-index: 9;
+    content: "";
 }
 /* Footer */
-.text-des-footer,
-.copyright-footer {
-  color: #fff;
-  font-size: 0.875rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
+.text-des-footer , .copyright-footer {
+	color: #FFF;
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px; 
 }
 .list-footer-1 .ux-menu-link .ux-menu-link__link {
-  color: #fff;
-  font-family: SVN-Gilroy;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.25rem;
+	color: #FFF;
+	font-family: SVN-Gilroy;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.25rem;
 }
 .list-footer-1 .ux-menu-link__link {
-  border-bottom-style: none !important;
+	border-bottom-style: none!important;
 }
-.list-footer-1 .ux-menu-link .ux-menu-link__link i:before {
-  color: #0fb239;
+.list-footer-1 .ux-menu-link .ux-menu-link__link i:before{
+	color: #0FB239;
 }
 .clearfix li a {
-  color: #fff !important;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 26.88px;
-  text-transform: none;
+	color: #fff!important;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 26.88px;
+	text-transform: none;
 }
 .absolute-footer ul {
-  border-bottom: none !important;
+    border-bottom: none!important;
 }
+
+
+
+
 
 /*CSS FROM CUSTOMIZE ======================================================================================== */
 
-/* Đã xóa và update */
+ /* Đã xóa và update */
 
 /* ================================ END CSS FROM CUSTOMMIZE*/
