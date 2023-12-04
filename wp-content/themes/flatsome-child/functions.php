@@ -70,6 +70,7 @@ new \Sconnect\Integration\ImageMapPro;
 new \Sconnect\Woocommerce\AccountPage;
 
 // Post type
+$Sconnect_Page = new  \Sconnect\Page\Controller\Init;
 $Sconnect_Lop = new  \Sconnect\Lop\Controller\Init;
 $Sconnect_Khoa = new  \Sconnect\Khoa\Controller\Init;
 $Sconnect_DoAn = new  \Sconnect\DoAn\Controller\Init;
