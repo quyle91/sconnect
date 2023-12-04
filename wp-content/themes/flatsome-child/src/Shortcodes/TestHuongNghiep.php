@@ -9,8 +9,8 @@ class TestHuongNghiep {
 		$a->shortcode_name = 'sconnect-disc-testing';
 		$a->shortcode_title = 'Sconnect DISC Tesing';
 
-		add_action( 'wp_enqueue_scripts', [$this, 'add_stype_image_map_frontend'] );
-		add_action(	'wpcf7_before_send_mail', [$this, 'cf7_create_post'], 1 );
+		add_action( 'wp_enqueue_scripts', [$this, 'add_stype_script_frontend'] );
+		add_action(	'wpcf7_before_send_mail', [$this, 'cf7_create_post'], 10, 3 );
 
 		add_filter( "acf/prepare_field_group_for_import", [$this, 'exclude_default_acf_field'], 10);
 
@@ -266,10 +266,16 @@ class TestHuongNghiep {
 				#popup_disc_form .wpcf7-form.failed .wpcf7-response-output {
 					display: none;
 				}
+				#popup_disc_form .wpcf7-form.aborted .wpcf7-response-output {
+					display: none;
+				}
 			</style>
 			<?php
 			$id_form = ($this->get_cf7_form_id_disc()) ? $this->get_cf7_form_id_disc() : 0;
 			self::add_cf7_form_disc($id_form);
+			wp_enqueue_script('disc-handle-script');
+			wp_enqueue_style('sweetalert2-lib-style');  
+			wp_enqueue_script('sweetalert2-lib-script');
 
 		};
 		$a->options = [
@@ -292,16 +298,11 @@ class TestHuongNghiep {
 		return get_field('disc_cf7_form', 'option');
 	}
 
-	public function add_stype_image_map_frontend() {
-		// wp_register_style( 'image-map-style', Sconnect_Url . "/assets/css/image-map.css", [], null, 'all' );
-		// wp_enqueue_style('image-map-style');  
+	public function add_stype_script_frontend() {
 		wp_register_style( 'sweetalert2-lib-style', Sconnect_Url . "/assets/css/lib/sweetalert2.min.css", [], null, 'all' );
-		wp_enqueue_style('sweetalert2-lib-style');  
 
 		wp_register_script( 'disc-handle-script', Sconnect_Url  . "/assets/js/disc-handle.js", array('jquery'), '', true );
-		wp_enqueue_script('disc-handle-script');
 		wp_register_script( 'sweetalert2-lib-script', Sconnect_Url  . "/assets/js/lib/sweetalert2.all.min.js", array('jquery'), '', true );
-		wp_enqueue_script('sweetalert2-lib-script');
 
 		wp_localize_script( 'disc-handle-script', 'sconnect_disc', array(
 			'ajaxurl' 			=> admin_url( 'admin-ajax.php' ),
@@ -360,7 +361,7 @@ class TestHuongNghiep {
 		return $field_group;
 	}
 
-	public function cf7_create_post($data) {
+	public function cf7_create_post($data, &$abort, $submission) {
 
 		$form_id = $data->id;
 		if ($form_id != $this->get_cf7_form_id_disc()) return;

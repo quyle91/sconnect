@@ -84,6 +84,7 @@ new \Sconnect\Shortcodes\TrendingTopic;
 new \Sconnect\Shortcodes\TuKhoaNoiBat; // custom yes or no?
 new \Sconnect\Shortcodes\HoiDongHocThuat;
 new \Sconnect\Shortcodes\GiaiDapThacMac;
+new \Sconnect\Shortcodes\CauHoiThuongGap;
 new \Sconnect\Shortcodes\MapView;
 new \Sconnect\Shortcodes\BlogSmall;
 new \Sconnect\Shortcodes\DoiNguGiangVien;
@@ -92,6 +93,7 @@ new \Sconnect\Shortcodes\PolylangCustomSwitcher;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoItem;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoChiTiet;
 new \Sconnect\Shortcodes\TestHuongNghiep;
+new \Sconnect\Shortcodes\KetQuaTestDISC;
 new \Sconnect\Shortcodes\ChuongTrinhDaoTaoKhoa;
 new \Sconnect\Shortcodes\GiangVien;
 new \Sconnect\Shortcodes\QuyenLoiHocVien;

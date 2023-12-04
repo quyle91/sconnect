@@ -12,11 +12,12 @@ Vì vậy anh yêu cầu
 
 /* ----------------- Global */
 *:root {
-  --primary-color: #008444;
-  --secondary-color: #333333;
-  --success-color: #a6e027;
-  --alert-color: #ff611a;
-  --white: #fff;
+	--primary-color : #008444;
+	--secondary-color : #333333;
+	--success-color : #A6E027;
+	--alert-color : #ff611a;
+	--white : #fff;
+	--strong-green-color : #0FB239;
 }
 
 /* -----------------End Global */
@@ -93,35 +94,282 @@ Vì vậy anh yêu cầu
 }
 /* CEO Home ===========================================*/
 
-@media screen and (min-width: 850px) {
-  .ceo-home .ceo-home-slider {
-    position: relative;
-    /* padding-bottom: 50px; */
-  }
-  .ceo-home .ceo-home-slider > .slider {
-    height: 250px;
-  }
-  .ceo-home .previous {
-    top: 87% !important;
-    left: 40% !important;
-  }
-  .ceo-home .next {
-    top: 87% !important;
-    left: 60%;
-  }
-  .ceo-home .flickity-page-dots {
-    width: 14%;
-    top: 90% !important;
-    left: 45% !important;
-    /* overflow-x: hidden; */
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  /* .ceo-home .flickity-slider>div {
-		border : 1px solid var(--primary-color);
+@media screen and (min-width : 850px){
+	.ceo-home .ceo-home-slider{
+		position: relative;
+		/* padding-bottom: 50px; */
+	}
+	.ceo-home .ceo-home-slider> .slider{
+		height: 250px;
+	}
+	.ceo-home .previous{
+		top: 87%!important;
+		left: 40%!important;
+	}
+	.ceo-home .next{
+		top: 87%!important;
+		left: 60%;
+	}
+	.ceo-home .flickity-page-dots {
+		width: 14%;
+		top: 90%!important;
+		left: 45%!important;
+		/* overflow-x: hidden; */
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.ceo-home blockquote::after {
+		display: none!important;
+	}
+	.ceo-home blockquote {
+		border: none!important;
+		border-left: none!important;
 
-	} */
+	}
+	.ceo-home .flickity-slider > div  .text {
+		border : 1px solid var(--primary-color);
+		min-height: 10.5rem;
+		border-radius: 5px;
+	}
+	.ceo-home .flickity-slider > div  .text p {
+		padding: 0 5px;
+		margin-bottom: 0!important;
+	}
+	.ceo-home .flickity-slider > div  .text strong {
+		padding: 0 5px;
+		margin-bottom: 0!important;
+	}
 }
+
+/* Chương trình đào tạo ======================== */
+.chuong-trinh-dao-tao{
+	background: linear-gradient(180deg, #008444 -20.44%, #09293F 93.78%);
+}
+.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+	background-image: url(../images/khung1.svg);
+	background-size:  95%;
+  	background-repeat: no-repeat;
+	background-position-x: center;
+}
+.chuong-trinh-dao-tao .strong_color{
+	color: var(--strong-green-color);
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+.chuong-trinh-dao-tao .icon-box-text .text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.chuong-trinh-dao-tao .icon-box-text ul li{
+	margin-bottom: 0!important;
+	padding: 0 40px 0 5px;
+}
+.chuong-trinh-dao-tao .icon-box .icon-box-img {
+	display: flex;
+	flex-direction: column;
+	   justify-content: center;
+}
+@media screen and (min-width : 850px){
+	
+}
+@media screen and (min-width : 850px) and (max-width :1100px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background : none;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li {
+		margin-bottom: 0;
+		padding: 0;
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		color: var(--strong-green-color);
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+	.chuong-trinh-dao-tao .text:first-child {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+}
+@media screen and (min-width : 1100px) and (max-width :1384px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background-image: url(../images/khung1.svg);
+		background-size: contain 80%;
+		background-repeat: no-repeat;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li {
+		margin-bottom: 0;
+		padding: 0;
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		color: var(--strong-green-color);
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+	.chuong-trinh-dao-tao .text:first-child {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+}
+@media screen and (min-width : 1385px){
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .col{
+		background-image: url(../images/khung1.svg);
+		background-size: contain 80%;
+		  background-repeat: no-repeat;
+	}
+	.chuong-trinh-dao-tao .icon-box-text ul li{
+		margin-bottom: 0!important;
+		padding: 0 40px 0 5px;
+	}
+	.chuong-trinh-dao-tao .thongTin-chuongTrinh .pd-res{
+		  padding-top : 1rem
+	}
+	.chuong-trinh-dao-tao .strong_color {
+		font-size: 1.875rem;
+		font-weight: 700;
+	}
+}
+
+
+/* Cảm nhận học viên */
+.CamNhanHocVien .camnhan-text .col-inner{
+	background-color: rgb(6, 25, 39);
+    border-radius: 10px;
+    border: solid 1px var(--primary-color);
+	position: relative;
+	z-index: 2;
+	box-shadow: 11px 15px 30px 0px rgba(2, 2, 2, 0.37);
+}
+.CamNhanHocVien .star-rating{
+	display: none;
+}
+.CamNhanHocVien .testimonial-meta{
+	display: flex;
+	flex-direction: column;
+}
+.CamNhanHocVien .testimonial-meta .testimonial-name-divider {
+	display: none;
+}
+.CamNhanHocVien .testimonial-meta .testimonial-company  {
+	color: var(--primary-color);
+}
+.CamNhanHocVien .slider  .previous {
+	left: 70%!important;
+}
+.CamNhanHocVien .slider  .flickity-prev-next-button {
+	top: 95%!important;
+}
+@media screen and (min-width : 550px){
+.CamNhanHocVien .img-camnhan{
+	margin-left: -3%;;
+}
+}
+@media screen and (min-width : 850px){
+.CamNhanHocVien .img-camnhan{
+	margin-left: -3%;;
+}
+.CamNhanHocVien .slider  .previous {
+	left: 80%!important;
+}
+}
+
+/*  Chương trình tuyển sinh 2024- 2026*/
+.bgr-zzzz-9999 > .col-inner{
+	position: relative;
+	border-radius: 10px;
+}
+.bgr-zzzz-9999 > .col-inner::after{
+	background: url(../images/title-back-1.svg)  ;
+	/* left: 0;
+	bottom: 0; */
+	content : "";
+	position: absolute;
+}
+
+/* Hội đồng học thuật */
+.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien .ten-giang-vien{
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-container{
+	margin-bottom: 0!important;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main{
+	font-size: 1.25rem;
+	font-weight: 700;
+	display: flex;
+}
+.hoidonghocthuat  .button-style-3{
+	margin-bottom: -10%;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main .icon-angle-right{
+	opacity: 1!important;
+	padding-right: 8px;
+	padding-top: 3px;
+}
+.hoidonghocthuat  .thongtinthem .form-title .section-title-main .icon-angle-right::before{
+	font-size: 1.5rem;
+	font-weight: 700;
+
+}
+@media screen and (min-width : 850px){
+	.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien{
+		position: relative;
+	}
+	.hoidonghocthuat .single-hoidonghocthuat-item .ThongTinThanhVien::before {
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: -4%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent var(--primary-color) transparent transparent;
+	}
+	.hoidonghocthuat .item:nth-child(4n+2) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: -4%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent var(--secondary-color)transparent transparent;
+	}
+	.hoidonghocthuat .item:nth-child(4n+3) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left : 104%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent transparent transparent var(--success-color);
+	}
+	.hoidonghocthuat .item:nth-child(4n+4) .single-hoidonghocthuat-item .ThongTinThanhVien::before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 50%;
+		left : 104%;
+		transform: translateX(-50%);
+		border-style: solid;
+		border-width: 20px 20px 20px 20px;
+		border-color: transparent transparent transparent var(--alert-color);
+	}       
+}
+
+
+
+
+
+
+
+
+
 
 /* Header Style */
 .header-nav-main li a {
