@@ -1,0 +1,37 @@
+.q__khong-gian > .box-text > .box-text-inner > button {
+  border: 2px solid rgba(166, 224, 39, 1);
+  color: rgba(166, 224, 39, 1);
+}
+
+.q__khong-gian > .box-text > .box-text-inner > button:hover {
+  background-color: rgba(166, 224, 39, 1) !important;
+  color: #fff;
+}
+
+.q__khong-gian > .badge > .badge-inner {
+  background-color: rgba(244, 119, 48, 1);
+}
+
+.q__goc-nhin > .col-inner > .type-slider > .row > .flickity-page-dots > .dot {
+  opacity: 0.8;
+  background-color: #fff;
+}
+
+.q__goc-nhin
+  > .col-inner
+  > .type-slider
+  > .row
+  > .flickity-page-dots
+  > .is-selected {
+  background-color: rgba(244, 119, 48, 1);
+}
+
+.q__doi-tac > .section-content > .row > .col > .col-inner > a::before {
+  right: -7%;
+}
+
+.q__slide-doi-tac > .slider > .flickity-button {
+  background-color: #999;
+  border-radius: 50%;
+  opacity: 0.5;
+}
