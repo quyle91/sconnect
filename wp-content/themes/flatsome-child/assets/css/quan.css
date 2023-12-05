@@ -37,7 +37,7 @@
 }
 
 .blog__chuong-trinh-dao-tao>.grid-col-1>.col-inner>a>.box>.box-text{
- 	background-color: rgba(0, 132, 68, 1) !important;
+ 	background-color: rgba(0, 132, 68, 0.6) !important;
     width: 66%;
     border-radius: 0 30px 0 5px;
     text-align: center;
