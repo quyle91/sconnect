@@ -386,7 +386,7 @@ function flatsome_fix_span($span){
 }
 
 
-function flatsome_smart_links($link){
+/*function flatsome_smart_links($link){
     if($link == 'shop' && is_woocommerce_activated()){
       $link = get_permalink( wc_get_page_id( 'shop' ) );
     }
@@ -421,6 +421,49 @@ function flatsome_smart_links($link){
 	array_push( $protocols, 'sms' );
 
     return esc_url( $link, $protocols );
+}*/
+
+function flatsome_smart_links($link){
+  if($link == 'shop' && is_woocommerce_activated()){
+    $link = get_permalink( wc_get_page_id( 'shop' ) );
+  }
+  else if($link == 'cart' && is_woocommerce_activated()) {
+    $link = wc_get_cart_url();
+  }
+  else if($link == 'checkout' && is_woocommerce_activated()) {
+    $link = wc_get_checkout_url();
+  }
+  else if($link == 'account' && is_woocommerce_activated()){
+    $link = get_permalink( get_option('woocommerce_myaccount_page_id') );
+  }
+  else if($link == 'home'){
+    $link = get_home_url();
+  }
+  else if($link == 'blog'){
+    $link = get_permalink( get_option( 'page_for_posts' ) );
+  }
+  else if($link == 'wishlist' && class_exists('YITH_WCWL')){
+    $link =  YITH_WCWL()->get_wishlist_url();
+  }
+  // Get link by page title
+  else if(strpos($link, '/') === false && !is_numeric($link)){
+    $query = new WP_Query( array(
+        'post_type'      => 'page',
+        'post_title'     => $link,
+        'posts_per_page' => 1
+    ) );
+
+    if ( $query->have_posts() ) {
+        $query->the_post();
+        $link = get_permalink();
+        wp_reset_postdata();
+    }
+  }
+
+  $protocols = wp_allowed_protocols();
+  array_push( $protocols, 'sms' );
+
+  return esc_url( $link, $protocols );
 }
 
 function flatsome_to_dashed($className) {

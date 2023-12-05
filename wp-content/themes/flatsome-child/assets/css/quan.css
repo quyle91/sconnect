@@ -36,35 +36,35 @@
   opacity: 0.5;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col-1>.col-inner>a>.box>.box-text{
- 	background: rgba(0, 132, 68, 0.6);
+.blog__chuong-trinh-dao-tao>.grid-col-1>.col-inner>a>.box>.box-text{
+ 	background-color: rgba(0, 132, 68, 0.6) !important;
     width: 66%;
     border-radius: 0 30px 0 5px;
     text-align: center;
 	padding-top: 1.4em;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(2)>.col-inner>a>.box>.box-text{
-	background: rgba(0, 101, 169, 0.6);
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(2)>.col-inner>a>.box>.box-text{
+	background: rgba(0, 101, 169, 0.6) !important;
     width: 66%;
     border-radius: 0 30px 0 5px;
     text-align: center;
 	padding-top: 1.4em;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(3)>.col-inner>a>.box>.box-text{
-	background: rgba(255, 97, 26, 0.6);
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(3)>.col-inner>a>.box>.box-text{
+	background: rgba(255, 97, 26, 0.6) !important;
     width: 66%;
     border-radius: 0 30px 0 5px;
     text-align: center;
 	padding-top: 1.4em;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner{
+.blog__chuong-trinh-dao-tao>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner{
 	margin: auto;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item{
+.blog__chuong-trinh-dao-tao>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item{
 	margin-bottom: 48px;
 	border: 2px solid #0FB239;
     padding: 0 20px 0 0;
@@ -72,22 +72,22 @@
 	background: rgba(14, 17, 15, 0.8);
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item>a{
+.blog__chuong-trinh-dao-tao>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item>a{
 	align-items: center;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button{
+.blog__chuong-trinh-dao-tao>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button{
 	position: relative;
 	overflow: hidden;
 	padding: 5px 30px!important;
     border-radius: 6px;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button:hover{
+.blog__chuong-trinh-dao-tao>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button:hover{
 	border: 2px solid #fff;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button::before{
+.blog__chuong-trinh-dao-tao>.grid-col-1>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button::before{
 	opacity: 0.2;
     background-color: #fff;
     transform: rotate(25deg);
@@ -101,26 +101,26 @@
 	display: block;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner{
 	margin: auto;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item {
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item {
 	margin-bottom: 1.4em;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button{
 	position: relative;
 	overflow: hidden;
 	padding: 5px 30px!important;
     border-radius: 6px;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button:hover{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button:hover{
 	border: 2px solid #fff;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button::before{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(2)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button::before{
 	opacity: 0.2;
     background-color: #fff;
     transform: rotate(25deg);
@@ -135,22 +135,22 @@
 }
 
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner{
 	margin: auto;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button{
 	position: relative;
 	overflow: hidden;
 	padding: 5px 30px!important;
     border-radius: 6px;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button:hover{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button:hover{
 	border: 2px solid #fff;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button::before{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.button::before{
 	opacity: 0.2;
     background-color: #fff;
     transform: rotate(25deg);
@@ -164,17 +164,26 @@
 	display: block;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items{
 	display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner {
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner {
 	padding-top: 20px;
 }
 
-.q__chuong-trinh-dao-tao>.col-inner>.blog-posts-custom-element-wrapper>.row>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item{
+.blog__chuong-trinh-dao-tao>.grid-col:nth-child(3)>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item{
 	width: 47%;
+}
+
+.blog__chuong-trinh-dao-tao>.grid-col>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.h3{
+	color: #fff;
+    font-weight: bold;
+}
+
+.blog__chuong-trinh-dao-tao>.grid-col>.col-inner>.custom_element_chuongtrinhdaotao>.inner>.items>.single-bomon-item>a{
+	color: #Fff !important;
 }

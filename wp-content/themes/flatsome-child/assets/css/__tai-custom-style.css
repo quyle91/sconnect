@@ -166,9 +166,10 @@ Vì vậy anh yêu cầu
 	padding: 0 40px 0 5px;
 }
 .chuong-trinh-dao-tao .icon-box .icon-box-img {
-	display: flex;
+	padding-top: 1rem;
+	/* display: flex;
 	flex-direction: column;
-	   justify-content: center;
+	   justify-content: center; */
 }
 @media screen and (min-width : 850px){
 	
@@ -231,7 +232,7 @@ Vì vậy anh yêu cầu
 }
 
 
-/* Cảm nhận học viên */
+/* Cảm nhận học viên =====================*/
 .CamNhanHocVien .camnhan-text .col-inner{
 	background-color: rgb(6, 25, 39);
     border-radius: 10px;
@@ -321,7 +322,7 @@ Vì vậy anh yêu cầu
 		position: absolute;
 		display: block;
 		top: 50%;
-		left: -4%;
+		left: -3%;
 		transform: translateX(-50%);
 		border-style: solid;
 		border-width: 20px 20px 20px 20px;
@@ -332,7 +333,7 @@ Vì vậy anh yêu cầu
 		position: absolute;
 		display: block;
 		top: 50%;
-		left: -4%;
+		left: -3%;
 		transform: translateX(-50%);
 		border-style: solid;
 		border-width: 20px 20px 20px 20px;
@@ -343,7 +344,7 @@ Vì vậy anh yêu cầu
 		position: absolute;
 		display: block;
 		top: 50%;
-		left : 104%;
+		left : 103%;
 		transform: translateX(-50%);
 		border-style: solid;
 		border-width: 20px 20px 20px 20px;
@@ -354,13 +355,43 @@ Vì vậy anh yêu cầu
 		position: absolute;
 		display: block;
 		top: 50%;
-		left : 104%;
+		left : 103%;
 		transform: translateX(-50%);
 		border-style: solid;
 		border-width: 20px 20px 20px 20px;
 		border-color: transparent transparent transparent var(--alert-color);
 	}       
 }
+/* Trending-toppic */
+.trendingtopic a {
+    color: var(--primary-color)!important;
+}
+.trendingtopic .row .large-9{
+    padding: 0!important;
+}
+.trendingtopic .row .large-9 .flickity-prev-next-button {
+    top :-20%!important;
+}
+.trendingtopic .tagcloud a {
+    border-radius: 33px!important;
+    display: inline-block;
+    font-size: .8em!important;
+    margin: 0 3px 5px 0;
+    opacity: .8;
+    padding: 2px 10px;
+	border: 1.3px solid #75B194;
+	background: #EAF3ED;
+}
+/* Giải đáp thắc mặc  */
+.giaidapthacmac .section-title-main{
+	color: var(--primary-color);
+}
+.giaidapthacmac .section-title-main i{
+	padding-right:  10px!important;
+}
+/* Hỗ trợ tư vấn hướng nghiệp ==============================  */
+.hotrontuvanhuongnghiep 
+
 
 /* Học phí ========================= */
  .stt-loaiHocPhi{
@@ -371,9 +402,42 @@ Vì vậy anh yêu cầu
 	letter-spacing: 1.6px;
 	margin-bottom: 0;
 }
-.hoc-phi .row-hoc-phi:nth-last-child(-n+3)>.col> .row-equal>.col-inner>.row-equal{
-	display: flex;
+.hoc-phi .row-hoc-phi :nth-last-child(-n+3) > .col-inner > .row{
+	display: flex!important;
     flex-direction: row-reverse;
+}
+.hoc-phi  .img-inner{ 
+	border-radius: 0!important;
+}
+.hoc-phi .row-hocphi-2> .col> .col-inner {
+	    background: url(https://sconnect.htecom.com/wp-content/uploads/2023/12/bg-2.svg) no-repeat;
+    background-position: top;
+	background-color: transparent!important;
+}
+.hoc-phi .row-hocphi-2> .col {
+	    background: url(https://sconnect.htecom.com/wp-content/uploads/2023/12/bg-2.svg) no-repeat;
+    background-position: top;
+}
+.hoc-phi .row-hocphi-2:last-child img{
+	 bottom: 11px!important;
+}
+.hoc-phi .row-hocphi-2 .icon-inner img{
+	position: absolute;
+	left: 20px;
+	bottom: 2px;
+}
+.hoc-phi .row-hocphi-2 .icon-box-text p{
+	margin-bottom: 0!important;
+}
+.hoc-phi .row-hocphi-2 .icon-box-text {
+	position: relative;
+	top: 1.5rem;
+	left: 3rem;
+}
+.hoc-phi .row-hocphi-2 .icon-box-text .icon-angle-right {
+	position: absolute;
+    left: 81%;
+    bottom: 0;
 }
  .thongtin-chiphi >col-inner {
 	display: flex;
@@ -382,6 +446,23 @@ Vì vậy anh yêu cầu
 }
 
 /* End Học phí ========================= */
+
+
+/* Thông tin học bổng */
+.thongtinhocbong .post-title {
+	padding-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -540,6 +621,9 @@ Vì vậy anh yêu cầu
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.25rem;
+}
+.list-footer-1  .ux-menu-link:hover .ux-menu-link__link {
+    color: var(--primary-color)!important;
 }
 .list-footer-1 .ux-menu-link__link {
 	border-bottom-style: none!important;
