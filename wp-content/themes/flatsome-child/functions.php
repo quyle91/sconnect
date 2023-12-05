@@ -70,6 +70,8 @@ new \Sconnect\Integration\ImageMapPro;
 new \Sconnect\Woocommerce\AccountPage;
 
 // Post type
+$Sconnect_Page = new  \Sconnect\Page\Controller\Init;
+$Sconnect_Page = new  \Sconnect\Page\BlogSidebar;
 $Sconnect_Lop = new  \Sconnect\Lop\Controller\Init;
 $Sconnect_Khoa = new  \Sconnect\Khoa\Controller\Init;
 $Sconnect_DoAn = new  \Sconnect\DoAn\Controller\Init;
@@ -99,3 +101,4 @@ new \Sconnect\Shortcodes\GiangVien;
 new \Sconnect\Shortcodes\QuyenLoiHocVien;
 new \Sconnect\Shortcodes\TongQuanKhoaHoc;
 new \Sconnect\Shortcodes\HoTroSauKhoaHoc;
+new \Sconnect\Shortcodes\TraCuuDiemThiSA;

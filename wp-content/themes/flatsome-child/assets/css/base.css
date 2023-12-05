@@ -51,6 +51,10 @@
     padding-top: 30px;
   }
 }
+/*========================================= CONTENT*/
+#content{
+  min-height: 500px;
+}
 /*========================================= FOOTER*/
 .absolute-footer:not(.text-center) .footer-primary {
   border-radius: 10px;
@@ -81,6 +85,10 @@
         CUSTOM CLASS
 ----------------------------
 */
+
+.bgr-xanhnhat>.col-inner{
+  background-color: var(--xanh-nhat);
+}
 .sconnectpre {
   background: #71cedf;
   border: 2px dashed #000;

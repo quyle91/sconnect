@@ -15,6 +15,7 @@ class TestHuongNghiep {
 		add_filter( "acf/prepare_field_group_for_import", [$this, 'exclude_default_acf_field'], 10);
 
 		$a->shortcode_callback = function() use($a){
+			ob_start();
 
 			if (!have_rows('disc_questions', 'option')) return;
 
@@ -276,7 +277,9 @@ class TestHuongNghiep {
 			wp_enqueue_script('disc-handle-script');
 			wp_enqueue_style('sweetalert2-lib-style');  
 			wp_enqueue_script('sweetalert2-lib-script');
+			
 
+			return ob_get_clean();
 		};
 		$a->options = [
 			'text' => array(
