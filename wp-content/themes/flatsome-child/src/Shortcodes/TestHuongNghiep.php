@@ -99,7 +99,7 @@ class TestHuongNghiep {
 
 				$disc_item_question .= '
 
-					[col span__sm="12" padding="0px 0px 100px 0px" bg_radius="10" depth="2" border="1px 1px 1px 1px" border_radius="10" class="'.$hidden.' pb-0 disc_item_question disc_item_question_'.$index_ques.'"]
+					[col span__sm="12" padding="0px 0px 100px 0px" bg_radius="10" depth="2" border="1px 1px 1px 1px" border_radius="10" class="'.$hidden.' pb-0 disc_item_question disc_item_question_'.$index_ques.'" bg_color="rgb(255,255,255)"]
 
 						[row_inner style="collapse" h_align="center" class="disc_index_question"]
 
@@ -200,19 +200,7 @@ class TestHuongNghiep {
 				$index_ques++;
 			}
 
-			$disc_section = '
-
-				[section]
-
-					[row]
-
-						'.$disc_item_question.'
-
-					[/row]
-
-				[/section]
-
-			';
+			$disc_section = $disc_item_question;
 
 			echo do_shortcode( $disc_section );
 			?>
