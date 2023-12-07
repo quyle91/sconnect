@@ -78,6 +78,7 @@ $Sconnect_BoMon = new  \Sconnect\BoMon\Controller\Init;
 $Sconnect_HocBong = new  \Sconnect\HocBong\Controller\Init;
 $Sconnect_GiangVien = new  \Sconnect\GiangVien\Controller\Init;
 $Sconnect_ChuongTrinh = new  \Sconnect\ChuongTrinh\Controller\Init;
+$Sconnect_TinTuyenDung = new  \Sconnect\TinTuyenDung\Controller\Init;//tuyennv
 
 
 // Shortcodes
@@ -101,3 +102,4 @@ new \Sconnect\Shortcodes\QuyenLoiHocVien;
 new \Sconnect\Shortcodes\TongQuanKhoaHoc;
 new \Sconnect\Shortcodes\HoTroSauKhoaHoc;
 new \Sconnect\Shortcodes\TraCuuDiemThiSA;
+new \Sconnect\Shortcodes\TinTuyenDung;//tuyennv

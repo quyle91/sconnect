@@ -277,3 +277,14 @@ x {
   background-position: bottom left;
   background-repeat: no-repeat;
 }
+
+/*Tuyennv*/
+/*single-tuyendung-item --------------------------------------------------*/
+.single-tuyendung-item a {
+  display: flex;
+  gap: 10px;
+}
+
+.single-tuyendung-item a .icon-angle-right {
+  margin-left: auto;
+}
